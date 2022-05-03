@@ -1,6 +1,4 @@
-interface LayoutProps {
-  children: React.ReactNode
-}
+import { LayoutProps } from 'types/LayoutProps'
 
 const Container = ({ children }: LayoutProps) => {
   return <div className="px-4 md:px-24">{children}</div>

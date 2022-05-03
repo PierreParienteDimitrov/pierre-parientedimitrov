@@ -1,4 +1,4 @@
-import Container from '@/layouts/containers/container'
+import Container from '@/layouts/containers/Container'
 import styles from '@/styles/animations.module.css'
 
 const Index = () => {
