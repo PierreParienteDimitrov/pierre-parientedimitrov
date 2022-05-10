@@ -1,28 +1,74 @@
 import Container from '@/layouts/containers/Container'
-import styles from '@/styles/animations.module.css'
 
-const Index = () => {
+const Index: React.FC = () => {
   return (
     <Container>
-      <div className="flex flex-col space-y-2 pt-36">
-        <h2 className="font-light text-red-400">
-          Hi, my name is Pierre Pariente Dimitrov
-        </h2>
-        <h1 className="font-medium">
-          I am an{' '}
-          <span className={styles['hover-underline-animation']}>
-            entrepreneur
-          </span>
-          ,{' '}
-          <span className={styles['hover-underline-animation']}>
-            product designer
-          </span>{' '}
-          and{' '}
-          <span className={styles['hover-underline-animation']}>
-            {' '}
-            full-stack engineer.
-          </span>
-        </h1>
+      {/* intro */}
+      <div className="flex h-screen flex-col space-y-10 pt-36">
+        <h1 className="font-bold">Let&apos;s Create!</h1>
+        <h3 className="text-red-400">
+          I&apos;m Pierre Pariente Dimitrov a Los Angeles based <br></br>UX/UI
+          Designer and Front-End Engineer
+        </h3>
+      </div>
+
+      {/* statement */}
+      <div className="flex flex-col md:flex-row">
+        <div className="w-full md:w-4/6 md:pr-10">
+          <h2>Short Statement</h2>
+          <h3>
+            Description lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Odio, quis.
+          </h3>
+          <h4>
+            Paragraph Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Repudiandae, error?
+          </h4>
+        </div>
+        <div className="w-full bg-slate-50 md:w-2/6">Picture</div>
+      </div>
+
+      {/* case studies */}
+      <div className="mt-32">
+        <h2>Case Studies</h2>
+        <div className="flex flex-wrap space-y-4">
+          <div className="flex w-full flex-col space-y-4 md:flex-row md:space-x-4 md:space-y-0">
+            <div className="h-96 w-full items-center bg-blue-50 md:w-1/2">
+              Case 1
+            </div>
+            <div className="h-96 w-full items-center bg-blue-50 md:w-1/2">
+              Case 2
+            </div>
+          </div>
+          <div className="flex w-full flex-col space-y-4 md:flex-row md:space-x-4 md:space-y-0">
+            <div className="h-96 w-full items-center bg-blue-50 md:w-1/2">
+              Case 1
+            </div>
+            <div className="h-96 w-full items-center bg-blue-50 md:w-1/2">
+              Case 2
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* testimonials */}
+      <div className="mt-32">
+        <div className="flex w-full justify-center px-96 text-center">
+          <h4>
+            Testimonials Lorem ipsum dolor sit amet consectetur adipisicing
+            elit. Maxime, pariatur!
+          </h4>
+        </div>
+      </div>
+      {/* testimonials */}
+      <div className="mt-32 w-full bg-slate-900">
+        <div className="flex w-full flex-col justify-center space-y-4 text-center">
+          <h2>We would work great together.</h2>
+          <p>
+            Read about my available services and let’s talk about your interface
+            design goals.
+          </p>
+        </div>
       </div>
     </Container>
   )
