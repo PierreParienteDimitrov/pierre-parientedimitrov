@@ -58,10 +58,10 @@ const Carousel: React.FC<{ carouselItems: ICarousel[] }> = (props) => {
                   key={index}
                   onClick={(e) => handleCarouselClick(e)}
                   value={index}
-                  className="cursor-pointer"
-                >
-                  {index + 1}
-                </li>
+                  className={`h-2 w-2 cursor-pointer rounded-full ${
+                    index === carouselIndex ? 'bg-red-600' : 'bg-gray-300'
+                  }`}
+                ></li>
               )
             })}
           </ul>
