@@ -1,90 +1,52 @@
-import React, { useState } from 'react'
+import React from 'react'
 
+import { ICarousel } from '@/../types/ICarousel'
+import Carousel from '@/components/Carousel'
 import Container from '@/layouts/containers/Container'
 
-interface ICarousel {
-  index: number
-  title: string
-  url: string
-  alt: string
-}
-
 const TEMPSO: ICarousel[] = [
-  { index: 1, title: 'tempso1', url: 'url1', alt: 'alt1' },
-  { index: 2, title: 'tempso2', url: 'url2', alt: 'alt2' },
-  { index: 3, title: 'tempso3', url: 'url3', alt: 'alt3' },
+  {
+    title: 'tempso1',
+    src: '/Slide1.png',
+    alt: 'alt1',
+  },
+  {
+    title: 'tempso2',
+    src: '/Slide2.png',
+    alt: 'alt1',
+  },
+  {
+    title: 'tempso3',
+    src: '/Slide3.png',
+    alt: 'alt3',
+  },
+  {
+    title: 'tempso4',
+    src: '/Slide4.png',
+    alt: 'alt4',
+  },
+  {
+    title: 'tempso5',
+    src: '/Slide5.png',
+    alt: 'alt5',
+  },
+  {
+    title: 'tempso6',
+    src: '/Slide6.png',
+    alt: 'alt6',
+  },
+  {
+    title: 'tempso7',
+    src: '/Slide7.png',
+    alt: 'alt7',
+  },
 ]
 
 const Tempso: React.FC = () => {
-  const [index, setIndex] = useState(0)
-  console.log(index)
-
-  const handleCarouselClick = (e: React.MouseEvent<HTMLLIElement>) => {
-    e.preventDefault()
-    const currentIndex = e.currentTarget.value
-    setIndex(currentIndex - 1)
-  }
-
-  React.useEffect(() => {
-    const timer = setTimeout(() => {
-      if (index < 2) {
-        setIndex(index + 1)
-        console.log(index)
-      } else {
-        setIndex(0)
-      }
-    }, 4000)
-
-    return () => clearTimeout(timer)
-  }, [index])
-
   return (
     <Container>
       {/* carousel */}
-      <div className="h-screen w-full">
-        <div className="relative flex h-5/6 w-full items-center">
-          <div
-            className={`absolute flex h-full w-full items-center justify-center bg-gray-600 ${
-              index === 0
-                ? 'transition duration-1000 ease-in opacity-100'
-                : 'transition duration-1000 ease-out opacity-0'
-            }`}
-          >
-            <h2>{TEMPSO[0]?.title}</h2>
-          </div>
-          <div
-            className={`absolute flex h-full w-full items-center justify-center bg-red-600 ${
-              index === 1
-                ? 'transition duration-1000 ease-in opacity-100'
-                : 'transition duration-1000 ease-out opacity-0'
-            }`}
-          >
-            <h2>{TEMPSO[1]?.title}</h2>
-          </div>
-          <div
-            className={`absolute flex h-full w-full items-center justify-center bg-blue-600 ${
-              index === 2
-                ? 'transition duration-1000 ease-in opacity-100'
-                : 'transition duration-1000 ease-out opacity-0'
-            }`}
-          >
-            <h2>{TEMPSO[2]?.title}</h2>
-          </div>
-          <div className="absolute bottom-4">
-            <ul className="flex space-x-3">
-              <li onClick={(e) => handleCarouselClick(e)} value={1}>
-                1
-              </li>
-              <li onClick={(e) => handleCarouselClick(e)} value={2}>
-                2
-              </li>
-              <li onClick={(e) => handleCarouselClick(e)} value={3}>
-                3
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
+      <Carousel carouselItems={TEMPSO} />
 
       {/* title */}
       <div className="flex w-full flex-col space-y-1">
@@ -93,7 +55,7 @@ const Tempso: React.FC = () => {
       </div>
       <div className="flex flex-col space-y-2 md:flex-row">
         {/* left side */}
-        <div className="pr-10 md:w-4/6">
+        <div className="pr-36 md:w-4/6">
           <div>
             <p>
               Tempso is a live Classical Music Streaming Mobile App, fully
