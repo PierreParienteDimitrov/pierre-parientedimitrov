@@ -55,7 +55,7 @@ const Tempso: React.FC = () => {
       </div>
       <div className="flex flex-col space-y-2 md:flex-row">
         {/* left side */}
-        <div className="pr-36 md:w-4/6">
+        <div className="order-2 pr-36 md:order-1 md:w-4/6">
           <div>
             <p>
               Tempso is a live Classical Music Streaming Mobile App, fully
@@ -177,7 +177,7 @@ const Tempso: React.FC = () => {
           </div>
         </div>
         {/* right side */}
-        <div className="md:w-2/6">
+        <div className="order-1 md:order-2 md:w-2/6">
           <ul>
             <li>
               <h5>Year</h5>
