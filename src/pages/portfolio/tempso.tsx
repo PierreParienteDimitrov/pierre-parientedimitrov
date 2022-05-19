@@ -3,7 +3,7 @@ import React from 'react'
 import { ICarousel } from '@/../types/ICarousel'
 import Carousel from '@/components/Carousel'
 import Container from '@/layouts/containers/Container'
-import TwoColsRightFixed from '@/layouts/grids/TwoColsRightFixed'
+import TwoCols from '@/layouts/grids/TwoCols'
 
 const TEMPSO: ICarousel[] = [
   {
@@ -212,7 +212,7 @@ const Tempso: React.FC = () => {
         <h6>DESIGNED BY PIERRE PARIENTE DIMITROV</h6>
       </div>
       <div className="flex flex-col space-y-2 md:flex-row">
-        <TwoColsRightFixed leftSide={<LeftSide />} rightSide={<RightSide />} />
+        <TwoCols leftSide={<LeftSide />} rightSide={<RightSide />} />
         {/* left side */}
         <div className="order-2 pr-36 md:order-1 md:w-4/6"></div>
         {/* right side */}
