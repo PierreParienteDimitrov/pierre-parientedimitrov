@@ -177,8 +177,8 @@ const Tempso: React.FC = () => {
           </div>
         </div>
         {/* right side */}
-        <div className="order-1 md:order-2 md:w-2/6">
-          <ul>
+        <div className="order-1 md:relative md:order-2 md:w-2/6">
+          <ul className="md:sticky md:top-16">
             <li>
               <h5>Year</h5>
               <hr />
