@@ -2,6 +2,7 @@ import React from 'react'
 
 import { ICarousel } from '@/../types/ICarousel'
 import Carousel from '@/components/Carousel'
+import ProjectMetrics from '@/components/ProjectMetrics'
 import Container from '@/layouts/containers/Container'
 import TwoCols from '@/layouts/grids/TwoCols'
 
@@ -166,40 +167,6 @@ const LeftSide: React.FC = () => {
   )
 }
 
-const RightSide: React.FC = () => {
-  return (
-    <>
-      <ul className="md:sticky md:top-16">
-        <li>
-          <h5>Year</h5>
-          <hr />
-          <p>2022</p>
-        </li>
-        <li>
-          <h5>Role</h5>
-          <hr />
-          <p>UX/UI Designer</p>
-        </li>
-        <li>
-          <h5>Technology</h5>
-          <hr />
-          <p>Sketch, Figma, Illustrator</p>
-        </li>
-        <li>
-          <h5>Research Method</h5>
-          <hr />
-          <p>Usability Studies, Surveys, Interviews, Preference Tests</p>
-        </li>
-        <li>
-          <h5>Application</h5>
-          <hr />
-          <p>Live App</p>
-        </li>
-      </ul>
-    </>
-  )
-}
-
 const Tempso: React.FC = () => {
   return (
     <Container>
@@ -212,11 +179,18 @@ const Tempso: React.FC = () => {
         <h6>DESIGNED BY PIERRE PARIENTE DIMITROV</h6>
       </div>
       <div className="flex flex-col space-y-2 md:flex-row">
-        <TwoCols leftSide={<LeftSide />} rightSide={<RightSide />} />
-        {/* left side */}
-        <div className="order-2 pr-36 md:order-1 md:w-4/6"></div>
-        {/* right side */}
-        <div className="order-1 md:relative md:order-2 md:w-2/6"></div>
+        <TwoCols
+          leftSide={<LeftSide />}
+          rightSide={
+            <ProjectMetrics
+              year="2022"
+              role="UX/UI Designer"
+              technology="Sketch, Figma, Illustrato"
+              method="Usability Studies, Surveys, Interviews, Preference Tests"
+              category="Mobile Application"
+            />
+          }
+        />
       </div>
     </Container>
   )
