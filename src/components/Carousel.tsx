@@ -26,8 +26,8 @@ const Carousel: React.FC<{ carouselItems: ICarousel[] }> = (props) => {
     return () => clearTimeout(timer)
   }, [carouselIndex])
   return (
-    <div className="h-screen w-full">
-      <div className="relative flex h-4/6 w-full items-center md:h-5/6">
+    <div className="h-[500px] w-full">
+      <div className="relative flex h-4/6 w-full items-center md:h-full">
         {carouselItems.map((item, index: number) => {
           return (
             <div
@@ -50,7 +50,7 @@ const Carousel: React.FC<{ carouselItems: ICarousel[] }> = (props) => {
           )
         })}
 
-        <div className="absolute -bottom-12 flex w-full justify-center">
+        <div className="absolute -bottom-8 flex w-full justify-center">
           <ul className="flex space-x-3">
             {carouselItems.map((item, index: number) => {
               return (

@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import React from 'react'
 
 import { ICarousel } from '@/../types/ICarousel'
@@ -47,17 +48,17 @@ const TEMPSO: ICarousel[] = [
 const LeftSide: React.FC = () => {
   return (
     <>
-      <div>
-        <p>
-          Tempso is a live Classical Music Streaming Mobile App, fully
-          integrated with Spotify and Apple Music. My task was to design a
-          mobile application where a user could discover and browse the
-          classical music catalogue, compare recordings and save recordings and
-          playlists to a library
-        </p>
-      </div>
-      <div className="flex flex-col space-y-2">
+      <div className="flex flex-col space-y-8">
         <div>
+          <p>
+            Tempso is a live Classical Music Streaming Mobile App, fully
+            integrated with Spotify and Apple Music. My task was to design a
+            mobile application where a user could discover and browse the
+            classical music catalogue, compare recordings and save recordings
+            and playlists to a library
+          </p>
+        </div>
+        <div className="flex flex-col space-y-2">
           <h3>Process</h3>
           <p>
             As the sole UX/UI designer and researcher, my goal was to create a
@@ -66,7 +67,7 @@ const LeftSide: React.FC = () => {
             the process was divided into the following steps:
           </p>
         </div>
-        <div>
+        <div className="flex flex-col space-y-2">
           <h3>Research</h3>
           <p>
             I spent a full month conducting user research with musicians,
@@ -89,11 +90,11 @@ const LeftSide: React.FC = () => {
         </div>
 
         {/* Pain Points */}
-        <div>
+        <div className="flex flex-col space-y-2">
           <h3>Pain Points</h3>
           <div className="flex flex-col space-y-4">
-            <div>
-              <h4>Accuracy</h4>
+            <div className="flex flex-col space-y-1">
+              <h4>🎯 Accuracy</h4>
               <p>
                 Classical music specialists who didn’t stream classical music
                 said their reasoning was that they could never get a clear
@@ -105,8 +106,8 @@ const LeftSide: React.FC = () => {
                 architecture which would guide the design process.
               </p>
             </div>
-            <div>
-              <h4>Exhaustivity</h4>
+            <div className="flex flex-col space-y-1">
+              <h4>♾️ Exhaustivity</h4>
               <p>
                 Classical music specialists felt like they could never browse
                 the complete discography of a performer, nor the complete list
@@ -115,8 +116,8 @@ const LeftSide: React.FC = () => {
                 their preferred version.
               </p>
             </div>
-            <div>
-              <h4>Discovery</h4>
+            <div className="flex flex-col space-y-1">
+              <h4>🧭 Discovery</h4>
               <p>
                 Non-specialists classical music listeners felt like it was
                 extremely difficult to know where to start their journey on
@@ -131,13 +132,36 @@ const LeftSide: React.FC = () => {
         </div>
 
         {/* Define */}
-        <div>
+        <div className="flex flex-col space-y-2">
           <h3>Define</h3>
           <p>
             I began the defining stage by creating multiple personas based on
             users interviewed during the research stage.
           </p>
-          <p>IMAGE</p>
+          <div className="flex flex-col space-y-4">
+            <div>
+              <Image
+                src="/Cecilia.png"
+                alt="Persona 1"
+                layout="responsive"
+                width={1920}
+                height={1080}
+                objectFit="cover"
+                priority
+              />
+            </div>
+            <div>
+              <Image
+                src="/Benjamin.png"
+                alt="Persona 2"
+                layout="responsive"
+                width={1920}
+                height={1080}
+                objectFit="cover"
+                priority
+              />
+            </div>
+          </div>
           <p>
             My biggest takeaway from research was that users wanted different
             type of experience for a classical music streaming app.
@@ -173,24 +197,29 @@ const Tempso: React.FC = () => {
       {/* carousel */}
       <Carousel carouselItems={TEMPSO} />
 
-      {/* title */}
-      <div className="flex w-full flex-col space-y-1">
-        <h2>TEMPSO</h2>
-        <h6>DESIGNED BY PIERRE PARIENTE DIMITROV</h6>
-      </div>
-      <div className="flex flex-col space-y-2 md:flex-row">
-        <TwoCols
-          leftSide={<LeftSide />}
-          rightSide={
-            <ProjectMetrics
-              year="2022"
-              role="UX/UI Designer"
-              technology="Sketch, Figma, Illustrato"
-              method="Usability Studies, Surveys, Interviews, Preference Tests"
-              category="Mobile Application"
-            />
-          }
-        />
+      <div className="mt-16 flex flex-col space-y-8">
+        {/* title */}
+        <div className="flex w-full flex-col space-y-0">
+          <h2>TEMPSO</h2>
+          <h6 className="tracking-widest">
+            DESIGNED BY PIERRE PARIENTE DIMITROV
+          </h6>
+        </div>
+        {/* content */}
+        <div className="flex flex-col space-y-2 md:flex-row">
+          <TwoCols
+            leftSide={<LeftSide />}
+            rightSide={
+              <ProjectMetrics
+                year="2022"
+                role="UX/UI Designer"
+                technology="Sketch, Figma, Illustrato"
+                method="Usability Studies, Surveys, Interviews, Preference Tests"
+                category="Mobile Application"
+              />
+            }
+          />
+        </div>
       </div>
     </Container>
   )
