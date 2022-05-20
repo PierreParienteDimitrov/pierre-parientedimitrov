@@ -55,7 +55,7 @@ const Carousel: React.FC<{ carouselItems: ICarousel[] }> = (props) => {
             {carouselItems.map((item, index: number) => {
               return (
                 <li
-                  key={index}
+                  key={item.title}
                   onClick={(e) => handleCarouselClick(e)}
                   value={index}
                   className={`h-2 w-2 cursor-pointer rounded-full ${
