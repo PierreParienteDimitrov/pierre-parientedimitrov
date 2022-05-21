@@ -1,3 +1,4 @@
+import Hero from '@/components/Hero/Hero'
 import Container from '@/layouts/containers/Container'
 
 const Index: React.FC = () => {
@@ -5,11 +6,7 @@ const Index: React.FC = () => {
     <Container>
       {/* intro */}
       <div className="flex h-screen flex-col space-y-10 pt-36">
-        <h1 className="font-bold">Let&apos;s Create!</h1>
-        <h3 className="text-red-400">
-          I&apos;m Pierre Pariente Dimitrov a Los Angeles based <br></br>UX/UI
-          Designer and Front-End Engineer
-        </h3>
+        <Hero />
       </div>
 
       {/* statement */}

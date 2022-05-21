@@ -5,6 +5,7 @@
 @tailwind utilities;
 
 body {
+  font-family: 'Playfair Display', serif;
   font-family: 'Inter', sans-serif;
 }
 
@@ -13,7 +14,7 @@ h1 {
 }
 
 h2 {
-  font-size: 4rem;
+  font-size: 5rem;
 }
 
 h3 {

@@ -13,6 +13,10 @@ module.exports = {
       '5xl': '3rem',
       '6xl': '4rem',
     },
+    fontFamily: {
+      sans: ['Inter'],
+      serif: ['Playfair Display'],
+    },
     extend: {
       colors: {
         gray: {
@@ -41,4 +45,4 @@ module.exports = {
     },
   },
   plugins: [],
-};
+}
