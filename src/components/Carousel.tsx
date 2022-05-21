@@ -43,6 +43,7 @@ const Carousel: React.FC<{ carouselItems: ICarousel[] }> = (props) => {
                 alt={item.alt}
                 layout="fill"
                 objectFit="cover"
+                objectPosition="center"
                 priority
               />
               {/* <h2 className="absolute bottom-4">{item?.title}</h2> */}
