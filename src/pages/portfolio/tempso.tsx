@@ -209,6 +209,8 @@ const Tempso: React.FC = () => {
         <div className="flex flex-col space-y-2 md:flex-row">
           <TwoCols
             leftSide={<LeftSide />}
+            leftMobileOrder="order-2"
+            leftDesktopOrder="order-1"
             rightSide={
               <ProjectMetrics
                 year="2022"
@@ -218,6 +220,8 @@ const Tempso: React.FC = () => {
                 category="Mobile Application"
               />
             }
+            rightMobileOrder="order-1"
+            rightDesktopOrder="order-2"
           />
         </div>
       </div>

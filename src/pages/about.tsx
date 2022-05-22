@@ -1,16 +1,20 @@
 const About = () => (
-  <div>
+  <div className="flex flex-col space-y-2">
     <p>
-      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ratione fuga
-      recusandae quidem. Quaerat molestiae blanditiis doloremque possimus labore
-      voluptatibus distinctio recusandae autem esse explicabo molestias officia
-      placeat, accusamus aut saepe.
+      I started my career in San Francisco, as a Strategic Analyst for a major
+      international bank. I learned there how to conduct Market Research and
+      User Interviews. This lead me to the world of UX/UI Design.
     </p>
     <p>
-      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ratione fuga
-      recusandae quidem. Quaerat molestiae blanditiis doloremque possimus labore
-      voluptatibus distinctio recusandae autem esse explicabo molestias officia
-      placeat, accusamus aut saepe.
+      After multiple online trainings and many hours working of different
+      projects, I started a new chapter of my career as a Product Designer. Over
+      the last five years, I have conceptualised, designed and built Mobile
+      Applications, Websites and Web App for a wide range of industries.
+    </p>
+    <p>
+      In 2020, at the start of the pandemic, I started a Full-Stack Web
+      Development Bootcamp with UCLA. I have since then refined my engineering
+      skills and worked on multiple web-based projects.
     </p>
   </div>
 )

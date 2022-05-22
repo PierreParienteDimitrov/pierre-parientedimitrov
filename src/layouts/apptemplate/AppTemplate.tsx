@@ -1,8 +1,8 @@
 import Link from 'next/link'
 import { useRouter } from 'next/router'
-import { LayoutProps } from 'types/LayoutProps'
+import { ILayoutProps } from 'types/ILayoutProps'
 
-const AppTemplate = ({ children }: LayoutProps) => {
+const AppTemplate = ({ children }: ILayoutProps) => {
   const router = useRouter()
   const pathname = router.pathname
 

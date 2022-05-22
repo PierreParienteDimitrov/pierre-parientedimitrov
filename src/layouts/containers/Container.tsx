@@ -1,4 +1,4 @@
-import { LayoutProps } from 'types/LayoutProps'
+import { LayoutProps } from 'types/ILayoutProps'
 
 const Container = ({ children }: LayoutProps) => {
   return <div className="px-4 md:px-24">{children}</div>
