@@ -48,7 +48,7 @@ const TEMPSO: ICarousel[] = [
 const LeftSide: React.FC = () => {
   return (
     <>
-      <div className="flex flex-col space-y-8">
+      <div className="flex flex-col space-y-8 pl-16">
         <div>
           <p>
             Tempso is a live Classical Music Streaming Mobile App, fully
@@ -203,9 +203,7 @@ const Tempso: React.FC = () => {
         {/* title */}
         <div className="flex w-full flex-col space-y-0">
           <h2>TEMPSO</h2>
-          <h6 className="tracking-widest">
-            DESIGNED BY PIERRE PARIENTE DIMITROV
-          </h6>
+          <h5 className="">DESIGNED BY PIERRE PARIENTE DIMITROV</h5>
         </div>
         {/* content */}
         <div className="flex flex-col space-y-2 md:flex-row">
