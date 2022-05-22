@@ -65,7 +65,7 @@ const Hero = () => {
         </span>
         . I am a Los Angeles based:
       </h4>
-      <ul className="flex flex-col md:-space-y-8">
+      <ul className="flex h-96 flex-col md:-space-y-8">
         {TypewriterItems.map((element) => {
           return (
             <li key={element.title}>

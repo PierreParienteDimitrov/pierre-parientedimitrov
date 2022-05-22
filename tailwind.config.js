@@ -20,11 +20,20 @@ module.exports = {
     extend: {
       colors: {
         primary: {
-          100: '#BF98AD',
-          200: '#B07E99',
-          300: '#A06485',
-          400: '#87536F',
-          500: '#6D435A',
+          100: '#CD55D7',
+          200: '#C642CF',
+          300: '#A938B1',
+          400: '#8D2E94',
+          500: '#712476',
+          600: '#541A59',
+          700: '#38113B',
+          800: '#1C071E',
+        },
+        secondary: {
+          DEFAULT: '#D1D2F9',
+        },
+        tertiary: {
+          DEFAULT: '#A3BCF9',
         },
         gray: {
           100: '#f7fafc',
@@ -53,3 +62,10 @@ module.exports = {
   },
   plugins: [],
 }
+
+// /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#a3bcf9+0,d1d2f9+100 */
+// background: #a3bcf9; /* Old browsers */
+// background: -moz-linear-gradient(top,  #a3bcf9 0%, #d1d2f9 100%); /* FF3.6-15 */
+// background: -webkit-linear-gradient(top,  #a3bcf9 0%,#d1d2f9 100%); /* Chrome10-25,Safari5.1-6 */
+// background: linear-gradient(to bottom,  #a3bcf9 0%,#d1d2f9 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+// filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a3bcf9', endColorstr='#d1d2f9',GradientType=0 ); /* IE6-9 */

@@ -1,7 +1,7 @@
-import { LayoutProps } from 'types/ILayoutProps'
+import { ILayoutProps } from 'types/ILayoutProps'
 
-const Container = ({ children }: LayoutProps) => {
-  return <div className="px-4 md:px-24">{children}</div>
+const Container = ({ children }: ILayoutProps) => {
+  return <div className="w-full px-4 md:px-24">{children}</div>
 }
 
 export default Container

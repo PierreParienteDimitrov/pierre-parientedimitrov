@@ -14,7 +14,7 @@ const Button: React.FC<IButton> = ({ children, color, variant, size }) => {
     if (variant === 'outlined') {
       switch (color) {
         case 'primary':
-          return 'border border-primary-500 text-primary-500 transition delay-150 duration-300 ease-in-out hover:bg-primary-100'
+          return 'border border-secondary text-primary-500 transition delay-50 duration-300 ease-in-out hover:bg-secondary'
         default:
           break
       }
@@ -25,7 +25,9 @@ const Button: React.FC<IButton> = ({ children, color, variant, size }) => {
 
   return (
     <button className={`rounded-md ${buttonStyle()}`}>
+      {size === 'large' && <h4 className="px-8 py-2">{children}</h4>}
       {size === 'medium' && <h5 className="px-4 py-2">{children}</h5>}
+      {size === 'small' && <h5 className="px-4 py-1">{children}</h5>}
     </button>
   )
 }
