@@ -194,6 +194,8 @@ const LeftSide: React.FC = () => {
 const Tempso: React.FC = () => {
   return (
     <Container>
+      <h2>In construction</h2>
+
       {/* carousel */}
       <Carousel carouselItems={TEMPSO} />
 
