@@ -11,12 +11,12 @@ export const WORK = [
 
 export const TypewriterItems = [
   {
-    title: 'dreamer',
+    title: 'creator',
     skill: 'designer',
     url: '/designer',
   },
   {
-    title: 'creator',
+    title: 'builder',
     skill: 'web developer',
     url: '/developer',
   },
