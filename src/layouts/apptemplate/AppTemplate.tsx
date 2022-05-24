@@ -10,8 +10,6 @@ const AppTemplate = ({ children }: ILayoutProps) => {
   const router = useRouter()
   const pathname = router.pathname
 
-  console.log(pathname)
-
   return (
     <div>
       <nav className="relative z-50 flex h-12 w-full items-center justify-start">
