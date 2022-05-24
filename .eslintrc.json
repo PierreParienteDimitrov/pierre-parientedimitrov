@@ -58,7 +58,8 @@
         "unused-imports/no-unused-vars": [
           "error",
           { "argsIgnorePattern": "^_" }
-        ]
+        ],
+        "@typescript-eslint/no-shadow": "off"
       }
     },
     // Configuration for testing
