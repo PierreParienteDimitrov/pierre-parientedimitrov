@@ -4,7 +4,7 @@ import { IProjectMetrics } from 'types/IProjectMetrics'
 const ProjectMetrics: React.FC<IProjectMetrics> = (props) => {
   const { year, role, technology, method, category } = props
   return (
-    <ul className="flex flex-col space-y-6 md:sticky md:top-16">
+    <ul className="flex flex-col space-y-6">
       <li className="flex flex-col space-y-2">
         <div className="flex flex-col space-y-1">
           <h6 className="font-bold uppercase">Year</h6>

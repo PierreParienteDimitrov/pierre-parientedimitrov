@@ -5,7 +5,6 @@ import { ICarousel } from '@/../types/ICarousel'
 import Carousel from '@/components/Carousel'
 import ProjectMetrics from '@/components/ProjectMetrics'
 import Container from '@/layouts/containers/Container'
-import TwoCols from '@/layouts/grids/TwoCols'
 
 const TEMPSO: ICarousel[] = [
   {
@@ -48,7 +47,7 @@ const TEMPSO: ICarousel[] = [
 const LeftSide: React.FC = () => {
   return (
     <>
-      <div className="flex flex-col space-y-12 pt-4 md:pr-16">
+      <div className="flex flex-col space-y-12 pr-20">
         <div>
           {/* introduction */}
           <div className="flex flex-col space-y-4">
@@ -69,7 +68,7 @@ const LeftSide: React.FC = () => {
         </div>
         {/* Process */}
         <div className="flex flex-col space-y-2">
-          <h4 className="font-bold">Process</h4>
+          <h3 className="font-bold">Process</h3>
           <p>
             As the sole UX/UI designer and researcher, my goal was to create a
             user-centered design for Tempso by spending extra time with
@@ -78,7 +77,7 @@ const LeftSide: React.FC = () => {
           </p>
         </div>
         <div className="flex flex-col space-y-2">
-          <h4 className="font-bold">Research</h4>
+          <h3 className="font-bold">Research</h3>
           <p>
             I spent a full month conducting user research with musicians,
             classical music amateurs and music streaming users through
@@ -98,12 +97,40 @@ const LeftSide: React.FC = () => {
             start.
           </p>
         </div>
+      </div>
+    </>
+  )
+}
 
+const Tempso: React.FC = () => {
+  return (
+    <Container>
+      {/* carousel */}
+      <div className="py-8">
+        <Carousel carouselItems={TEMPSO} />
+      </div>
+
+      <div className="mt-16 flex flex-col space-y-8">
+        {/* content */}
+        <div className="flex flex-col space-y-4 md:flex-row md:items-start md:space-x-10">
+          <div className="md:w-4/6 md:pr-16">
+            <LeftSide />
+          </div>
+          <div className="md:w-2/6 ">
+            <ProjectMetrics
+              year="2020"
+              role="UX/UI Designer"
+              technology="Sketch, Figma, Illustrato"
+              method="Usability Studies, Surveys, Interviews, Preference Tests"
+              category="Mobile Application"
+            />
+          </div>
+        </div>
         {/* Pain Points */}
         <div className="flex flex-col space-y-2">
-          <h4 className="font-bold">Pain Points</h4>
-          <div className="flex flex-col space-y-4">
-            <div className="flex flex-col space-y-1">
+          <h3 className="font-bold">Pain Points</h3>
+          <div className="flex flex-col space-y-4 md:flex-row md:space-x-16">
+            <div className="flex flex-col space-y-1 md:w-2/6">
               <h4 className="font-bold">🎯 Accuracy</h4>
               <p>
                 Classical music specialists who didn’t stream classical music
@@ -116,7 +143,7 @@ const LeftSide: React.FC = () => {
                 architecture which would guide the design process.
               </p>
             </div>
-            <div className="flex flex-col space-y-1">
+            <div className="flex flex-col space-y-1 md:w-2/6">
               <h4>♾️ Exhaustivity</h4>
               <p>
                 Classical music specialists felt like they could never browse
@@ -126,7 +153,7 @@ const LeftSide: React.FC = () => {
                 their preferred version.
               </p>
             </div>
-            <div className="flex flex-col space-y-1">
+            <div className="flex flex-col space-y-1 md:w-2/6">
               <h4>🧭 Discovery</h4>
               <p>
                 Non-specialists classical music listeners felt like it was
@@ -140,7 +167,6 @@ const LeftSide: React.FC = () => {
             </div>
           </div>
         </div>
-
         {/* Define */}
         <div className="flex flex-col space-y-2">
           <h3>Define</h3>
@@ -206,39 +232,6 @@ const LeftSide: React.FC = () => {
           </p>
           <p>USER JOURNEY 1</p>
           <p>USER JOURNEY 2</p>
-        </div>
-      </div>
-    </>
-  )
-}
-
-const Tempso: React.FC = () => {
-  return (
-    <Container>
-      {/* carousel */}
-      <div className="py-8">
-        <Carousel carouselItems={TEMPSO} />
-      </div>
-
-      <div className="mt-16 flex flex-col space-y-8">
-        {/* content */}
-        <div className="flex flex-col space-y-4 md:flex-row">
-          <TwoCols
-            leftSide={<LeftSide />}
-            leftMobileOrder="order-2"
-            leftDesktopOrder="order-1"
-            rightSide={
-              <ProjectMetrics
-                year="2020"
-                role="UX/UI Designer"
-                technology="Sketch, Figma, Illustrato"
-                method="Usability Studies, Surveys, Interviews, Preference Tests"
-                category="Mobile Application"
-              />
-            }
-            rightMobileOrder="order-1"
-            rightDesktopOrder="order-2"
-          />
         </div>
       </div>
     </Container>
