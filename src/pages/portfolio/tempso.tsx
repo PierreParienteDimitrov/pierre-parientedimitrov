@@ -48,18 +48,28 @@ const TEMPSO: ICarousel[] = [
 const LeftSide: React.FC = () => {
   return (
     <>
-      <div className="flex flex-col space-y-8 pl-16">
+      <div className="flex flex-col space-y-12 pt-4 md:pr-16">
         <div>
-          <p>
-            Tempso is a live Classical Music Streaming Mobile App, fully
-            integrated with Spotify and Apple Music. My task was to design a
-            mobile application where a user could discover and browse the
-            classical music catalogue, compare recordings and save recordings
-            and playlists to a library
-          </p>
+          {/* introduction */}
+          <div className="flex flex-col space-y-4">
+            <h4>
+              <span className="font-bold">Tempso</span> is a live Classical
+              Music Streaming Mobile App, fully integrated with Spotify and
+              Apple Music.
+            </h4>
+            <p>
+              My task was to design a mobile application where users could
+              <span className="font-bold italic"> discover </span> and{' '}
+              <span className="font-bold italic"> browse </span>
+              the classical music catalogue,{' '}
+              <span className="font-bold italic"> compare </span> recordings and
+              save liked recordings and playlists to their library.{' '}
+            </p>
+          </div>
         </div>
+        {/* Process */}
         <div className="flex flex-col space-y-2">
-          <h3>Process</h3>
+          <h4 className="font-bold">Process</h4>
           <p>
             As the sole UX/UI designer and researcher, my goal was to create a
             user-centered design for Tempso by spending extra time with
@@ -68,7 +78,7 @@ const LeftSide: React.FC = () => {
           </p>
         </div>
         <div className="flex flex-col space-y-2">
-          <h3>Research</h3>
+          <h4 className="font-bold">Research</h4>
           <p>
             I spent a full month conducting user research with musicians,
             classical music amateurs and music streaming users through
@@ -91,10 +101,10 @@ const LeftSide: React.FC = () => {
 
         {/* Pain Points */}
         <div className="flex flex-col space-y-2">
-          <h3>Pain Points</h3>
+          <h4 className="font-bold">Pain Points</h4>
           <div className="flex flex-col space-y-4">
             <div className="flex flex-col space-y-1">
-              <h4>🎯 Accuracy</h4>
+              <h4 className="font-bold">🎯 Accuracy</h4>
               <p>
                 Classical music specialists who didn’t stream classical music
                 said their reasoning was that they could never get a clear
@@ -152,8 +162,19 @@ const LeftSide: React.FC = () => {
             </div>
             <div>
               <Image
-                src="/Benjamin.png"
+                src="/Nathalie.png"
                 alt="Persona 2"
+                layout="responsive"
+                width={1920}
+                height={1080}
+                objectFit="cover"
+                priority
+              />
+            </div>
+            <div>
+              <Image
+                src="/Benjamin.png"
+                alt="Persona 3"
                 layout="responsive"
                 width={1920}
                 height={1080}
@@ -194,26 +215,21 @@ const LeftSide: React.FC = () => {
 const Tempso: React.FC = () => {
   return (
     <Container>
-      <h2>In construction</h2>
-
       {/* carousel */}
-      <Carousel carouselItems={TEMPSO} />
+      <div className="py-8">
+        <Carousel carouselItems={TEMPSO} />
+      </div>
 
       <div className="mt-16 flex flex-col space-y-8">
-        {/* title */}
-        <div className="flex w-full flex-col space-y-0">
-          <h2>TEMPSO</h2>
-          <h5 className="">DESIGNED BY PIERRE PARIENTE DIMITROV</h5>
-        </div>
         {/* content */}
-        <div className="flex flex-col space-y-2 md:flex-row">
+        <div className="flex flex-col space-y-4 md:flex-row">
           <TwoCols
             leftSide={<LeftSide />}
             leftMobileOrder="order-2"
             leftDesktopOrder="order-1"
             rightSide={
               <ProjectMetrics
-                year="2022"
+                year="2020"
                 role="UX/UI Designer"
                 technology="Sketch, Figma, Illustrato"
                 method="Usability Studies, Surveys, Interviews, Preference Tests"
