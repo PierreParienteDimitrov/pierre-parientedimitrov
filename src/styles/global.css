@@ -39,8 +39,23 @@ h6 {
 }
 
 input {
-  font-size: 0.875rem;
+  font-size: 1rem;
   font-weight: 500;
+}
+
+label {
+  font-size: 0.6rem;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 0.05rem;
+}
+
+input[type='text'] {
+  border: solid 1px black;
+}
+
+input[type='email'] {
+  border: solid 1px black;
 }
 
 /* clears the ‘X’ from Internet Explorer */

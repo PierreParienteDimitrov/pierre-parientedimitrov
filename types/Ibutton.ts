@@ -3,4 +3,5 @@ export interface IButton {
   color: string
   variant: string
   size: string
+  onClick: (event: React.MouseEvent<HTMLButtonElement>) => void
 }

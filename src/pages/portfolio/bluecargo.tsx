@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react'
+import React, { useRef, useState } from 'react'
 
 import Button from '@/components/Button'
 
@@ -12,11 +12,8 @@ const Bluecargo: React.FC = () => {
 
   const [password, setPassword] = useState<string>('')
 
-  useEffect(() => {}, [])
-
   const handleSubmit = (e: React.SyntheticEvent) => {
     e.preventDefault()
-    console.log(password)
     if (password === BLUE_CARGO_PASSWORD) {
       setHasAccess(true)
     }

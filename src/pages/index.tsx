@@ -1,7 +1,6 @@
 import Image from 'next/image'
 import Link from 'next/link'
 
-import Button from '@/components/Button'
 import Hero from '@/components/Hero/Hero'
 import Container from '@/layouts/containers/Container'
 import TwoCols from '@/layouts/grids/TwoCols'
@@ -14,11 +13,9 @@ const RightSide: React.FC = () => {
           You have a project in mind? <br />
           Let&apos;s create!
         </p>
-        <Button variant="outlined" size="large" color="primary">
-          <Link href="/contact" passHref>
-            Contact Me
-          </Link>
-        </Button>
+        <Link href="/contact" passHref>
+          Contact Me
+        </Link>
       </div>
     </>
   )
@@ -174,11 +171,9 @@ const Index: React.FC = () => {
               Product Designer in 2017. In 2020, at the start of the pandemic, I
               completed a Full-Stack Web Development Bootcamp with UCLA.
             </p>
-            <Button variant="outlined" size="medium" color="primary">
-              <Link href="/about" passHref>
-                Learn More
-              </Link>
-            </Button>
+            <Link href="/about" passHref>
+              Learn More
+            </Link>
           </div>
         </div>
 

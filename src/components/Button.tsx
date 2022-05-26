@@ -1,7 +1,13 @@
 import React from 'react'
 import { IButton } from 'types/Ibutton'
 
-const Button: React.FC<IButton> = ({ children, color, variant, size }) => {
+const Button: React.FC<IButton> = ({
+  children,
+  color,
+  variant,
+  size,
+  onClick,
+}) => {
   const buttonStyle = () => {
     if (variant === 'contained') {
       switch (color) {
@@ -24,7 +30,7 @@ const Button: React.FC<IButton> = ({ children, color, variant, size }) => {
   }
 
   return (
-    <button className={`rounded-md ${buttonStyle()}`}>
+    <button className={`rounded-md ${buttonStyle()}`} onClick={onClick}>
       {size === 'large' && <h4 className="px-8 py-2">{children}</h4>}
       {size === 'medium' && <h5 className="px-4 py-2">{children}</h5>}
       {size === 'small' && <h5 className="px-4 py-1">{children}</h5>}
