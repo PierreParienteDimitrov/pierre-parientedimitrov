@@ -1,7 +1,5 @@
 import React, { useRef, useState } from 'react'
 
-import Button from '@/components/Button'
-
 const BLUE_CARGO_PASSWORD = 'BL7;$wKZF)UaGd24'
 
 const Bluecargo: React.FC = () => {
@@ -26,16 +24,14 @@ const Bluecargo: React.FC = () => {
       {!hasAccess ? (
         <>
           <h4>Enter password</h4>
-          <Button variant="primary" size="medium" color="primary">
-            <form onSubmit={(e) => handleSubmit(e)} ref={inputEl}>
-              <input
-                type="password"
-                value={password}
-                className="border border-black"
-                onChange={(e) => setPassword(e.target.value)}
-              />
-            </form>
-          </Button>
+          <form onSubmit={(e) => handleSubmit(e)} ref={inputEl}>
+            <input
+              type="password"
+              value={password}
+              className="border border-black"
+              onChange={(e) => setPassword(e.target.value)}
+            />
+          </form>
           {alert && <h4>incorrect password</h4>}
         </>
       ) : (

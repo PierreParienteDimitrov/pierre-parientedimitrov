@@ -16,7 +16,8 @@ const Users: React.FC<{ users: IUser[] }> = ({ users }) => {
 }
 
 /* Retrieves user(s) data from mongodb database */
-export async function getServerSideProps() {
+export async function getServerSideProps(context) {
+  console.log(context.id)
   await dbConnect()
 
   /* find all the data in our database */
