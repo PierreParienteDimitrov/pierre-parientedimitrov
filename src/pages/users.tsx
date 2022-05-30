@@ -1,16 +1,23 @@
 import React from 'react'
 import { IUser } from 'types/IUser'
 
+import AccessForm from '@/components/AccessForm'
+
 import dbConnect from '../../lib/dbConnect'
 import User from '../../models/User'
 
-const users: React.FC<{ users: IUser[] }> = ({ users }) => {
-  console.log(users)
-  return <div>{users.map((user) => user.email)}</div>
+const Users: React.FC<{ users: IUser[] }> = ({ users }) => {
+  return (
+    <div>
+      {users.map((user) => user.email)}
+      <AccessForm />
+    </div>
+  )
 }
 
 /* Retrieves user(s) data from mongodb database */
-export async function getServerSideProps() {
+export async function getServerSideProps(context) {
+  console.log(context.id)
   await dbConnect()
 
   /* find all the data in our database */
@@ -24,4 +31,4 @@ export async function getServerSideProps() {
   return { props: { users: users } }
 }
 
-export default users
+export default Users
