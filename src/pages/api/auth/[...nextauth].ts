@@ -1,95 +1,75 @@
-import { MongoDBAdapter } from '@next-auth/mongodb-adapter'
-import clientPromise from 'lib/mongodb'
+import User from 'models/User'
 import NextAuth from 'next-auth'
-import EmailProvider from 'next-auth/providers/email'
+import CredentialsProvider from 'next-auth/providers/credentials'
 
-// For more information on each option (and a full list of options) go to
-// https://next-auth.js.org/configuration/options
 export default NextAuth({
-  adapter: MongoDBAdapter(clientPromise),
+  session: {
+    strategy: 'jwt',
+    maxAge: 3 * 60 * 60, // 3 hours
+  },
+  secret: process.env.NEXTAUTH_SECRET,
 
   providers: [
-    EmailProvider({
-      server: {
-        host: process.env.EMAIL_SERVER_HOST,
-        port: process.env.EMAIL_SERVER_PORT,
-        auth: {
-          user: process.env.EMAIL_SERVER_USER,
-          pass: process.env.EMAIL_SERVER_PASSWORD,
+    CredentialsProvider({
+      // The name to display on the sign in form (e.g. "Sign in with...")
+      name: 'submit your email',
+      // The credentials is used to generate a suitable form on the sign in page.
+      // You can specify whatever fields you are expecting to be submitted.
+      // e.g. domain, username, password, 2FA token, etc.
+      // You can pass any HTML attribute to the <input> tag through the object.
+      credentials: {
+        email: {
+          label: 'email',
+          type: 'email',
+          placeholder: 'email@email.com',
         },
       },
-      from: process.env.EMAIL_FROM,
+      authorize: async (credentials) => {
+        try {
+          const res = await credentials?.email
+          console.log(res)
+          const user = await User.findOne({
+            email: res,
+          })
+          if (user) {
+            return {
+              res,
+            }
+          }
+
+          if (!user) {
+            mongoose.connection.close()
+          }
+          return null // Add this line to satisfy the `authorize` typings
+        } catch (error) {
+          //const errorMessage = e.response.data.message;
+          //throw new Error(errorMessage);
+          return null
+        }
+      },
     }),
   ],
-  // Database optional. MySQL, Maria DB, Postgres and MongoDB are supported.
-  // https://next-auth.js.org/configuration/databases
-  //
-  // Notes:
-  // * You must install an appropriate node_module for your database
-  // * The Email provider requires a database (OAuth providers do not)
-  // database: process.env.DATABASE_URL,
+  pages: { signIn: '/signin' },
 
-  // The secret should be set to a reasonably long random string.
-  // It is used to sign cookies and to sign and encrypt JSON Web Tokens, unless
-  // a separate secret is defined explicitly for encrypting the JWT.
-  secret: process.env.SECRET,
+  // Providers.Credentials({
+  //   async authorize(credentials) {
+  //     await dbConnect()
 
-  session: {
-    // Use JSON Web Tokens for session instead of database sessions.
-    // This option can be used with or without a database for users/accounts.
-    // Note: `strategy` should be set to 'jwt' if no database is used.
-    strategy: 'database',
+  //     // is there a user
+  //     const user = await User.findOne({
+  //       email: credentials.email,
+  //     }).exec()
 
-    // Seconds - How long until an idle session expires and is no longer valid.
-    maxAge: 30 * 24 * 60 * 60, // 30 days
+  //     console.log(user)
 
-    // Seconds - Throttle how frequently to write to database to extend a session.
-    // Use it to limit write operations. Set to 0 to always update the database.
-    // Note: This option is ignored if using JSON Web Tokens
-    // updateAge: 24 * 60 * 60, // 24 hours
-  },
+  //     if (!user) {
+  //       mongoose.connection.close()
+  //       throw new Error('No user found')
+  //     }
 
-  // JSON Web tokens are only used for sessions if the `strategy: 'jwt'` session
-  // option is set - or by default if no database is specified.
-  // https://next-auth.js.org/configuration/options#jwt
-  jwt: {
-    // A secret to use for key generation (you should set this explicitly)
-    secret: process.env.SECRET,
-    // Set to true to use encryption (default: false)
-    // encryption: true,
-    // You can define your own encode/decode functions for signing and encryption
-    // if you want to override the default behaviour.
-    // encode: async ({ secret, token, maxAge }) => {},
-    // decode: async ({ secret, token, maxAge }) => {},
-  },
-
-  // You can define custom pages to override the built-in ones. These will be regular Next.js pages
-  // so ensure that they are placed outside of the '/api' folder, e.g. signIn: '/auth/mycustom-signin'
-  // The routes shown here are the default URLs that will be used when a custom
-  // pages is not specified for that route.
-  // https://next-auth.js.org/configuration/pages
-  pages: {
-    // signIn: '/auth/signin',  // Displays signin buttons
-    // signOut: '/auth/signout', // Displays form with sign out button
-    // error: '/auth/error', // Error code passed in query string as ?error=
-    // verifyRequest: '/auth/verify-request', // Used for check email page
-    // newUser: null // If set, new users will be directed here on first sign in
-  },
-
-  // Callbacks are asynchronous functions you can use to control what happens
-  // when an action is performed.
-  // https://next-auth.js.org/configuration/callbacks
-  callbacks: {
-    // async signIn({ user, account, profile, email, credentials }) { return true },
-    // async redirect({ url, baseUrl }) { return baseUrl },
-    // async session({ session, token, user }) { return session },
-    // async jwt({ token, user, account, profile, isNewUser }) { return token }
-  },
-
-  // Events are useful for logging
-  // https://next-auth.js.org/configuration/events
-  events: {},
-
-  // Enable debug messages in the console if you are having problems
-  debug: false,
+  //     return {
+  //       email: user.email,
+  //     }
+  //   },
+  // }),
 })
