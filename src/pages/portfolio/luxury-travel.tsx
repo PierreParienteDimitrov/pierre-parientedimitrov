@@ -5,8 +5,12 @@ import React from 'react'
 
 import { pageInformation, Routes } from '@/constants/pages'
 
-const Bluecargo: React.FC = () => {
-  return <div>Hello</div>
+const Luxurytravel = () => {
+  return (
+    <div>
+      <h1>luxurytravel</h1>
+    </div>
+  )
 }
 
 export const getServerSideProps: GetServerSideProps = async (context) => {
@@ -39,4 +43,4 @@ export const getServerSideProps: GetServerSideProps = async (context) => {
   }
 }
 
-export default Bluecargo
+export default Luxurytravel

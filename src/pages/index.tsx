@@ -1,8 +1,8 @@
 import Image from 'next/image'
 import Link from 'next/link'
 
-import Button from '@/components/Button'
 import Hero from '@/components/Hero/Hero'
+import CaseStudy from '@/components/Home/CaseStudy'
 import Container from '@/layouts/containers/Container'
 import TwoCols from '@/layouts/grids/TwoCols'
 
@@ -14,11 +14,9 @@ const RightSide: React.FC = () => {
           You have a project in mind? <br />
           Let&apos;s create!
         </p>
-        <Button variant="outlined" size="large" color="primary">
-          <Link href="/contact" passHref>
-            Contact Me
-          </Link>
-        </Button>
+        <Link href="/contact" passHref>
+          Contact Me
+        </Link>
       </div>
     </>
   )
@@ -58,94 +56,8 @@ const Index: React.FC = () => {
         </Container>
       </div>
       {/* case studies */}
-      <div className="flex flex-col  md:mb-32">
-        {/* first row */}
-        <div className="flex flex-col md:flex-row">
-          {/* tempso */}
-          <div className="relative w-full md:w-1/2">
-            <Image
-              src="/case-study-tempso.png"
-              alt="Pierre Pariente Dimitrov"
-              layout="responsive"
-              width={640}
-              height={383}
-              objectFit="cover"
-              priority
-            />
-            <div className="absolute inset-0 flex cursor-pointer items-center justify-center opacity-0 duration-300 hover:bg-black hover:opacity-90">
-              <Link href="/portfolio/tempso" passHref>
-                <div className="flex flex-col items-center justify-center space-y-4 text-white">
-                  <h3>Tempso</h3>
-                  <h5>UX/UI Design - Mobile Application</h5>
-                </div>
-              </Link>
-            </div>
-          </div>
-          {/* bluecargo */}
-          <div className="relative w-full md:w-1/2">
-            <Image
-              src="/case-study-BlueCargo.png"
-              alt="Pierre Pariente Dimitrov"
-              layout="responsive"
-              width={640}
-              height={383}
-              objectFit="cover"
-              priority
-            />
-            <div className="absolute inset-0 flex cursor-pointer items-center justify-center opacity-0 duration-300 hover:bg-dark hover:opacity-90">
-              <Link href="/portfolio/bluecargo" passHref>
-                <div className="flex flex-col items-center justify-center space-y-4 text-white">
-                  <h3>BlueCargo</h3>
-                  <h5>UX/UI Design - Web App</h5>
-                </div>
-              </Link>
-            </div>
-          </div>
-        </div>
-        {/* second row */}
-        <div className="flex flex-col md:flex-row">
-          {/* luxury travel */}
-          <div className="relative w-full md:w-1/2">
-            <Image
-              src="/case-study-luxury-travel.png"
-              alt="Pierre Pariente Dimitrov"
-              layout="responsive"
-              width={640}
-              height={383}
-              objectFit="cover"
-              priority
-            />
-            <div className="absolute inset-0 flex cursor-pointer items-center justify-center opacity-0 duration-300 hover:bg-dark hover:opacity-90">
-              <Link href="/portfolio/luxurytravel" passHref>
-                <div className="flex flex-col items-center justify-center space-y-4 text-white">
-                  <h3>Luxury Travel Agency</h3>
-                  <h5>UX/UI Design - Website</h5>
-                </div>
-              </Link>
-            </div>
-          </div>
-          {/* UI shots */}
-          <div className="relative w-full md:w-1/2">
-            <Image
-              src="/case-study-ui-shots.png"
-              alt="Pierre Pariente Dimitrov"
-              layout="responsive"
-              width={640}
-              height={383}
-              objectFit="cover"
-              priority
-            />
-            <div className="absolute inset-0 flex cursor-pointer items-center justify-center opacity-0 duration-300 hover:bg-dark hover:opacity-90">
-              <Link href="/portfolio/uishots" passHref>
-                <div className="flex flex-col items-center justify-center space-y-4 text-white">
-                  <h3>UI Shots</h3>
-                  <h5>UX/UI Design - Practice</h5>
-                </div>
-              </Link>
-            </div>
-          </div>
-        </div>
-      </div>
+      <CaseStudy />
+
       <Container>
         {/* statement */}
         <div className="flex flex-col justify-items-start space-y-4 md:flex-row md:items-center">
@@ -174,11 +86,9 @@ const Index: React.FC = () => {
               Product Designer in 2017. In 2020, at the start of the pandemic, I
               completed a Full-Stack Web Development Bootcamp with UCLA.
             </p>
-            <Button variant="outlined" size="medium" color="primary">
-              <Link href="/about" passHref>
-                Learn More
-              </Link>
-            </Button>
+            <Link href="/about" passHref>
+              Learn More
+            </Link>
           </div>
         </div>
 
@@ -207,98 +117,3 @@ const Index: React.FC = () => {
 }
 
 export default Index
-
-// {/* first row */}
-// <div className="flex w-full flex-col space-y-10 md:flex-row md:space-y-0">
-//   {/* tempso */}
-//   <div className="relative flex h-full w-full flex-col space-y-2 text-center">
-//     <div className="absolute inset-0">
-//       <Link href="/portfolio/tempso" passHref>
-//         <Image
-//           src="/case-study-tempso.png"
-//           alt="Pierre Pariente Dimitrov"
-//           layout="responsive"
-//           width={640}
-//           height={383}
-//           objectFit="cover"
-//           priority
-//           className="cursor-pointer shadow-lg transition delay-150 duration-300 ease-in-out hover:scale-125"
-//         />
-//       </Link>
-//     </div>
-//     <div className="absolute inset-0 bg-red-200">
-//       <h5 className="font-semibold uppercase">
-//         UX/UI Design - Mobile Application - Live
-//       </h5>
-//     </div>
-//   </div>
-//   {/* case 2 */}
-//   <div className="relative flex h-full w-full flex-col space-y-2 text-center">
-//     <div className="absolute inset-0">
-//       <Link href="/portfolio/tempso" passHref>
-//         <Image
-//           src="/case-study-tempso.png"
-//           alt="Pierre Pariente Dimitrov"
-//           layout="responsive"
-//           width={640}
-//           height={383}
-//           objectFit="cover"
-//           priority
-//           className="cursor-pointer shadow-lg transition delay-150 duration-300 ease-in-out hover:scale-125"
-//         />
-//       </Link>
-//     </div>
-//     <div className="absolute inset-0 bg-red-200">
-//       <h5 className="font-semibold uppercase">
-//         UX/UI Design - Mobile Application - Live
-//       </h5>
-//     </div>
-//   </div>
-// </div>
-// {/* second row */}
-// <div className="flex w-full flex-col space-y-10 md:flex-row md:space-y-0">
-//   {/* tempso */}
-//   <div className="relative flex h-full w-full flex-col space-y-2 text-center">
-//     <div className="absolute inset-0">
-//       <Link href="/portfolio/tempso" passHref>
-//         <Image
-//           src="/case-study-tempso.png"
-//           alt="Pierre Pariente Dimitrov"
-//           layout="responsive"
-//           width={640}
-//           height={383}
-//           objectFit="cover"
-//           priority
-//           className="cursor-pointer shadow-lg transition delay-150 duration-300 ease-in-out hover:scale-125"
-//         />
-//       </Link>
-//     </div>
-//     <div className="absolute inset-0 bg-red-200">
-//       <h5 className="font-semibold uppercase">
-//         UX/UI Design - Mobile Application - Live
-//       </h5>
-//     </div>
-//   </div>
-//   {/* case 2 */}
-//   <div className="relative flex h-full w-full flex-col space-y-2 text-center">
-//     <div className="absolute inset-0">
-//       <Link href="/portfolio/tempso" passHref>
-//         <Image
-//           src="/case-study-tempso.png"
-//           alt="Pierre Pariente Dimitrov"
-//           layout="responsive"
-//           width={640}
-//           height={383}
-//           objectFit="cover"
-//           priority
-//           className="cursor-pointer shadow-lg transition delay-150 duration-300 ease-in-out hover:scale-125"
-//         />
-//       </Link>
-//     </div>
-//     <div className="absolute inset-0 bg-red-200">
-//       <h5 className="font-semibold uppercase">
-//         UX/UI Design - Mobile Application - Live
-//       </h5>
-//     </div>
-//   </div>
-// </div>
