@@ -1,14 +1,26 @@
 import Link from 'next/link'
 import { useRouter } from 'next/router'
+import { useSession } from 'next-auth/react'
+import React, { useState } from 'react'
+import { useEffect } from 'react'
 import { ILayoutProps } from 'types/ILayoutProps'
 
-import Button from '@/components/Button'
+import { pageInformation, Routes } from '@/constants/pages'
 
 import Container from '../containers/Container'
 
 const AppTemplate = ({ children }: ILayoutProps) => {
   const router = useRouter()
   const pathname = router.pathname
+  const session = useSession()
+  const [displayLogin, setDisplayLogin] = useState<boolean>(false)
+  console.log(session)
+
+  useEffect(() => {
+    if (session.status === 'unauthenticated') {
+      setDisplayLogin(true)
+    }
+  }, [])
 
   return (
     <div>
@@ -30,13 +42,18 @@ const AppTemplate = ({ children }: ILayoutProps) => {
                 </Link>
               </li>
             </div>
-            <li>
-              <Button variant="outlined" size="small" color="primary">
+            <div className="flex space-x-16">
+              <li>
                 <Link href="/contact" passHref>
                   Contact Me
                 </Link>
-              </Button>
-            </li>
+              </li>
+              {displayLogin && (
+                <li>
+                  <Link href={pageInformation[Routes.SignIn]!.path}>Login</Link>
+                </li>
+              )}
+            </div>
           </ul>
         </Container>
       </nav>
