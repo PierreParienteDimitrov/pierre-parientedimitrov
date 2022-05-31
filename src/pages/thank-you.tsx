@@ -1,7 +1,7 @@
 import React from 'react'
 
-const Thankyou = () => {
+const ThankYou = () => {
   return <div>Thank you</div>
 }
 
-export default Thankyou
+export default ThankYou
