@@ -1,9 +1,7 @@
-import Image from 'next/image'
 import React from 'react'
 
 import { ICarousel } from '@/../types/ICarousel'
 import Carousel from '@/components/Carousel'
-import ProjectMetrics from '@/components/ProjectMetrics'
 import Container from '@/layouts/containers/Container'
 
 const TEMPSO: ICarousel[] = [
@@ -64,38 +62,18 @@ const LeftSide: React.FC = () => {
               <span className="font-bold italic"> compare </span> recordings and
               save liked recordings and playlists to their library.{' '}
             </p>
+            <p>
+              Tempso is a Live Application.{' '}
+              <a
+                href="https://www.tempso.com/"
+                target="_blank"
+                className="cursor-pointer text-primary-100"
+                rel="noreferrer"
+              >
+                Download it today!
+              </a>
+            </p>
           </div>
-        </div>
-        {/* Process */}
-        <div className="flex flex-col space-y-2">
-          <h3 className="font-bold">Process</h3>
-          <p>
-            As the sole UX/UI designer and researcher, my goal was to create a
-            user-centered design for Tempso by spending extra time with
-            researching and iterating designs based on usability testings. Thus,
-            the process was divided into the following steps:
-          </p>
-        </div>
-        <div className="flex flex-col space-y-2">
-          <h3 className="font-bold">Research</h3>
-          <p>
-            I spent a full month conducting user research with musicians,
-            classical music amateurs and music streaming users through
-            interviews to understand user’s experience with classical music
-            streaming. I also reviewed secondary research and user comments
-            about existing solutions for classical music streaming on forums and
-            blogs.
-          </p>
-          <p>
-            My hypothesis was that a majority of users would listen to classical
-            music only if they were already very familiar with the genre, but I
-            was surprised to find in my research that over half of potential
-            users did not have a strong relationship to classical music and were
-            curious to discover it. The largest complaint found in research was
-            that users, both classical music specialists and non-specialists,
-            didn’t know how to find classical music recordings or where to
-            start.
-          </p>
         </div>
       </div>
     </>
@@ -110,128 +88,12 @@ const Tempso: React.FC = () => {
         <Carousel carouselItems={TEMPSO} />
       </div>
 
-      <div className="mt-16 flex flex-col space-y-8">
+      <div className="my-16 flex flex-col space-y-8">
         {/* content */}
         <div className="flex flex-col space-y-4 md:flex-row md:items-start md:space-x-10">
           <div className="md:w-4/6 md:pr-16">
             <LeftSide />
           </div>
-          <div className="md:w-2/6 ">
-            <ProjectMetrics
-              year="2020"
-              role="UX/UI Designer"
-              technology="Sketch, Figma, Illustrato"
-              method="Usability Studies, Surveys, Interviews, Preference Tests"
-              category="Mobile Application"
-            />
-          </div>
-        </div>
-        {/* Pain Points */}
-        <div className="flex flex-col space-y-2">
-          <h3 className="font-bold">Pain Points</h3>
-          <div className="flex flex-col space-y-4 md:flex-row md:space-x-16">
-            <div className="flex flex-col space-y-1 md:w-2/6">
-              <h4 className="font-bold">🎯 Accuracy</h4>
-              <p>
-                Classical music specialists who didn’t stream classical music
-                said their reasoning was that they could never get a clear
-                picture of what recording they were listening too. “Why is the
-                composer tagged as a performer? Why can’t I find the complete
-                list of performers for this recording?” were common comments
-                addressed to mainstream music streaming platforms. I decided to
-                change this by building a complete classical music data
-                architecture which would guide the design process.
-              </p>
-            </div>
-            <div className="flex flex-col space-y-1 md:w-2/6">
-              <h4>♾️ Exhaustivity</h4>
-              <p>
-                Classical music specialists felt like they could never browse
-                the complete discography of a performer, nor the complete list
-                of compositions from a composer. They could also never compare
-                easily different recordings of the same composition and select
-                their preferred version.
-              </p>
-            </div>
-            <div className="flex flex-col space-y-1 md:w-2/6">
-              <h4>🧭 Discovery</h4>
-              <p>
-                Non-specialists classical music listeners felt like it was
-                extremely difficult to know where to start their journey on
-                mainstream music streaming apps. They felt like they were left
-                with limited choices with compilations such as “Relax with
-                Mozart” or intimidating classical music albums where they did
-                not understand the track titles. They wanted to discover and
-                explore classical music but “did not know where to start”.
-              </p>
-            </div>
-          </div>
-        </div>
-        {/* Define */}
-        <div className="flex flex-col space-y-2">
-          <h3>Define</h3>
-          <p>
-            I began the defining stage by creating multiple personas based on
-            users interviewed during the research stage.
-          </p>
-          <div className="flex flex-col space-y-4">
-            <div>
-              <Image
-                src="/Cecilia.png"
-                alt="Persona 1"
-                layout="responsive"
-                width={1920}
-                height={1080}
-                objectFit="cover"
-                priority
-              />
-            </div>
-            <div>
-              <Image
-                src="/Nathalie.png"
-                alt="Persona 2"
-                layout="responsive"
-                width={1920}
-                height={1080}
-                objectFit="cover"
-                priority
-              />
-            </div>
-            <div>
-              <Image
-                src="/Benjamin.png"
-                alt="Persona 3"
-                layout="responsive"
-                width={1920}
-                height={1080}
-                objectFit="cover"
-                priority
-              />
-            </div>
-          </div>
-          <p>
-            My biggest takeaway from research was that users wanted different
-            type of experience for a classical music streaming app.
-          </p>
-          <p>
-            Musicians and experimented classical music listeners wanted the
-            ability to deep dive into the catalogue, explore performer’s
-            discographies, composer’s catalogues, compare recordings, explore
-            genres. This category of users wanted to be allowed to explore the
-            catalogue through different data points, but did not need
-            suggestions and recommendations on what to listen to.
-          </p>
-          <p>
-            First-time listeners wanted to know where to start and what to
-            listen to. They are not independent listeners and need help to turn
-            on the music.
-          </p>
-          <p>
-            To answer bot of those needs, I decided to list desired actions for
-            both personas and build user journey:
-          </p>
-          <p>USER JOURNEY 1</p>
-          <p>USER JOURNEY 2</p>
         </div>
       </div>
     </Container>

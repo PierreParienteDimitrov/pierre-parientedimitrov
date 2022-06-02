@@ -3,33 +3,22 @@ import React from 'react'
 interface Props {
   leftSide?: React.ReactNode
   rightSide?: React.ReactNode
-  leftDesktopOrder: string
-  leftMobileOrder: string
-  rightDesktopOrder: string
-  rightMobileOrder: string
+  leftDesktopOrder?: string
+  leftMobileOrder?: string
+  rightDesktopOrder?: string
+  rightMobileOrder?: string
 }
 
-const TwoCols: React.FC<Props> = ({
-  leftSide,
-  rightSide,
-  leftDesktopOrder,
-  leftMobileOrder,
-  rightDesktopOrder,
-  rightMobileOrder,
-}) => {
+const TwoCols: React.FC<Props> = ({ leftSide, rightSide }) => {
   return (
-    <>
+    <div className="relative flex h-full flex-col md:flex md:flex-row">
+      <div className={`order-2 md:order-1 md:w-4/6 md:pr-28`}>{leftSide}</div>
       <div
-        className={`${leftMobileOrder} md:${leftDesktopOrder} md:w-4/6 md:pr-36`}
-      >
-        {leftSide}
-      </div>
-      <div
-        className={`${rightMobileOrder} md:relative md:${rightDesktopOrder} md:w-2/6`}
+        className={`order-1 md:order-2 md:w-2/6 md:sticky md:top-8 md:self-start`}
       >
         {rightSide}
       </div>
-    </>
+    </div>
   )
 }
 

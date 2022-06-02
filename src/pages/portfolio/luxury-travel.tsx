@@ -1,14 +1,13 @@
+import { pageInformation, Routes } from 'constants/pages'
 import { GetServerSideProps } from 'next'
 import { Session } from 'next-auth'
 import { getSession } from 'next-auth/react'
 import React from 'react'
 
-import { pageInformation, Routes } from '@/constants/pages'
-
 const Luxurytravel = () => {
   return (
-    <div>
-      <h1>luxurytravel</h1>
+    <div className="flex h-screen justify-center pt-36">
+      <h2>Coming Soon</h2>
     </div>
   )
 }
