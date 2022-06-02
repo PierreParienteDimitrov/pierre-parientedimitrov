@@ -1,3 +1,4 @@
+import Head from 'next/head'
 import Image from 'next/image'
 import Link from 'next/link'
 
@@ -8,6 +9,18 @@ import Container from '@/layouts/containers/Container'
 const Index: React.FC = () => {
   return (
     <>
+      <Head>
+        <title>Share Preview</title>
+        <meta property="og:url" content="pierreparientedimitrov.com" />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="website-preview" />
+        <meta name="twitter:card" content="summary" />
+        <meta
+          property="og:description"
+          content="Pierre Pariente Dimitrov Portfolio = UX/UI designer & Software Engineer"
+        />
+        <meta property="og:image" content="/website-preview.png" />
+      </Head>
       <div className="h-screen w-screen">
         {/* intro */}
         <Container>
