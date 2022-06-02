@@ -44,6 +44,10 @@ input {
   font-weight: 500;
 }
 
+input::placeholder {
+  color: black;
+}
+
 /* clears the ‘X’ from Internet Explorer */
 input[type='search']::-ms-clear {
   display: none;
@@ -78,7 +82,7 @@ textarea {
 ::placeholder {
   font-size: 0.875rem;
   font-weight: 400;
-  opacity: 1; /* Firefox */
+  opacity: 1;
 }
 
 @media only screen and (max-width: 1200px) {
