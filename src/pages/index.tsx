@@ -10,7 +10,7 @@ const Index: React.FC = () => {
   return (
     <>
       <Head>
-        <title>Share Preview</title>
+        <title>Pierre Pariente Dimitrov Portfolio</title>
         <meta
           property="og:url"
           content="https://www.pierreparientedimitrov.com/"
