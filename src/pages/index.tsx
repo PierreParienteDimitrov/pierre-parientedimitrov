@@ -11,17 +11,28 @@ const Index: React.FC = () => {
     <>
       <Head>
         <title>Share Preview</title>
+<<<<<<< HEAD
         <meta property="og:title" content="website-preview" />
         <meta property="og:image" content="/website-preview.png" />
+=======
+        <meta property="og:url" content="pierreparientedimitrov.com" />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="website-preview" />
+        <meta name="twitter:card" content="summary" />
+>>>>>>> 9581222e11debd61cfdaaa7b881402975cb8d6db
         <meta
           property="og:description"
           content="Pierre Pariente Dimitrov Portfolio = UX/UI designer & Software Engineer"
         />
+<<<<<<< HEAD
         <meta
           property="og:url"
           content="https://www.pierreparientedimitrov.com/"
         />
         <meta property="og:type" content="website" />
+=======
+        <meta property="og:image" content="/website-preview.png" />
+>>>>>>> 9581222e11debd61cfdaaa7b881402975cb8d6db
       </Head>
       <div className="h-screen w-screen">
         {/* intro */}
