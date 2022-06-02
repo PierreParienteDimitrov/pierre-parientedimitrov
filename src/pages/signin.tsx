@@ -1,11 +1,10 @@
+import { pageInformation, Routes } from 'constants/pages'
 import { GetServerSideProps } from 'next'
 import Link from 'next/link'
 import { Session } from 'next-auth'
 import { useSession } from 'next-auth/react'
 import { getSession } from 'next-auth/react'
 import React from 'react'
-
-import { pageInformation, Routes } from '@/constants/pages'
 
 import SignInForm from '../components/SignInForm'
 

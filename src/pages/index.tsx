@@ -4,23 +4,6 @@ import Link from 'next/link'
 import Hero from '@/components/Hero/Hero'
 import CaseStudy from '@/components/Home/CaseStudy'
 import Container from '@/layouts/containers/Container'
-import TwoCols from '@/layouts/grids/TwoCols'
-
-const RightSide: React.FC = () => {
-  return (
-    <>
-      <div className="flex flex-col items-start space-y-8 border-l-2 border-black px-4">
-        <p>
-          You have a project in mind? <br />
-          Let&apos;s create!
-        </p>
-        <Link href="/contact" passHref>
-          Contact Me
-        </Link>
-      </div>
-    </>
-  )
-}
 
 const Index: React.FC = () => {
   return (
@@ -28,15 +11,8 @@ const Index: React.FC = () => {
       <div className="h-screen w-screen">
         {/* intro */}
         <Container>
-          <div className="flex h-full flex-col space-y-10 pt-10 pb-20 md:h-screen md:flex-row md:items-center">
-            <TwoCols
-              leftSide={<Hero />}
-              leftMobileOrder="order-1"
-              leftDesktopOrder="order-1"
-              rightSide={<RightSide />}
-              rightMobileOrder="order-2"
-              rightDesktopOrder="order-2"
-            />
+          <div className="flex h-full flex-col space-y-10 pt-36 pb-20 md:h-screen md:flex-row md:items-center">
+            <Hero />
             <video
               autoPlay
               muted

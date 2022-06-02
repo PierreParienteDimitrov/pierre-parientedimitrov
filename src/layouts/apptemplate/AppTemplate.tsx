@@ -1,11 +1,10 @@
+import { pageInformation, Routes } from 'constants/pages'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
 import { useSession } from 'next-auth/react'
 import React, { useState } from 'react'
 import { useEffect } from 'react'
 import { ILayoutProps } from 'types/ILayoutProps'
-
-import { pageInformation, Routes } from '@/constants/pages'
 
 import Container from '../containers/Container'
 

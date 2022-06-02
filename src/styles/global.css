@@ -6,7 +6,7 @@
 
 body {
   font-family: 'Playfair Display', serif;
-  font-family: 'Inter', sans-serif;
+  font-family: 'Manrope', sans-serif;
   color: #1c071e;
 }
 
@@ -28,10 +28,11 @@ h4 {
 
 p {
   font-size: 1rem;
+  line-height: 160%;
 }
 
 h5 {
-  font-size: 1rem;
+  font-size: 0.85rem;
 }
 
 h6 {

@@ -2,6 +2,7 @@ import React from 'react'
 
 import { getServerSideProps } from '../../utils/protectedPages'
 
+
 const Bluecargo: React.FC = () => {
   return <div>Hello</div>
 }
