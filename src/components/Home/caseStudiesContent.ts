@@ -36,4 +36,11 @@ export const caseStudies = [
     src: '/case-study-ui-shots.png',
     alt: 'UI Shots',
   },
+  {
+    project: 'Portfolio Website',
+    description: 'Front-end & Back-end',
+    href: pageInformation[Routes.Portfolio]!.path,
+    src: '/software-portfolio.png',
+    alt: 'Portfolio Website',
+  },
 ]

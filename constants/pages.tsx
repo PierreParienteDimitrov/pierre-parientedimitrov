@@ -16,6 +16,7 @@ export enum Routes {
   BlueCargo = '/portfolio/blue-cargo',
   LuxuryTravel = '/portfolio/luxury-travel',
   UIShots = '/portfolio/ui-shots',
+  Portfolio = '/portfolio/portfolio',
 }
 
 export const pageInformation: Record<string, IPage> = {
@@ -72,6 +73,11 @@ export const pageInformation: Record<string, IPage> = {
   [Routes.UIShots]: {
     title: 'UIShots',
     path: Routes.UIShots,
+    isPublic: true,
+  },
+  [Routes.Portfolio]: {
+    title: 'Portfolio',
+    path: Routes.Portfolio,
     isPublic: true,
   },
 }
