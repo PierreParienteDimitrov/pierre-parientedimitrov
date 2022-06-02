@@ -55,7 +55,7 @@ export const pageInformation: Record<string, IPage> = {
     isPublic: true,
   },
   [Routes.TempsoUX]: {
-    title: 'Tempso',
+    title: 'TempsoUX',
     path: Routes.TempsoUX,
     isPublic: true,
   },
