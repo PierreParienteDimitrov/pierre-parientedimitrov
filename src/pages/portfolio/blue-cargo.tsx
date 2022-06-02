@@ -1,9 +1,8 @@
+import { pageInformation, Routes } from 'constants/pages'
 import { GetServerSideProps } from 'next'
 import { Session } from 'next-auth'
 import { getSession } from 'next-auth/react'
 import React from 'react'
-
-import { pageInformation, Routes } from '@/constants/pages'
 
 const Bluecargo: React.FC = () => {
   return <div>Hello</div>

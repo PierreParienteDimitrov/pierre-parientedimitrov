@@ -57,19 +57,17 @@ const Hero = () => {
   }, [letterIndex, reverse, typewriter])
 
   return (
-    <div className="pr-36">
+    <div className="">
       <h4>
         Hi! My name is{' '}
-        <span className="font-bold text-primary-500">
-          Pierre Pariente Dimitrov
-        </span>
-        . I am a Los Angeles based:
+        <span className="font-bold">Pierre Pariente Dimitrov</span>. I am a Los
+        Angeles based:
       </h4>
       <ul className="flex h-96 flex-col md:-space-y-8">
         {TypewriterItems.map((element) => {
           return (
             <li key={element.title}>
-              <h2 className="font-serif italic">
+              <h2 className="font-serif italic text-primary-500">
                 {element[key].substring(0, letterIndex)}
                 {/* {blink && '|'} */}
               </h2>
