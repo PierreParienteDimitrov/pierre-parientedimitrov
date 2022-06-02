@@ -11,10 +11,12 @@ const Index: React.FC = () => {
     <>
       <Head>
         <title>Share Preview</title>
-        <meta property="og:url" content="pierreparientedimitrov.com" />
+        <meta
+          property="og:url"
+          content="https://www.pierreparientedimitrov.com/"
+        />
         <meta property="og:type" content="website" />
         <meta property="og:title" content="website-preview" />
-        <meta name="twitter:card" content="summary" />
         <meta
           property="og:description"
           content="Pierre Pariente Dimitrov Portfolio = UX/UI designer & Software Engineer"
