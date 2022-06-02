@@ -13,7 +13,6 @@ const AppTemplate = ({ children }: ILayoutProps) => {
   const pathname = router.pathname
   const session = useSession()
   const [displayLogin, setDisplayLogin] = useState<boolean>(false)
-  console.log(session)
 
   useEffect(() => {
     if (session.status === 'unauthenticated') {

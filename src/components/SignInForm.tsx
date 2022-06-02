@@ -5,8 +5,6 @@ import React, { useState } from 'react'
 
 import { validateEmail } from '@/utils/validateEmail'
 
-import Button from './Button'
-
 const SignInForm = () => {
   const router = useRouter()
   const { query } = router
@@ -50,29 +48,41 @@ const SignInForm = () => {
   }
 
   return (
-    <div>
+    <div className="mb-16">
       {' '}
-      <div className="w-[500px] rounded-md border-black p-4 shadow-md">
-        <form onSubmit={handleSubmit} className="flex flex-col space-y-2">
+      <div className="flex flex-col items-center space-y-4">
+        <h5 className="font-bold uppercase tracking-wider">
+          Access to this page is restricted
+        </h5>
+        <h6>Enter your email to continue</h6>
+        <form
+          onSubmit={handleSubmit}
+          className="m-auto flex w-2/4 flex-col space-y-8"
+        >
           {/* email */}
-          <div className="flex flex-col space-y-1">
-            <label>Email</label>
+          <div className="flex flex-col space-y-1 text-black">
             <input
               type="email"
               placeholder="Email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               required
+              className="border-b border-black px-4 py-2"
             />
           </div>
-          <Button
+          {/* Submit */}
+          <div className="flex flex-col items-center -space-y-4">
+            <h2 className="opacity-20">↵</h2>
+            <h6>Press return to validate</h6>
+          </div>
+          {/* <Button
             variant="contained"
             color="primary"
             size="medium"
             onclick={handleSubmit}
           >
             Submit
-          </Button>
+          </Button> */}
         </form>
         {error && (
           <div>
