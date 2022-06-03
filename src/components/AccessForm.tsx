@@ -6,8 +6,7 @@ import Button from '@/components/Button'
 
 const AccessForm = () => {
   const router = useRouter()
-  const [firstName, setFirstName] = useState<string>('')
-  const [lastName, setLastName] = useState<string>('')
+  const [name, setName] = useState<string>('')
   const [company, setCompany] = useState<string>('')
   const [email, setEmail] = useState<string>('')
   const [alertMessage, setAlertMessage] = useState<string>('')
@@ -15,11 +14,9 @@ const AccessForm = () => {
   const handleSubmit = async (e: React.SyntheticEvent) => {
     e.preventDefault()
     const user: IUser = {
-      first_name: firstName,
-      last_name: lastName,
-      email: email,
-      has_access: false,
-      company: company,
+      name,
+      email,
+      company,
     }
 
     const res = await fetch(`/api/users/create-user`, {
@@ -50,26 +47,15 @@ const AccessForm = () => {
         onSubmit={(e) => handleSubmit(e)}
         className="flex flex-col space-y-2"
       >
-        {/* first name */}
+        {/* name */}
         <div className="flex flex-col space-y-1">
-          <label>first name</label>
+          <label>Name</label>
           <input
             type="text"
-            placeholder="First name"
-            value={firstName}
-            onChange={(e) => setFirstName(e.target.value)}
+            placeholder="name"
+            value={name}
+            onChange={(e) => setName(e.target.value)}
             className="border border-black"
-            required
-          />
-        </div>
-        {/* last name */}
-        <div className="flex flex-col space-y-1">
-          <label>Last Name</label>
-          <input
-            type="text"
-            placeholder="Last name"
-            value={lastName}
-            onChange={(e) => setLastName(e.target.value)}
             required
           />
         </div>

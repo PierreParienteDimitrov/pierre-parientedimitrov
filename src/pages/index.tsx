@@ -2,6 +2,7 @@ import Head from 'next/head'
 import Image from 'next/image'
 import Link from 'next/link'
 
+import ContactForm from '@/components/ContactForm'
 import Hero from '@/components/Hero/Hero'
 import CaseStudy from '@/components/Home/CaseStudy'
 import Container from '@/layouts/containers/Container'
@@ -23,36 +24,32 @@ const Index: React.FC = () => {
         />
         <meta property="og:image" content="/website-preview.png" />
       </Head>
-      <div className="h-screen w-screen">
+      <div className="relative h-screen w-screen">
+        {/* <div className="absolute inset-0 -z-10 bg-gradient-to-l from-secondary to-tertiary opacity-100"></div> */}
+        <video
+          autoPlay
+          muted
+          loop
+          style={{
+            position: 'absolute',
+            top: '1rem',
+            zIndex: '-1',
+            opacity: '0.03',
+            width: '100vw',
+            height: '100vh',
+          }}
+        >
+          <source src="/uxvideo.mp4" type="video/mp4" />
+        </video>
         {/* intro */}
         <Container>
-          <div className="flex h-full flex-col space-y-10 pt-36 pb-20 md:h-screen md:flex-row md:items-center">
-            <Hero />
-            <video
-              autoPlay
-              muted
-              loop
-              style={{
-                position: 'absolute',
-                top: '1rem',
-                zIndex: '-1',
-                opacity: '0.07',
-                width: '100vw',
-                height: '100%',
-              }}
-            >
-              <source src="/uxvideo.mp4" type="video/mp4" />
-            </video>
-            {/* <form>
-              <input
-                type="email"
-                placeholder="Email"
-                value="{email}"
-                // onChange={(e) => setEmail(e.target.value)}
-                required
-                className="border-b border-black px-4 py-2"
-              />
-            </form> */}
+          <div className="flex h-full flex-col space-y-10 pt-36 pb-20 md:h-screen md:flex-row md:items-start md:space-y-0">
+            <div className="w-2/3">
+              <Hero />
+            </div>
+            <div className="w-1/3">
+              <ContactForm />
+            </div>
           </div>
         </Container>
       </div>

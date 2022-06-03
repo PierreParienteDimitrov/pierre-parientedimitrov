@@ -1,7 +1,8 @@
 export interface IUser {
   email: string
-  has_access: boolean
-  first_name: string
-  last_name: string
+  hasAccess?: boolean
+  name: string
   company: string
+  design?: boolean
+  engineering?: boolean
 }
