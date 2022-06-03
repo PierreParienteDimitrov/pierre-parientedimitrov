@@ -35,7 +35,7 @@ const ContactForm: React.FC = () => {
 
   return (
     <form
-      className="min-w-[343px] rounded-md border-[0.5px] border-gray-100 bg-gray-100 p-8 shadow-inner"
+      className="min-w-[343px] rounded-md border-[0.5px] border-gray-100 bg-gray-100 p-4 shadow-inner md:p-8"
       onSubmit={(e) => handleSubmit(e)}
     >
       <h6 className="pb-4 font-black uppercase tracking-wider text-primary-400">

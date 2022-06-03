@@ -1,13 +1,21 @@
 import React from 'react'
 
-import AccessForm from '@/components/AccessForm'
+import ContactForm from '@/components/ContactForm'
+import Container from '@/layouts/containers/Container'
 
 const Users: React.FC = () => {
   return (
-    <div>
-      <h1>Request Access</h1>
-      <AccessForm />
-    </div>
+    <Container>
+      <div className="py-16">
+        {' '}
+        <div className="flex flex-col items-center space-y-4">
+          <h5 className="text-center font-bold uppercase tracking-wider">
+            Fill the form below in order to request access to more projects
+          </h5>
+          <ContactForm />
+        </div>
+      </div>
+    </Container>
   )
 }
 

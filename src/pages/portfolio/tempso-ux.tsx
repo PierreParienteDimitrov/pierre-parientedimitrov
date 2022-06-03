@@ -275,7 +275,7 @@ const LeftSide: React.FC = () => {
               </div>
             </div>
             <div className="flex flex-col space-y-4">
-              <p className="font-bold">User Journey #1: Compare Recordings</p>
+              <p className="font-bold">User Journey #3: Discover Recordings</p>
               <p>
                 In order to answer Benjamin&apos;s needs, I created a user
                 journey that allowed users like him to discover music.
@@ -285,40 +285,6 @@ const LeftSide: React.FC = () => {
                 why I created the concept of manually-curated playlists. Those
                 thematic playlist showcase a selection of famous classical music
                 recordings that are a good start for a new listener.
-              </p>
-              <div>
-                <Image
-                  src="/flow-chart-discover.png"
-                  alt="Flow Chart Discover"
-                  layout="responsive"
-                  width={1920}
-                  height={768}
-                  objectFit="cover"
-                  priority
-                />
-              </div>
-            </div>
-            <div className="flex flex-col space-y-4">
-              <p className="font-bold">User Journey #1: Compare Recordings</p>
-              <p>
-                In order to answer Cecilia&apos;s needs, I created a first flow
-                chart that detailed all the required steps that a user must take
-                to compare recordings of the same composition.
-              </p>
-              <p>
-                This flow chart showed that users would have to undertake a lot
-                of different steps in order to be able to compare recordings.
-                User Research showed, however, that this feature was appreciated
-                equally by all Personas. In addition, it seemed like a
-                differentiator for Tempso.
-              </p>
-              <p>
-                This is why I decided to have a &quot;Compare&quot; tab, in the
-                bottom navigation. This tab is refreshed with the current
-                composition that the user is listening to. This helps any user
-                compare recordings easily and &quot;hammers&quot; Tempso&apos;s
-                value proposition; but also demonstrates the uniqueness of
-                classical music.
               </p>
               <div>
                 <Image
@@ -380,7 +346,7 @@ const LeftSide: React.FC = () => {
           </div>
         </div>
         <Link href={pageInformation[Routes.Tempso]!.path} passHref>
-          <h4 className="cursor-pointer font-bold text-primary-100 underline">
+          <h4 className="cursor-pointer pb-16 font-bold text-primary-100 underline">
             Discover Tempso UI here!
           </h4>
         </Link>
@@ -397,7 +363,7 @@ const Tempso: React.FC = () => {
         <Carousel carouselItems={TEMPSO} />
       </div>
 
-      <div className="mt-16 flex flex-col space-y-8">
+      <div className="flex flex-col space-y-8 md:mt-16">
         <TwoCols
           leftSide={<LeftSide />}
           leftDesktopOrder="order-1"

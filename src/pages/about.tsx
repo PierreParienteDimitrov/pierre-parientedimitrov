@@ -2,7 +2,7 @@ import Container from '@/layouts/containers/Container'
 
 const About = () => (
   <Container>
-    <div className="m-auto mt-10 flex w-3/6 flex-col space-y-8">
+    <div className="m-auto mt-10 flex w-full flex-col space-y-8 md:w-3/6">
       <h2>In construction</h2>
       <div className="flex flex-col space-y-2">
         <h6 className="font-extrabold">2015</h6>

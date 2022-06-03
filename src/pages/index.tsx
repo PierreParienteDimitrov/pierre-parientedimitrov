@@ -24,7 +24,7 @@ const Index: React.FC = () => {
         />
         <meta property="og:image" content="/website-preview.png" />
       </Head>
-      <div className="relative h-screen w-screen">
+      <div className="relative mb-16 w-screen md:mt-20 md:h-screen">
         {/* <div className="absolute inset-0 -z-10 bg-gradient-to-l from-secondary to-tertiary opacity-100"></div> */}
         <video
           autoPlay
@@ -43,7 +43,7 @@ const Index: React.FC = () => {
         </video>
         {/* intro */}
         <Container>
-          <div className="flex h-full flex-col space-y-10 pt-36 pb-20 md:h-screen md:flex-row md:items-start md:space-y-0">
+          <div className="flex h-full flex-col space-y-16 pt-16 md:h-screen md:flex-row md:items-start md:space-y-0">
             <div className="w-2/3">
               <Hero />
             </div>

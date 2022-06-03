@@ -57,13 +57,13 @@ const Hero = () => {
   }, [letterIndex, reverse, typewriter])
 
   return (
-    <div className="">
+    <div className="flex flex-col space-y-4">
       <h4>
         Hi! My name is{' '}
-        <span className="font-bold">Pierre Pariente Dimitrov</span>. <br />I am
-        a Los Angeles based:
+        <span className="font-bold">Pierre Pariente Dimitrov</span>. I am a Los
+        Angeles based:
       </h4>
-      <ul className="flex h-96 flex-col md:-space-y-4">
+      <ul className="flex flex-col md:h-96 md:-space-y-4">
         {TypewriterItems.map((element) => {
           return (
             <li key={element.title}>
