@@ -43,6 +43,16 @@ const Index: React.FC = () => {
             >
               <source src="/uxvideo.mp4" type="video/mp4" />
             </video>
+            {/* <form>
+              <input
+                type="email"
+                placeholder="Email"
+                value="{email}"
+                // onChange={(e) => setEmail(e.target.value)}
+                required
+                className="border-b border-black px-4 py-2"
+              />
+            </form> */}
           </div>
         </Container>
       </div>
