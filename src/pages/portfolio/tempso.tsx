@@ -45,7 +45,7 @@ const TEMPSO: ICarousel[] = [
 const LeftSide: React.FC = () => {
   return (
     <>
-      <div className="flex flex-col space-y-12 pr-20">
+      <div className="flex flex-col space-y-12 md:pr-20">
         <div>
           {/* introduction */}
           <div className="flex flex-col space-y-4">
@@ -88,7 +88,7 @@ const Tempso: React.FC = () => {
         <Carousel carouselItems={TEMPSO} />
       </div>
 
-      <div className="my-16 flex flex-col space-y-8">
+      <div className="mb-16 flex flex-col space-y-8 md:mt-16">
         {/* content */}
         <div className="flex flex-col space-y-4 md:flex-row md:items-start md:space-x-10">
           <div className="md:w-4/6 md:pr-16">
