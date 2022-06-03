@@ -11,8 +11,6 @@ const SignInForm = () => {
   const { query } = router
   const requestedPath = query.path
 
-  console.log(requestedPath)
-
   const [email, setEmail] = useState<string>('')
   const [error, setError] = useState<boolean>(false)
   const [emailError, setEmailError] = useState<boolean>(false)
