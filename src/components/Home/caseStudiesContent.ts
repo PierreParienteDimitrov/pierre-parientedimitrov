@@ -3,7 +3,7 @@ import { pageInformation, Routes } from 'constants/pages'
 export const caseStudies = [
   {
     project: 'TempsoUX',
-    description: 'UX Research & Design',
+    description: 'UX Research & Wireframes',
     href: pageInformation[Routes.TempsoUX]!.path,
     src: '/ux-case-study-tempso.png',
     alt: 'Tempso UX Case Study',
@@ -17,9 +17,9 @@ export const caseStudies = [
   },
   {
     project: 'Container Tracking',
-    description: 'UX/UI Design - Web App',
+    description: 'UX Research & Wireframes',
     href: pageInformation[Routes.ContainerTracking]!.path,
-    src: '/case-study-BlueCargo.png',
+    src: '/case-study-container-management.png',
     alt: 'Container Tracking Case Study',
   },
   {
