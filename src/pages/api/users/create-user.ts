@@ -21,6 +21,9 @@ export default async function handler(
           res
             .status(422)
             .json({ message: 'invalid email', success: false, data: {} })
+
+          mongoose.connection.close()
+          return
         }
 
         const isExistingEmail = await User.findOne({ email })
@@ -41,15 +44,18 @@ export default async function handler(
           data: user,
           message: 'user successfully created',
         })
+        mongoose.connection.close()
       } catch (error) {
         res
           .status(400)
           .json({ sucess: false, message: 'server error', data: {} })
+        mongoose.connection.close()
       }
       break
     default:
       res
         .status(400)
         .json({ success: false, message: 'server error', data: {} })
+      mongoose.connection.close()
   }
 }

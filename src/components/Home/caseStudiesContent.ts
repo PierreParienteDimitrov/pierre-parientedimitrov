@@ -2,7 +2,7 @@ import { pageInformation, Routes } from 'constants/pages'
 
 export const caseStudies = [
   {
-    project: 'Tempso',
+    project: 'TempsoUX',
     description: 'UX Research & Design',
     href: pageInformation[Routes.TempsoUX]!.path,
     src: '/ux-case-study-tempso.png',
