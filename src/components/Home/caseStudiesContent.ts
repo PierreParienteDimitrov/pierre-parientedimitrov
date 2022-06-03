@@ -16,11 +16,11 @@ export const caseStudies = [
     alt: 'Tempso UI',
   },
   {
-    project: 'BlueCargo',
+    project: 'Container Tracking',
     description: 'UX/UI Design - Web App',
-    href: pageInformation[Routes.BlueCargo]!.path,
+    href: pageInformation[Routes.ContainerTracking]!.path,
     src: '/case-study-BlueCargo.png',
-    alt: 'BlueCargo Case Study',
+    alt: 'Container Tracking Case Study',
   },
   {
     project: 'Luxury Travel Agency',

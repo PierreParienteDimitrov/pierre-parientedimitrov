@@ -13,7 +13,7 @@ export enum Routes {
   ThankYou = '/thank-you',
   Tempso = '/portfolio/tempso',
   TempsoUX = '/portfolio/tempso-ux',
-  BlueCargo = '/portfolio/blue-cargo',
+  ContainerTracking = '/portfolio/container-tracking',
   LuxuryTravel = '/portfolio/luxury-travel',
   UIShots = '/portfolio/ui-shots',
   Portfolio = '/portfolio/portfolio',
@@ -60,9 +60,9 @@ export const pageInformation: Record<string, IPage> = {
     path: Routes.TempsoUX,
     isPublic: true,
   },
-  [Routes.BlueCargo]: {
-    title: 'BlueCargo',
-    path: Routes.BlueCargo,
+  [Routes.ContainerTracking]: {
+    title: 'Container Tracking',
+    path: Routes.ContainerTracking,
     isPublic: false,
   },
   [Routes.LuxuryTravel]: {
