@@ -8,7 +8,7 @@ export const getServerSideProps: GetServerSideProps = async (context) => {
 
   const hasAccess = session?.user.has_access
 
-  const query = pageInformation[Routes.BlueCargo]!.path
+  const query = pageInformation[Routes.ContainerTracking]!.path
 
   if (!session) {
     return {
