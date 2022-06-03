@@ -50,6 +50,7 @@ const Index: React.FC = () => {
             <div className="w-1/3">
               <ContactForm />
             </div>
+
           </div>
         </Container>
       </div>
