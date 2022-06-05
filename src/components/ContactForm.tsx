@@ -5,6 +5,8 @@ import React, { useRef, useState } from 'react'
 import { RequestAccess } from '@/utils/RequestAccess'
 import { validateEmail } from '@/utils/validateEmail'
 
+import styles from '../styles/contactForm.module.css'
+
 const ContactForm: React.FC = () => {
   const router = useRouter()
   const form = useRef<HTMLFormElement>(null)
@@ -55,79 +57,91 @@ const ContactForm: React.FC = () => {
   }
 
   return (
-    <form
-      ref={form}
-      className="min-w-[343px] rounded-md border-[0.5px] border-gray-100 bg-gray-100 p-4 shadow-inner md:p-8"
-      onSubmit={(e) => handleSubmit(e)}
-    >
-      <h6 className="pb-4 font-black uppercase tracking-wider text-primary-400">
-        Contact Me!
-      </h6>
-      <div className="flex flex-col space-y-4">
-        <input
-          type="text"
-          placeholder="Full name"
-          value={name}
-          onChange={(e) => setName(e.target.value)}
-          required
-          className="w-full border border-gray-200 p-2 text-black"
-        />
-        <input
-          type="email"
-          placeholder="Email"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-          required
-          className="w-full border border-gray-200 p-2 text-black"
-        />
-        {emailError && (
-          <h5 className="text-red-500">Please enter a valid email</h5>
-        )}
-        <input
-          type="text"
-          placeholder="Company"
-          value={company}
-          onChange={(e) => setCompany(e.target.value)}
-          required
-          className="w-full border border-gray-200 p-2 text-black"
-        />
-        <h5>
-          Are you interested in <em>(click both if it applies)</em>:
-        </h5>
-        <div className="flex space-x-4">
-          <div
-            className={`w-full cursor-pointer border-tertiary border-[0.5px] ${
-              design ? 'bg-tertiary' : '  hover:bg-tertiary'
-            } p-2 transition duration-700 ease-in-out `}
-            onClick={() => setDesign(!design)}
-          >
-            <h5>Product design</h5>
-          </div>
-          <div
-            className={`w-full cursor-pointer border-tertiary border-[0.5px]
+    <div className={`w-full h-full shadow-inner ${styles.container}`}>
+      <div className={`py-8 px-4 ${styles['card-wrapper']} text-white`}>
+        <form
+          ref={form}
+          onSubmit={(e) => handleSubmit(e)}
+          // className={`min-w-[343px] h-full p-96 shadow-inner md:p-32`}
+        >
+          <h6 className="pb-4 font-black uppercase tracking-wider">
+            Contact Me!
+          </h6>
+          <div className={`flex flex-col space-y-8 ${styles.content}`}>
+            <div className="flex flex-col space-y-4">
+              <input
+                type="text"
+                placeholder="Full name"
+                value={name}
+                onChange={(e) => setName(e.target.value)}
+                required
+                className="w-full border p-2 text-white"
+              />
+              <input
+                type="email"
+                placeholder="Email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                required
+                className="w-full border p-2 text-white"
+              />
+              {emailError && (
+                <h5 className="text-red-500">Please enter a valid email</h5>
+              )}
+              <input
+                type="text"
+                placeholder="Company"
+                value={company}
+                onChange={(e) => setCompany(e.target.value)}
+                required
+                className="w-full border p-2 text-white"
+              />
+            </div>
+            <div className="flex flex-col space-y-4">
+              <h5>
+                Are you interested in <em>(click both if it applies)</em>:
+              </h5>
+              <div className="flex space-x-4">
+                <div
+                  className={`w-full cursor-pointer border-tertiary border-[0.5px] text-center ${
+                    design ? 'bg-tertiary' : '  hover:bg-tertiary'
+                  } p-2 transition duration-700 ease-in-out `}
+                  onClick={() => setDesign(!design)}
+                >
+                  <h6 className="font-black uppercase tracking-wider">
+                    Product Design
+                  </h6>
+                </div>
+                <div
+                  className={`w-full cursor-pointer border-secondary border-[0.5px] text-center
              ${
-               engineering ? 'bg-tertiary' : 'hover:bg-tertiary'
+               engineering ? 'bg-secondary' : 'hover:bg-secondary'
              } p-2 transition duration-700 ease-in-out `}
-            onClick={() => setEngineering(!engineering)}
-          >
-            <h5>Engineering</h5>
-          </div>
-        </div>
+                  onClick={() => setEngineering(!engineering)}
+                >
+                  <h6 className="font-black uppercase tracking-wider">
+                    Engineering
+                  </h6>
+                </div>
+              </div>
 
-        {thankYouMessage ? (
-          <h5>Thank you for your submission!</h5>
-        ) : (
-          <div
-            className="w-full cursor-pointer bg-gradient-to-r from-secondary to-tertiary py-3 text-center"
-            onClick={(e) => handleSubmit(e)}
-          >
-            <h6 className="font-black uppercase tracking-wider text-white">
-              Submit
-            </h6>
+              {thankYouMessage ? (
+                <h5>Thank you for your submission!</h5>
+              ) : (
+                <div
+                  className="w-full cursor-pointer bg-gradient-to-r from-secondary to-tertiary py-3 text-center"
+                  onClick={(e) => handleSubmit(e)}
+                >
+                  <h6 className="font-black uppercase tracking-wider text-white">
+                    Submit
+                  </h6>
+                </div>
+              )}
+            </div>
           </div>
-        )}
+        </form>
       </div>
-    </form>
+    </div>
   )
 }
 

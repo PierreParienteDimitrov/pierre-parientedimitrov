@@ -7,6 +7,8 @@ import Hero from '@/components/Hero/Hero'
 import CaseStudy from '@/components/Home/CaseStudy'
 import Container from '@/layouts/containers/Container'
 
+import styles from '../styles/home.module.css'
+
 const Index: React.FC = () => {
   return (
     <>
@@ -24,9 +26,9 @@ const Index: React.FC = () => {
         />
         <meta property="og:image" content="/website-preview.png" />
       </Head>
-      <div className="relative mb-16 w-screen md:mt-20 md:h-screen">
+      <div className="relative z-0 mb-16 w-screen bg-dark md:h-screen md:pt-20">
         {/* <div className="absolute inset-0 -z-10 bg-gradient-to-l from-secondary to-tertiary opacity-100"></div> */}
-        <video
+        {/* <video
           autoPlay
           muted
           loop
@@ -40,14 +42,16 @@ const Index: React.FC = () => {
           }}
         >
           <source src="/uxvideo.mp4" type="video/mp4" />
-        </video>
+        </video> */}
+        <div className={`${styles.container}`}></div>
+
         {/* intro */}
         <Container>
-          <div className="flex h-full flex-col space-y-16 pt-16 md:h-screen md:flex-row md:items-start md:space-y-0">
-            <div className="w-2/3">
+          <div className="relative z-50 flex h-full flex-col space-y-16 py-16 md:h-screen md:flex-row md:items-start md:space-y-0">
+            <div className="md:w-2/3">
               <Hero />
             </div>
-            <div className="w-1/3">
+            <div className="md:w-1/3">
               <ContactForm />
             </div>
           </div>
