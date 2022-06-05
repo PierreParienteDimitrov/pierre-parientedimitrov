@@ -1,9 +1,16 @@
 import React from 'react'
 
+import UIShots from '@/components/UIShots'
+
 const Uishots = () => {
   return (
-    <div className="flex h-screen justify-center pt-36">
-      <h2>Coming Soon</h2>
+    <div className="pt-16 text-center">
+      <h3 className="font-bold">UI Shots</h3>
+      <p>
+        I built this series of UI shot while following the Daily UI Design
+        Challenge.
+      </p>
+      <UIShots />
     </div>
   )
 }
