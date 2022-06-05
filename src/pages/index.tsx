@@ -6,6 +6,7 @@ import ContactForm from '@/components/ContactForm'
 import Hero from '@/components/Hero/Hero'
 import CaseStudy from '@/components/Home/CaseStudy'
 import Container from '@/layouts/containers/Container'
+import { skills } from '@/utils/skills'
 
 import styles from '../styles/home.module.css'
 
@@ -46,6 +47,47 @@ const Index: React.FC = () => {
         <CaseStudy />
       </div>
 
+      {/* skills */}
+      <div className="pt-32">
+        <Container>
+          <div className="w-full pb-8 text-center">
+            <h4 className="font-bold">My Skills</h4>
+          </div>
+          <div className="flex flex-col space-y-4 md:flex-row md:space-x-16 md:space-y-0">
+            {/* cards */}
+            {skills.map((card, index) => {
+              return (
+                <div
+                  key={index}
+                  className="flex w-1/3 flex-col items-center rounded-2xl border text-center shadow-md"
+                >
+                  <div className="h-48 w-full rounded-2xl border bg-white">
+                    <Image
+                      src={card.src}
+                      alt="UX Research"
+                      layout="responsive"
+                      width={372}
+                      height={192}
+                      priority
+                    />
+                  </div>
+                  <div className="flex flex-col items-center space-y-4 px-2 py-4">
+                    <p className="font-black uppercase tracking-wider">
+                      {card.title}
+                    </p>
+                    <ul className="flex flex-col items-center space-y-2 capitalize">
+                      {card.bullets.map((bullet, index) => {
+                        return <li key={index}>{bullet}</li>
+                      })}
+                    </ul>
+                  </div>
+                </div>
+              )
+            })}
+          </div>
+        </Container>
+      </div>
+
       <div className="relative w-full py-32">
         <Container>
           {/* statement */}
@@ -60,7 +102,7 @@ const Index: React.FC = () => {
                 priority
                 className="z-10 rounded-full shadow-lg"
               />
-              <div className="absolute top-0 z-0 h-[230px] w-[230px] rounded-full bg-primary-100 opacity-10"></div>
+              <div className="bg-primary-100 absolute top-0 z-0 h-[230px] w-[230px] rounded-full opacity-10"></div>
             </div>
             <div className="w-full flex-col space-y-4 md:m-auto md:w-3/6">
               <h4>
@@ -78,7 +120,7 @@ const Index: React.FC = () => {
               </p>
             </div>
             <Link href="/about" passHref>
-              <h5 className="cursor-pointer text-primary-100">Learn More</h5>
+              <h5 className="text-primary-100 cursor-pointer">Learn More</h5>
             </Link>
           </div>
         </Container>

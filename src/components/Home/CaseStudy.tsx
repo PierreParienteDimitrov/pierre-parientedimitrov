@@ -27,8 +27,10 @@ const CaseStudy: React.FC = () => {
                   />
                   <div className="absolute inset-0 flex cursor-pointer items-center justify-center opacity-0 duration-300 hover:bg-black hover:opacity-90">
                     <div className="flex flex-col items-center justify-center space-y-4 text-white">
-                      <h3>{element.project}</h3>
-                      <h5>{element.description}</h5>
+                      <h5 className="font-semibold uppercase tracking-widest">
+                        {element.project}
+                      </h5>
+                      <h3>{element.description}</h3>
                     </div>
                   </div>
                 </div>
@@ -55,8 +57,10 @@ const CaseStudy: React.FC = () => {
                 />
                 <div className="absolute inset-0 flex cursor-pointer items-center justify-center opacity-0 duration-300 hover:bg-black hover:opacity-90">
                   <div className="flex flex-col items-center justify-center space-y-4 text-white">
-                    <h3>{element.project}</h3>
-                    <h5>{element.description}</h5>
+                    <h5 className="font-semibold uppercase tracking-widest">
+                      {element.project}
+                    </h5>
+                    <h3>{element.description}</h3>
                   </div>
                 </div>
               </div>
