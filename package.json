@@ -15,7 +15,9 @@
       "prepare": "husky install"
    },
    "dependencies": {
+      "@emailjs/browser": "^3.6.2",
       "@next-auth/mongodb-adapter": "^1.0.3",
+      "emailjs": "^4.0.0",
       "mongodb": "^4.6.0",
       "mongoose": "^6.3.4",
       "next": "^12.1.5",
