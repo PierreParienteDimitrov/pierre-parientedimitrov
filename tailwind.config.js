@@ -20,7 +20,7 @@ module.exports = {
     extend: {
       colors: {
         primary: {
-          100: '#CD55D7',
+          100: '#2196f3',
           200: '#C642CF',
           300: '#A938B1',
           400: '#8D2E94',
@@ -30,10 +30,10 @@ module.exports = {
           800: '#1C071E',
         },
         secondary: {
-          DEFAULT: '#D1D2F9',
+          DEFAULT: '#2196f3',
         },
         tertiary: {
-          DEFAULT: '#A3BCF9',
+          DEFAULT: '#e91e63',
         },
         gray: {
           100: '#f7fafc',
@@ -58,7 +58,7 @@ module.exports = {
           900: '#2a4365',
         },
         dark: {
-          DEFAULT: '#000106',
+          DEFAULT: '#151515',
           100: '#001279',
           200: '#001dc2',
         },
