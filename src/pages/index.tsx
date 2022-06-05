@@ -27,22 +27,6 @@ const Index: React.FC = () => {
         <meta property="og:image" content="/website-preview.png" />
       </Head>
       <div className="relative z-0 mb-16 w-screen bg-dark md:h-screen md:pt-20">
-        {/* <div className="absolute inset-0 -z-10 bg-gradient-to-l from-secondary to-tertiary opacity-100"></div> */}
-        {/* <video
-          autoPlay
-          muted
-          loop
-          style={{
-            position: 'absolute',
-            top: '1rem',
-            zIndex: '-1',
-            opacity: '0.03',
-            width: '100vw',
-            height: '100vh',
-          }}
-        >
-          <source src="/uxvideo.mp4" type="video/mp4" />
-        </video> */}
         <div className={`${styles.container}`}></div>
 
         {/* intro */}
@@ -98,38 +82,7 @@ const Index: React.FC = () => {
             </Link>
           </div>
         </Container>
-        {/* <Image
-          src="/abstract-bg.jpeg"
-          alt="Pierre Pariente Dimitrov"
-          layout="fill"
-          objectFit="cover"
-          objectPosition="center"
-          priority
-          className="absolute inset-x-0 top-0 -z-10"
-        /> */}
       </div>
-
-      {/* <Container> */}
-      {/* testimonials */}
-      {/* <div className="mt-32">
-          <div className="flex w-full justify-center text-center md:px-96">
-            <h4>
-              Testimonials Lorem ipsum dolor sit amet consectetur adipisicing
-              elit. Maxime, pariatur!
-            </h4>
-          </div>
-        </div> */}
-      {/* testimonials */}
-      {/* <div className="mt-32 w-full bg-slate-900">
-          <div className="flex w-full flex-col justify-center space-y-4 text-center">
-            <h2>We would work great together.</h2>
-            <p>
-              Read about my available services and let’s talk about your
-              interface design goals.
-            </p>
-          </div>
-        </div> */}
-      {/* </Container> */}
     </>
   )
 }

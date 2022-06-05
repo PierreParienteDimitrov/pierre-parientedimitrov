@@ -2,28 +2,6 @@
   position: relative;
 }
 
-/* .container::before {
-  content: '';
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: -170px;
-  left: -50px;
-  background: linear-gradient(#f0f, #f00);
-  clip-path: circle(20% at 25% 30%);
-}
-
-.container::after {
-  content: '';
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 150px;
-  left: 50px;
-  background: linear-gradient(#e91e63, #2196f3);
-  clip-path: circle(20% at 70% 65%);
-} */
-
 .container .card-wrapper {
   position: relative;
   z-index: 1;

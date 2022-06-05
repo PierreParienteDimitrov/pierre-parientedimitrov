@@ -39,7 +39,7 @@ export const caseStudies = [
   {
     project: 'Portfolio Website',
     description: 'Front-end & Back-end',
-    href: pageInformation[Routes.Portfolio]!.path,
+    href: 'https://github.com/PierreParienteDimitrov/pierre-parientedimitrov',
     src: '/software-portfolio.png',
     alt: 'Portfolio Website',
   },
