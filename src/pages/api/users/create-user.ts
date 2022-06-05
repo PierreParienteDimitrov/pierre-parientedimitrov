@@ -23,39 +23,32 @@ export default async function handler(
             .json({ message: 'invalid email', success: false, data: {} })
 
           mongoose.connection.close()
-          return
         }
 
         const isExistingEmail = await User.findOne({ email })
 
         if (isExistingEmail) {
-          res.status(422).json({
+          return res.status(422).json({
             message: 'access already requested',
             success: false,
             data: {},
           })
-          mongoose.connection.close()
-          return
         }
 
         const user = await User.create(data)
-        res.status(201).json({
+        return res.status(201).json({
           success: true,
           data: user,
           message: 'user successfully created',
         })
-        mongoose.connection.close()
       } catch (error) {
-        res
+        return res
           .status(400)
           .json({ sucess: false, message: 'server error', data: {} })
-        mongoose.connection.close()
       }
-      break
     default:
-      res
+      return res
         .status(400)
         .json({ success: false, message: 'server error', data: {} })
-      mongoose.connection.close()
   }
 }

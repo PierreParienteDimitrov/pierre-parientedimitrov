@@ -1,11 +1,13 @@
+import emailjs from '@emailjs/browser'
 import { useRouter } from 'next/router'
-import React, { useState } from 'react'
+import React, { useRef, useState } from 'react'
 
 import { RequestAccess } from '@/utils/RequestAccess'
 import { validateEmail } from '@/utils/validateEmail'
 
 const ContactForm: React.FC = () => {
   const router = useRouter()
+  const form = useRef<HTMLFormElement>(null)
 
   const [email, setEmail] = useState<string>('')
   const [emailError, setEmailError] = useState<boolean>(false)
@@ -25,6 +27,25 @@ const ContactForm: React.FC = () => {
       return
     }
 
+    if (router.pathname === '/') {
+      const formParams = { email, name, company, design, engineering }
+      emailjs
+        .send(
+          process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID!,
+          process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID!,
+          formParams,
+          process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY
+        )
+        .then(
+          (result) => {
+            console.log(result.text)
+          },
+          (error) => {
+            console.log(error.text)
+          }
+        )
+    }
+
     const data = await RequestAccess(name, email, company, design, engineering)
 
     if (data) {
@@ -35,6 +56,7 @@ const ContactForm: React.FC = () => {
 
   return (
     <form
+      ref={form}
       className="min-w-[343px] rounded-md border-[0.5px] border-gray-100 bg-gray-100 p-4 shadow-inner md:p-8"
       onSubmit={(e) => handleSubmit(e)}
     >
