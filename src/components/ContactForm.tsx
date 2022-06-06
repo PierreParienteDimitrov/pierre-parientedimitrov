@@ -29,6 +29,14 @@ const ContactForm: React.FC = () => {
       return
     }
 
+    window.analytics.track('Contact form submitted', {
+      email,
+      name,
+      company,
+      design,
+      engineering,
+    })
+
     if (router.pathname === '/') {
       const formParams = { email, name, company, design, engineering }
       emailjs
@@ -75,7 +83,7 @@ const ContactForm: React.FC = () => {
                 value={name}
                 onChange={(e) => setName(e.target.value)}
                 required
-                className="w-full border p-2 text-white"
+                className={`w-full border p-2 text-white ${styles.input}`}
               />
               <input
                 type="email"
@@ -83,7 +91,7 @@ const ContactForm: React.FC = () => {
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 required
-                className="w-full border p-2 text-white"
+                className={`w-full border p-2 text-white ${styles.input}`}
               />
               {emailError && (
                 <h5 className="text-red-500">Please enter a valid email</h5>
@@ -94,7 +102,7 @@ const ContactForm: React.FC = () => {
                 value={company}
                 onChange={(e) => setCompany(e.target.value)}
                 required
-                className="w-full border p-2 text-white"
+                className={`w-full border p-2 text-white ${styles.input}`}
               />
             </div>
             <div className="flex flex-col space-y-4">
