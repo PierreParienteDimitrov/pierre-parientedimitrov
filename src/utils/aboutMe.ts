@@ -1,6 +1,12 @@
 export const aboutMe =
   'I am a Product Designer and Front-End Engineer. For the last 18 month I have been the Product Designer and a Front-End Engineer for a fast-growing YC startup - BlueCargo. I have designed, built and grew, along with the product team, a multi-million dollar product for the Drayage Industry.'
 
+export const skills = [
+  'Interaction Design: Figma, Sketch, Adobe XD. Strong experience in building and managing large component library and documentation for developers.',
+  'User Experience Research: Experienced User Researcher with many usability interviews conducted for a wide range of digital products.',
+  'Engineering language and framework (intermediate skills): HTML, CSS, JavaScript, Typescript, React.js, Next.js, Node.js, Express, MongoDB, SQL databases.',
+]
+
 export const professionalExperiences = [
   {
     position: 'Product Designer - UX/UI Engineer',
