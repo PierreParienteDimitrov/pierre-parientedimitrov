@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 
 import { TypewriterItems } from '@/utils/content'
 
-const word = 'web developper'
+const word = 'software engineer'
 
 const Hero = () => {
   const [letterIndex, setLetterIndex] = useState(0)
@@ -50,7 +50,7 @@ const Hero = () => {
       () => {
         setLetterIndex((prev) => (reverse ? prev - 1 : prev + 1))
       },
-      reverse ? 50 : 200
+      reverse ? 50 : 150
     )
 
     return () => clearTimeout(timer1)
@@ -67,7 +67,7 @@ const Hero = () => {
         {TypewriterItems.map((element) => {
           return (
             <li key={element.title}>
-              <h2 className="font-serif font-extrabold italic text-primary-100">
+              <h2 className="font-serif font-extrabold italic text-white">
                 {element[key].substring(0, letterIndex)}
                 {/* {blink && '|'} */}
               </h2>
