@@ -49,7 +49,7 @@ const Index: React.FC = () => {
       </div>
 
       {/* skills */}
-      <div className="relative bg-dark py-24 text-white">
+      <div className="relative overflow-x-hidden bg-dark py-24 text-white">
         <div className={styles.skills}>
           <Container>
             <div className="w-full pb-8 text-center">
