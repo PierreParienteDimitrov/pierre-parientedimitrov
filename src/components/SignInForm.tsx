@@ -56,7 +56,7 @@ const SignInForm = () => {
         {' '}
         <div className="flex flex-col items-center space-y-4">
           <h5 className="font-bold uppercase tracking-wider">
-            Login to access restricted pages
+            You need to login to access this page.
           </h5>
           <h6>Enter your email to continue</h6>
           <form
@@ -79,14 +79,6 @@ const SignInForm = () => {
               <h2 className="opacity-20">↵</h2>
               <h6>Press return to validate</h6>
             </div>
-            {/* <Button
-            variant="contained"
-            color="primary"
-            size="medium"
-            onclick={handleSubmit}
-          >
-            Submit
-          </Button> */}
           </form>
           {error && (
             <div>
