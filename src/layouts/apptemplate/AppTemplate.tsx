@@ -17,7 +17,6 @@ const AppTemplate = ({ children }: ILayoutProps) => {
   const [displayLogin, setDisplayLogin] = useState<boolean>(false)
 
   useEffect(() => {
-    console.log(status)
     if (status === 'loading') return
     if (!isUser) {
       setDisplayLogin(true)
