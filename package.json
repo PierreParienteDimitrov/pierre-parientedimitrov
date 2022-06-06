@@ -17,6 +17,7 @@
    "dependencies": {
       "@emailjs/browser": "^3.6.2",
       "@next-auth/mongodb-adapter": "^1.0.3",
+      "@segment/snippet": "^4.15.3",
       "emailjs": "^4.0.0",
       "mongodb": "^4.6.0",
       "mongoose": "^6.3.4",

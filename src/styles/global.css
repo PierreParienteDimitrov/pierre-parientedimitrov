@@ -83,14 +83,6 @@ input[type='search']::-webkit-search-results-decoration {
   display: none;
 }
 
-input:-webkit-autofill,
-input:-webkit-autofill:hover,
-input:-webkit-autofill:focus,
-input:-webkit-autofill:active {
-  transition: background-color 5000s;
-  -webkit-text-fill-color: rgb(164, 19, 19) !important;
-}
-
 textarea {
   font-size: 0.75rem;
 }

@@ -1,6 +1,7 @@
 import { pageInformation, Routes } from 'constants/pages'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
+import Router from 'next/router'
 import { useSession } from 'next-auth/react'
 import React, { useState } from 'react'
 import { useEffect } from 'react'
@@ -8,6 +9,11 @@ import { AiFillDribbbleCircle, AiFillLinkedin } from 'react-icons/ai'
 import { ILayoutProps } from 'types/ILayoutProps'
 
 import Container from '../containers/Container'
+
+// Track client-side page views with Segment
+Router.events.on('routeChangeComplete', (url) => {
+  window.analytics.page(url)
+})
 
 const AppTemplate = ({ children }: ILayoutProps) => {
   const router = useRouter()

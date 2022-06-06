@@ -13,3 +13,11 @@
   backdrop-filter: blur(5px);
   overflow: hidden;
 }
+
+.input:-webkit-autofill,
+.input:-webkit-autofill:hover,
+.input:-webkit-autofill:focus,
+.input:-webkit-autofill:active {
+  transition: background-color 5000s;
+  -webkit-text-fill-color: white !important;
+}
