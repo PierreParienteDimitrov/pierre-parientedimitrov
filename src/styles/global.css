@@ -17,6 +17,8 @@ html,
 body {
   @apply h-full;
   @apply text-dark;
+  font-family: 'Playfair Display', serif;
+  font-family: 'Manrope', sans-serif;
 }
 
 #__next {
