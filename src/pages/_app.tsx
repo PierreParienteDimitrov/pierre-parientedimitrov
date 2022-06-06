@@ -1,6 +1,7 @@
 import '../styles/global.css'
 import 'nprogress/nprogress.css' //styles of nprogress
 
+import * as snippet from '@segment/snippet'
 import { AppProps } from 'next/app'
 import Router from 'next/router'
 import Script from 'next/script'
@@ -13,19 +14,21 @@ Router.events.on('routeChangeStart', () => NProgress.start())
 Router.events.on('routeChangeComplete', () => NProgress.done())
 Router.events.on('routeChangeError', () => NProgress.done())
 
+const DEFAULT_WRITE_KEY = process.env.NEXT_PUBLIC_SEGMENT_KEY
+
 function renderSnippet() {
   const opts = {
-    apiKey: process.env.NEXT_PUBLIC_SEGMENT_KEY,
+    apiKey: process.env.NEXT_PUBLIC_SEGMENT_KEY || DEFAULT_WRITE_KEY,
     // note: the page option only covers SSR tracking.
     // Page.js is used to track other events using `window.analytics.page()`
     page: true,
   }
 
   if (process.env.NODE_ENV === 'development') {
-    return opts
+    return snippet.max(opts)
   }
 
-  return opts
+  return snippet.min(opts)
 }
 
 const MyApp = ({
@@ -36,7 +39,6 @@ const MyApp = ({
     <AppTemplate>
       <Script
         id="segment-script"
-        //@ts-ignore
         dangerouslySetInnerHTML={{ __html: renderSnippet() }}
       />
       <Component {...pageProps} />
