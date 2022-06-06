@@ -1,7 +1,5 @@
 # Pierre Pariente Dimitrov Portfolio
 
-![Portfolio Image](image.png)
-
 ## Description
 
 This project is my personal portfolio that showcase my design and engineering work over the past few years. You can visit my [Portfolio here!](https://www.pierreparientedimitrov.com/)
