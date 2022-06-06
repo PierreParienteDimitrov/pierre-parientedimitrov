@@ -7,13 +7,10 @@ import { caseStudies } from '../../utils/caseStudiesContent'
 const CaseStudy: React.FC = () => {
   return (
     <div className="flex w-full flex-wrap">
-      {caseStudies.map((element) => {
+      {caseStudies.map((element, index) => {
         if (element.project === 'Portfolio Website') {
           return (
-            <div
-              key={element.project}
-              className="relative w-full border-4 md:w-1/2"
-            >
+            <div key={index} className="relative w-full border-4 md:w-1/2">
               <a href={element.href} target="_blank" rel="noreferrer">
                 <div>
                   <Image
@@ -40,10 +37,7 @@ const CaseStudy: React.FC = () => {
         }
 
         return (
-          <div
-            key={element.project}
-            className="relative w-full border-4 md:w-1/2"
-          >
+          <div key={index} className="relative w-full border-4 md:w-1/2">
             <Link href={element.href} passHref>
               <div>
                 <Image
