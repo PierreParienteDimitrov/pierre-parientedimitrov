@@ -28,7 +28,7 @@ function renderSnippet() {
     return snippet.max(opts)
   }
 
-  return snippet.min(opts)
+  return snippet.max(opts)
 }
 
 const MyApp = ({
