@@ -1,7 +1,6 @@
 import '../styles/global.css'
 import 'nprogress/nprogress.css' //styles of nprogress
 
-import * as snippet from '@segment/snippet'
 import { AppProps } from 'next/app'
 import Router from 'next/router'
 import Script from 'next/script'
@@ -23,10 +22,10 @@ function renderSnippet() {
   }
 
   if (process.env.NODE_ENV === 'development') {
-    return snippet.max(opts)
+    return opts
   }
 
-  return snippet.min(opts)
+  return opts
 }
 
 const MyApp = ({
@@ -37,6 +36,7 @@ const MyApp = ({
     <AppTemplate>
       <Script
         id="segment-script"
+        //@ts-ignore
         dangerouslySetInnerHTML={{ __html: renderSnippet() }}
       />
       <Component {...pageProps} />
