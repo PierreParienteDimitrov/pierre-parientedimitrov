@@ -55,6 +55,8 @@ const SignInForm = () => {
     if (!result) {
       return router.replace('/thank-you')
     }
+
+    return
   }
 
   return (
