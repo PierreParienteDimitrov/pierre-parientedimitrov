@@ -17,17 +17,22 @@ Router.events.on('routeChangeError', () => NProgress.done())
 const DEFAULT_WRITE_KEY = process.env.NEXT_PUBLIC_DEFAULT_WRITE_KEY
 
 function renderSnippet() {
+  if (process.env.NODE_ENV === 'development') {
+    const opts = {
+      apiKey: DEFAULT_WRITE_KEY,
+      // note: the page option only covers SSR tracking.
+      // Page.js is used to track other events using `window.analytics.page()`
+      page: true,
+    }
+    return snippet.max(opts)
+  }
+
   const opts = {
-    apiKey: process.env.NEXT_PUBLIC_ANALYTICS_WRITE_KEY || DEFAULT_WRITE_KEY,
+    apiKey: process.env.NEXT_PUBLIC_SEGMENT_KEY,
     // note: the page option only covers SSR tracking.
     // Page.js is used to track other events using `window.analytics.page()`
     page: true,
   }
-
-  if (process.env.NODE_ENV === 'development') {
-    return snippet.max(opts)
-  }
-
   return snippet.min(opts)
 }
 
