@@ -9,7 +9,7 @@ import { validateEmail } from '@/utils/validateEmail'
 const SignInForm = () => {
   const router = useRouter()
   const { query } = router
-  const requestedPath = query.path
+  const requestedPath = query.project
 
   const [email, setEmail] = useState<string>('')
   const [error, setError] = useState<boolean>(false)
@@ -43,11 +43,20 @@ const SignInForm = () => {
     }
 
     //@ts-ignore
+    if (!result?.error && !requestedPath) {
+      router.replace(`/`)
+    }
+
+    //@ts-ignore
     if (result?.error) {
       setError(true)
     }
 
-    return router.replace('/thank-you')
+    if (!result) {
+      return router.replace('/thank-you')
+    }
+
+    return
   }
 
   return (

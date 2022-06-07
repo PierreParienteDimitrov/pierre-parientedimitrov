@@ -2,7 +2,7 @@ import { pageInformation, Routes } from 'constants/pages'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
 import Router from 'next/router'
-import { useSession } from 'next-auth/react'
+import { signOut, useSession } from 'next-auth/react'
 import React, { useState } from 'react'
 import { useEffect } from 'react'
 import { AiFillDribbbleCircle, AiFillLinkedin } from 'react-icons/ai'
@@ -19,13 +19,18 @@ const AppTemplate = ({ children }: ILayoutProps) => {
   const router = useRouter()
   const pathname = router.pathname
   const { data: session, status } = useSession()
-  const isUser = !!session?.user
+  const isUser = !!session
   const [displayLogin, setDisplayLogin] = useState<boolean>(false)
 
   useEffect(() => {
     if (status === 'loading') return
+
     if (!isUser) {
       setDisplayLogin(true)
+    }
+
+    if (isUser) {
+      setDisplayLogin(false)
     }
   }, [isUser, status])
 
@@ -50,9 +55,20 @@ const AppTemplate = ({ children }: ILayoutProps) => {
               </li>
             </div>
             <div className="flex space-x-16">
-              {displayLogin && (
+              {displayLogin ? (
                 <li>
                   <Link href={pageInformation[Routes.SignIn]!.path}>Login</Link>
+                </li>
+              ) : (
+                <li
+                  className="cursor-pointer"
+                  onClick={() =>
+                    signOut({
+                      callbackUrl: `${pageInformation[Routes.Home]!.path}`,
+                    })
+                  }
+                >
+                  Sign out
                 </li>
               )}
             </div>
