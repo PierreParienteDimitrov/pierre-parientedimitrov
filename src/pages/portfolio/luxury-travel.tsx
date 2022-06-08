@@ -7,8 +7,6 @@ import TwoCols from '@/layouts/grids/TwoCols'
 import { ICarousel } from 'types/ICarousel'
 import Carousel from '@/components/Carousel'
 import ProjectMetrics from '@/components/ProjectMetrics'
-import Link from 'next/link'
-import { pageInformation, Routes } from 'constants/pages'
 
 const LUXURY: ICarousel[] = [
   {
