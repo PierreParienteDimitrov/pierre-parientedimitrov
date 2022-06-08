@@ -1,12 +1,12 @@
-import React from 'react'
 import Image from 'next/image'
-
-import { getServerSideProps } from '@/utils/protectedRoutes'
-import Container from '@/layouts/containers/Container'
-import TwoCols from '@/layouts/grids/TwoCols'
+import React from 'react'
 import { ICarousel } from 'types/ICarousel'
+
 import Carousel from '@/components/Carousel'
 import ProjectMetrics from '@/components/ProjectMetrics'
+import Container from '@/layouts/containers/Container'
+import TwoCols from '@/layouts/grids/TwoCols'
+import { getServerSideProps } from '@/utils/protectedRoutes'
 
 const LUXURY: ICarousel[] = [
   {
@@ -88,7 +88,7 @@ const LeftSide: React.FC = () => {
               four buckets that represented most of the company’s travel
               experiences:
             </p>
-            <div className="w-full h-full flex flex-wrap">
+            <div className="flex h-full w-full flex-wrap">
               <div className="w-1/2 border-4 border-white">
                 <Image
                   src="/yatch.png"
