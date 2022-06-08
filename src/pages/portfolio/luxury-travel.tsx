@@ -159,6 +159,7 @@ const LeftSide: React.FC = () => {
               My work with Sienna Charles helped the company rebuild its
               marketing and brand assets, including the website.
             </p>
+            <a href="https://siennacharles.com/">Link to the website</a>
           </div>
         </div>
       </div>
