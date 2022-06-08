@@ -56,12 +56,28 @@ const LeftSide: React.FC = () => {
         <div className="flex flex-col space-y-2">
           <h4 className="font-bold">Brand Evolution</h4>
           <p>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minus
-            dolorem debitis, blanditiis tempora eveniet illo ratione voluptates
-            id neque iusto, earum sit? Debitis explicabo ipsa eveniet illum
-            expedita aliquid dolore veritatis, commodi porro modi odio, maiores
-            non vitae voluptates et!
+            I worked alongside the founder and the marketing director to define
+            new fonts for the brand. I proposed a two-font system. A Serif font
+            to evoke luxury; and a sans serif font for utilities (buttons,
+            forms, links, etc.).
           </p>
+          <div className="py-8">
+            <a
+              href="/_next/image?url=%2Fdata-architecture.png&w=3840&q=75"
+              target="_blank"
+              className="h-full w-full cursor-pointer"
+            >
+              <Image
+                src="/luxury-2.png"
+                alt="Brand Evolution"
+                layout="responsive"
+                width={1920}
+                height={768}
+                objectFit="cover"
+                priority
+              />
+            </a>
+          </div>
         </div>
         {/* Landing Page */}
         <div className="flex flex-col space-y-2">
@@ -74,12 +90,52 @@ const LeftSide: React.FC = () => {
               four buckets that represented most of the company’s travel
               experiences:
             </p>
-            <ul className="list-disc pl-4">
-              <li>Yatch</li>
-              <li>Welness</li>
-              <li>City</li>
-              <li> Food & Wine</li>
-            </ul>
+            <div className="w-full h-full flex flex-wrap">
+              <div className="w-1/2 border-4 border-white">
+                <Image
+                  src="/yatch.png"
+                  alt="Yatch"
+                  layout="responsive"
+                  width={374}
+                  height={374}
+                  objectFit="cover"
+                  priority
+                />
+              </div>
+              <div className="w-1/2 border-4 border-white">
+                <Image
+                  src="/wellness.png"
+                  alt="Wellness"
+                  layout="responsive"
+                  width={374}
+                  height={374}
+                  objectFit="cover"
+                  priority
+                />
+              </div>
+              <div className="w-1/2 border-4 border-white">
+                <Image
+                  src="/city.png"
+                  alt="City"
+                  layout="responsive"
+                  width={374}
+                  height={374}
+                  objectFit="cover"
+                  priority
+                />
+              </div>
+              <div className="w-1/2 border-4 border-white">
+                <Image
+                  src="/food-wine.png"
+                  alt="Food & Wine"
+                  layout="responsive"
+                  width={374}
+                  height={374}
+                  objectFit="cover"
+                  priority
+                />
+              </div>
+            </div>
           </div>
         </div>
         {/* Marketing */}
