@@ -8,7 +8,7 @@ const CaseStudy: React.FC = () => {
   return (
     <div className="flex w-full flex-wrap">
       {caseStudies.map((element, index) => {
-        if (element.project === 'Portfolio Website') {
+        if (element.external) {
           return (
             <div key={index} className="relative w-full border-4 md:w-1/2">
               <a href={element.href} target="_blank" rel="noreferrer">
