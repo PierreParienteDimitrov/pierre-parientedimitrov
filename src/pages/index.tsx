@@ -10,6 +10,7 @@ import { aboutMe } from '@/utils/aboutMe'
 import { skills } from '@/utils/skills'
 
 import styles from '../styles/home.module.css'
+import InfiniteCarousel from '@/components/Home/InfiniteCarousel'
 
 const Index: React.FC = () => {
   return (
@@ -33,12 +34,17 @@ const Index: React.FC = () => {
 
         {/* intro */}
         <Container>
-          <div className="relative z-50 flex h-full flex-col space-y-16 py-16 md:h-screen md:flex-row md:items-start md:space-y-0">
-            <div className="w-full lg:w-2/3">
-              <Hero />
+          <div className="flex flex-col -space-y-16 w-full">
+            <div className="relative z-50 flex h-full flex-col space-y-16 py-16 md:flex-row md:items-start md:space-y-0">
+              <div className="w-full lg:w-2/3">
+                <Hero />
+              </div>
+              <div className="w-full lg:w-1/3">
+                <ContactForm />
+              </div>
             </div>
-            <div className="w-full lg:w-1/3">
-              <ContactForm />
+            <div className="self-start">
+              <InfiniteCarousel />
             </div>
           </div>
         </Container>
