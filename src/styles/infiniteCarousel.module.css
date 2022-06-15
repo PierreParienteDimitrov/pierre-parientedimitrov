@@ -3,7 +3,7 @@
     transform: translateX(100px);
   }
   100% {
-    transform: translateX(calc(-100px * 8));
+    transform: translateX(calc(-100px * 10));
   }
 }
 
@@ -12,7 +12,7 @@
     transform: translateX(100px);
   }
   100% {
-    transform: translateX(calc(-100px * 8));
+    transform: translateX(calc(-100px * 10));
   }
 }
 .slider {
@@ -51,9 +51,9 @@
   -webkit-animation: scroll 20s linear infinite;
   animation: scroll 20s linear infinite;
   display: flex;
-  width: calc(250px * 14);
+  width: calc(250px * 20);
 }
 .slider .slide {
   height: 100px;
-  width: 250px;
+  width: 150px;
 }
