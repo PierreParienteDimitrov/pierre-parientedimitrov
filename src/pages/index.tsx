@@ -73,7 +73,7 @@ const Index: React.FC = () => {
               </h4>
               <p>{aboutMe}</p>
             </div>
-            <Link href={`${pageInformation[Routes.Resume]}`} passHref>
+            <Link href={`${pageInformation[Routes.Resume]!.path}`} passHref>
               <h5 className="cursor-pointer text-primary">Learn More</h5>
             </Link>
           </div>

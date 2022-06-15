@@ -42,10 +42,10 @@ const AppTemplate = ({ children }: ILayoutProps) => {
           <ul className="flex w-full items-center justify-between">
             <div className="flex items-center space-x-8">
               <li>
-                <Link href={`${pageInformation[Routes.Home]}`}>
+                <Link href={`${pageInformation[Routes.Home]!.path}`}>
                   <a
                     className={`${
-                      pathname === `${pageInformation[Routes.Home]}` &&
+                      pathname === `${pageInformation[Routes.Home]!.path}` &&
                       'font-bold'
                     }`}
                   >
@@ -54,10 +54,10 @@ const AppTemplate = ({ children }: ILayoutProps) => {
                 </Link>
               </li>
               <li>
-                <Link href={`${pageInformation[Routes.Resume]}`}>
+                <Link href={`${pageInformation[Routes.Resume]!.path}`}>
                   <a
                     className={`${
-                      pathname === `${pageInformation[Routes.Resume]}` &&
+                      pathname === `${pageInformation[Routes.Resume]!.path}` &&
                       'font-bold'
                     }`}
                   >
@@ -68,14 +68,14 @@ const AppTemplate = ({ children }: ILayoutProps) => {
             </div>
             <div className="flex space-x-16">
               {displayLogin ? (
-                <li className="relative group">
-                  <h6 className="uppercase tracking-wider font-bold cursor-pointer z-50 px-2">
+                <li className="group relative">
+                  <h6 className="z-50 cursor-pointer px-2 font-bold uppercase tracking-wider">
                     <Link href={pageInformation[Routes.RequestAccess]!.path}>
                       Request access to all projects
                     </Link>
                   </h6>
                   <span
-                    className="absolute top-0 left-0 w-0 h-full bg-secondary transition-all group-hover:w-full"
+                    className="absolute top-0 left-0 h-full w-0 bg-secondary transition-all group-hover:w-full"
                     style={{ zIndex: '-100' }}
                   ></span>
                 </li>
