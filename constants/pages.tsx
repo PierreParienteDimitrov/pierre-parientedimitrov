@@ -16,7 +16,7 @@ export enum Routes {
   ContainerTracking = '/portfolio/container-tracking',
   LuxuryTravel = '/portfolio/luxury-travel',
   UIShots = '/portfolio/ui-shots',
-  Portfolio = '/portfolio/portfolio',
+  Portfolio = '/portfolio',
 }
 
 export const pageInformation: Record<string, IPage> = {
