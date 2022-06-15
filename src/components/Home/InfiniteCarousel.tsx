@@ -1,5 +1,7 @@
 import React from 'react'
+
 import { skillLogos } from '@/utils/skillLogos'
+
 import styles from '../../styles/infiniteCarousel.module.css'
 
 const InfiniteCarousel: React.FC = () => {
