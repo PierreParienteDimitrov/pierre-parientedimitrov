@@ -65,6 +65,19 @@ const AppTemplate = ({ children }: ILayoutProps) => {
                   </a>
                 </Link>
               </li>
+              <li>
+                <Link href={`${pageInformation[Routes.Portfolio]!.path}`}>
+                  <a
+                    className={`${
+                      pathname ===
+                        `${pageInformation[Routes.Portfolio]!.path}` &&
+                      'font-bold'
+                    }`}
+                  >
+                    Portfolio
+                  </a>
+                </Link>
+              </li>
             </div>
             <div className="flex space-x-16">
               {displayLogin ? (
