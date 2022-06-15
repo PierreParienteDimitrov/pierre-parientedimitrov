@@ -51,7 +51,7 @@ export const caseStudies = [
   },
   {
     project: 'Tempso Landing Page',
-    description: 'Front-end & UX/UI Design',
+    description: 'UX/UI Design & Front-end',
     href: 'https://github.com/PierreParienteDimitrov/tempso.com',
     src: '/case-study-tempso-landing-page.png',
     alt: 'Tempso Landing Page',
@@ -59,7 +59,7 @@ export const caseStudies = [
   },
   {
     project: 'Know Better World Foundation',
-    description: 'Website Builder & UX/UI Design',
+    description: 'UX/UI Design & Squarespace',
     href: 'https://www.knowbetterworldfoundation.org/',
     src: '/case-study-kbwf.png',
     alt: 'Know Better World Foundation Website',
@@ -67,7 +67,7 @@ export const caseStudies = [
   },
   {
     project: 'Skoog Media',
-    description: 'Website Builder & UX/UI Design',
+    description: 'UX/UI Design & Shopify',
     href: 'https://skoog.media/',
     src: '/case-study-skoog.png',
     alt: 'Skoog Website',
@@ -75,7 +75,7 @@ export const caseStudies = [
   },
   {
     project: 'Technext',
-    description: 'Website Builder & UX/UI Design',
+    description: 'X/UI Design & Wix',
     href: 'https://www.technext.fr/?lang=en',
     src: '/case-study-technext.png',
     alt: 'Technext Website',
