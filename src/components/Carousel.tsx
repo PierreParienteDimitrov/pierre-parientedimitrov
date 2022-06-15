@@ -32,11 +32,14 @@ const Carousel: React.FC<{ carouselItems: ICarousel[] }> = (props) => {
           return (
             <div
               key={item.title}
-              className={`absolute flex h-full w-full items-center justify-center ${
+              className={`absolute flex h-full w-full items-center justify-center rounded-md ${
                 carouselIndex === index
                   ? 'transition duration-1000 ease-in opacity-100'
                   : 'transition duration-1000 ease-out opacity-0'
               }`}
+              style={{
+                boxShadow: '3px 3px 5px #c9ced2, -3px -3px 5px #ffffff',
+              }}
             >
               <Image
                 src={item.src}
@@ -45,6 +48,7 @@ const Carousel: React.FC<{ carouselItems: ICarousel[] }> = (props) => {
                 objectFit="cover"
                 objectPosition="center"
                 priority
+                className="rounded-md"
               />
               {/* <h2 className="absolute bottom-4">{item?.title}</h2> */}
             </div>

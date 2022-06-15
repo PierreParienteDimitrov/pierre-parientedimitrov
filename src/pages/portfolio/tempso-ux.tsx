@@ -372,31 +372,33 @@ const LeftSide: React.FC = () => {
 
 const Tempso: React.FC = () => {
   return (
-    <Container>
-      {/* carousel */}
-      <div className="py-8">
-        <Carousel carouselItems={TEMPSO} />
-      </div>
+    <div className="bg-gray-200">
+      <Container>
+        {/* carousel */}
+        <div className="py-8">
+          <Carousel carouselItems={TEMPSO} />
+        </div>
 
-      <div className="flex flex-col space-y-8 md:mt-16">
-        <TwoCols
-          leftSide={<LeftSide />}
-          leftDesktopOrder="order-1"
-          leftMobileOrder="order-2"
-          rightSide={
-            <ProjectMetrics
-              year="2020"
-              role="UX Researcher & Designer"
-              technology="Miro Mindmapping, Octopus sitemap, Figma"
-              method="User Interviews, Wireframing, Usability Study"
-              category="Mobile Application"
-            />
-          }
-          rightDesktopOrder="order-2"
-          rightMobileOrder="order-1"
-        />
-      </div>
-    </Container>
+        <div className="flex flex-col space-y-8 md:mt-16">
+          <TwoCols
+            leftSide={<LeftSide />}
+            leftDesktopOrder="order-1"
+            leftMobileOrder="order-2"
+            rightSide={
+              <ProjectMetrics
+                year="2020"
+                role="UX Researcher & Designer"
+                technology="Miro Mindmapping, Octopus sitemap, Figma"
+                method="User Interviews, Wireframing, Usability Study"
+                category="Mobile Application"
+              />
+            }
+            rightDesktopOrder="order-2"
+            rightMobileOrder="order-1"
+          />
+        </div>
+      </Container>
+    </div>
   )
 }
 
