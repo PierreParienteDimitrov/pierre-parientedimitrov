@@ -1,9 +1,9 @@
 export const tags = {
   ux: 'user experience',
   ui: 'user interface',
-  frontEnd: 'front-end engineering',
-  backEnd: 'back-end engineering',
-  fullStack: 'full-stack engineering',
+  frontEnd: 'front-end',
+  backEnd: 'back-end',
+  fullStack: 'full-stack',
   branding: 'branding',
   websiteBuilder: 'website builder',
 }
