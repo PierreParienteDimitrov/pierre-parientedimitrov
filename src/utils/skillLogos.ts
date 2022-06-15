@@ -16,16 +16,32 @@ export const skillLogos = [
     src: '/React.png',
     alt: '',
   },
-  //   {
-  //     src: '/Sketch.png',
-  //     alt: '',
-  //   },
-  //   {
-  //     src: '/React.png',
-  //     alt: '',
-  //   },
-  //   {
-  //     src: '/Figma.png',
-  //     alt: '',
-  //   },
+  {
+    src: '/Nodejs.png',
+    alt: '',
+  },
+  {
+    src: '/Nextjs.png',
+    alt: '',
+  },
+  {
+    src: '/Javascript.png',
+    alt: '',
+  },
+  {
+    src: '/Typescript.png',
+    alt: '',
+  },
+  {
+    src: '/HTML.png',
+    alt: '',
+  },
+  {
+    src: '/CSS.png',
+    alt: '',
+  },
+  {
+    src: '/Tailwind.png',
+    alt: '',
+  },
 ]
