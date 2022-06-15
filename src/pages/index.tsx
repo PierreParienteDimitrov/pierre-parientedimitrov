@@ -43,13 +43,37 @@ const Index: React.FC = () => {
           </div>
         </Container>
       </div>
-      {/* case studies */}
-      <div className="py-16">
-        <CaseStudy />
+      <div className="relative w-full py-32 h-screen">
+        <Container>
+          {/* statement */}
+          <div className="z-10 flex flex-col items-center space-y-8">
+            <div className="relative w-3/6 md:w-1/6">
+              <Image
+                src="/pierrepariente.jpeg"
+                alt="Pierre Pariente Dimitrov"
+                layout="responsive"
+                width={500}
+                height={500}
+                priority
+                className="z-10 rounded-full shadow-lg"
+              />
+              <div className="absolute top-0 z-0 h-[230px] w-[230px] rounded-full bg-primary opacity-10"></div>
+            </div>
+            <div className="w-full flex-col space-y-4 md:m-auto md:w-3/6">
+              <h4>
+                I am a Digital Entrepreneur with a passion for creating
+                meaningful digital experiences.
+              </h4>
+              <p>{aboutMe}</p>
+            </div>
+            <Link href="/about" passHref>
+              <h5 className="cursor-pointer text-primary">Learn More</h5>
+            </Link>
+          </div>
+        </Container>
       </div>
-
       {/* skills */}
-      <div className="relative overflow-x-hidden bg-dark py-24 text-white">
+      <div className="relative overflow-x-hidden bg-white py-24 text-dark">
         <div className={styles.skills}>
           <Container>
             <div className="w-full pb-8 text-center">
@@ -92,35 +116,12 @@ const Index: React.FC = () => {
           </Container>
         </div>
       </div>
-
-      <div className="relative w-full py-4">
-        <Container>
-          {/* statement */}
-          <div className="z-10 flex flex-col items-center space-y-8">
-            <div className="relative w-3/6 md:w-1/6">
-              <Image
-                src="/pierrepariente.jpeg"
-                alt="Pierre Pariente Dimitrov"
-                layout="responsive"
-                width={500}
-                height={500}
-                priority
-                className="z-10 rounded-full shadow-lg"
-              />
-              <div className="absolute top-0 z-0 h-[230px] w-[230px] rounded-full bg-primary opacity-10"></div>
-            </div>
-            <div className="w-full flex-col space-y-4 md:m-auto md:w-3/6">
-              <h4>
-                I am a Digital Entrepreneur with a passion for creating
-                meaningful digital experiences.
-              </h4>
-              <p>{aboutMe}</p>
-            </div>
-            <Link href="/about" passHref>
-              <h5 className="cursor-pointer text-primary">Learn More</h5>
-            </Link>
-          </div>
-        </Container>
+      {/* case studies */}
+      <div className="py-32">
+        <div className="w-full pb-8 text-center">
+          <h4 className="font-bold">My Projects</h4>
+        </div>
+        <CaseStudy />
       </div>
     </>
   )
