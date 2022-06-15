@@ -1,5 +1,7 @@
 import { pageInformation, Routes } from 'constants/pages'
 
+import { tags } from './tags'
+
 export const caseStudies = [
   {
     project: 'Tempso',
@@ -8,6 +10,7 @@ export const caseStudies = [
     src: '/ux-case-study-tempso.png',
     alt: 'Tempso UX Case Study',
     external: false,
+    tags: [tags.ux],
   },
   {
     project: 'Tempso',
@@ -16,6 +19,7 @@ export const caseStudies = [
     src: '/case-study-tempso.png',
     alt: 'Tempso UI',
     external: false,
+    tags: [tags.ui],
   },
   {
     project: 'BlueCargo',
@@ -24,6 +28,7 @@ export const caseStudies = [
     src: '/case-study-container-management.png',
     alt: 'Container Tracking Case Study',
     external: false,
+    tags: [tags.ux],
   },
   {
     project: 'Luxury Travel Agency',
@@ -32,6 +37,7 @@ export const caseStudies = [
     src: '/case-study-luxury-travel.png',
     alt: 'Luxury Travel Case Study',
     external: false,
+    tags: [tags.ux, tags.ui, tags.branding],
   },
   {
     project: 'UI Shots',
@@ -40,6 +46,7 @@ export const caseStudies = [
     src: '/case-study-ui-shots.png',
     alt: 'UI Shots',
     external: false,
+    tags: [tags.ui],
   },
   {
     project: 'Portfolio Website',
@@ -48,6 +55,7 @@ export const caseStudies = [
     src: '/software-portfolio.png',
     alt: 'Portfolio Website',
     external: true,
+    tags: [tags.frontEnd, tags.backEnd, tags.fullStack],
   },
   {
     project: 'Tempso Landing Page',
@@ -56,6 +64,7 @@ export const caseStudies = [
     src: '/case-study-tempso-landing-page.png',
     alt: 'Tempso Landing Page',
     external: true,
+    tags: [tags.ux, tags.ui, tags.frontEnd],
   },
   {
     project: 'Know Better World Foundation',
@@ -64,6 +73,7 @@ export const caseStudies = [
     src: '/case-study-kbwf.png',
     alt: 'Know Better World Foundation Website',
     external: true,
+    tags: [tags.ux, tags.ui, tags.websiteBuilder],
   },
   {
     project: 'Skoog Media',
@@ -72,13 +82,15 @@ export const caseStudies = [
     src: '/case-study-skoog.png',
     alt: 'Skoog Website',
     external: true,
+    tags: [tags.ux, tags.ui, tags.websiteBuilder],
   },
   {
     project: 'Technext',
-    description: 'X/UI Design & Wix',
+    description: 'UX/UI Design & Wix',
     href: 'https://www.technext.fr/?lang=en',
     src: '/case-study-technext.png',
     alt: 'Technext Website',
     external: true,
+    tags: [tags.ux, tags.ui, tags.websiteBuilder],
   },
 ]
