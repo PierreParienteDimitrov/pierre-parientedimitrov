@@ -17,7 +17,7 @@ const Index: React.FC = () => {
   return (
     <>
       <Head>
-        <title>Pierre Pariente Dimitrov Portfolio</title>
+        <title>{pageInformation[Routes.Home]!.title}</title>
         <meta
           property="og:url"
           content="https://www.pierreparientedimitrov.com/"

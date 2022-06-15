@@ -21,62 +21,62 @@ export enum Routes {
 
 export const pageInformation: Record<string, IPage> = {
   [Routes.Resume]: {
-    title: 'Resume',
+    title: 'Pierre Pariente Dimitrov - Resume',
     path: Routes.Resume,
     isPublic: true,
   },
   [Routes.Contact]: {
-    title: 'Contact',
+    title: 'Pierre Pariente Dimitrov - Contact',
     path: Routes.Contact,
     isPublic: true,
   },
   [Routes.Home]: {
-    title: 'Home',
+    title: 'Pierre Pariente Dimitrov',
     path: Routes.Home,
     isPublic: true,
   },
   [Routes.RequestAccess]: {
-    title: 'RequestAccess',
+    title: 'Pierre Pariente Dimitrov - Request Access',
     path: Routes.RequestAccess,
     isPublic: true,
   },
   [Routes.SignIn]: {
-    title: 'SignIn',
+    title: 'Pierre Pariente Dimitrov - Sign In',
     path: Routes.SignIn,
     isPublic: true,
   },
   [Routes.ThankYou]: {
-    title: 'Thank you',
+    title: 'Pierre Pariente Dimitrov - Thank you',
     path: Routes.ThankYou,
     isPublic: true,
   },
   [Routes.Tempso]: {
-    title: 'Tempso',
+    title: 'Pierre Pariente Dimitrov - Tempso',
     path: Routes.Tempso,
     isPublic: true,
   },
   [Routes.TempsoUX]: {
-    title: 'TempsoUX',
+    title: 'Pierre Pariente Dimitrov - Tempso UX',
     path: Routes.TempsoUX,
     isPublic: true,
   },
   [Routes.ContainerTracking]: {
-    title: 'Container Tracking',
+    title: 'Pierre Pariente Dimitrov - Container Tracking',
     path: Routes.ContainerTracking,
     isPublic: false,
   },
   [Routes.LuxuryTravel]: {
-    title: 'LuxuryTravel',
+    title: 'Pierre Pariente Dimitrov - Luxury Travel',
     path: Routes.LuxuryTravel,
     isPublic: false,
   },
   [Routes.UIShots]: {
-    title: 'UIShots',
+    title: 'Pierre Pariente Dimitrov - Tempso UI Shots',
     path: Routes.UIShots,
     isPublic: true,
   },
   [Routes.Portfolio]: {
-    title: 'Portfolio',
+    title: 'Pierre Pariente Dimitrov - Portfolio',
     path: Routes.Portfolio,
     isPublic: true,
   },

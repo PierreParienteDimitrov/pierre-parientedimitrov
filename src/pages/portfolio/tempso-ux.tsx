@@ -1,4 +1,5 @@
 import { pageInformation, Routes } from 'constants/pages'
+import Head from 'next/head'
 import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
@@ -30,6 +31,20 @@ const TEMPSO: ICarousel[] = [
 const LeftSide: React.FC = () => {
   return (
     <>
+      <Head>
+        <title>{pageInformation[Routes.TempsoUX]!.title}</title>
+        <meta
+          property="og:url"
+          content="https://www.pierreparientedimitrov.com/"
+        />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="website-preview" />
+        <meta
+          property="og:description"
+          content="Pierre Pariente Dimitrov Portfolio = UX/UI designer & Software Engineer"
+        />
+        <meta property="og:image" content="/website-preview.png" />
+      </Head>
       <div className="flex flex-col space-y-16 md:pb-16 md:pr-24">
         <div>
           {/* introduction */}
@@ -346,7 +361,7 @@ const LeftSide: React.FC = () => {
           </div>
         </div>
         <Link href={pageInformation[Routes.Tempso]!.path} passHref>
-          <h4 className="cursor-pointer pb-16 font-bold text-primary-100 underline">
+          <h4 className="text-primary-100 cursor-pointer pb-16 font-bold underline">
             Discover Tempso UI here!
           </h4>
         </Link>
