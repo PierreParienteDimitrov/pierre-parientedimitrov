@@ -5,6 +5,7 @@ import Link from 'next/link'
 import ContactForm from '@/components/ContactForm'
 import Hero from '@/components/Hero/Hero'
 import CaseStudy from '@/components/Home/CaseStudy'
+import InfiniteCarousel from '@/components/Home/InfiniteCarousel'
 import Container from '@/layouts/containers/Container'
 import { aboutMe } from '@/utils/aboutMe'
 import { skills } from '@/utils/skills'
@@ -33,17 +34,22 @@ const Index: React.FC = () => {
 
         {/* intro */}
         <Container>
-          <div className="relative z-50 flex h-full flex-col space-y-16 py-16 md:h-screen md:flex-row md:items-start md:space-y-0">
-            <div className="w-full lg:w-2/3">
-              <Hero />
+          <div className="flex w-full flex-col -space-y-16">
+            <div className="relative z-50 flex h-full flex-col space-y-16 py-16 md:flex-row md:items-start md:space-y-0">
+              <div className="w-full lg:w-2/3">
+                <Hero />
+              </div>
+              <div className="w-full lg:w-1/3">
+                <ContactForm />
+              </div>
             </div>
-            <div className="w-full lg:w-1/3">
-              <ContactForm />
+            <div className="self-start">
+              <InfiniteCarousel />
             </div>
           </div>
         </Container>
       </div>
-      <div className="relative w-full py-32 h-screen">
+      <div className="relative h-screen w-full py-32">
         <Container>
           {/* statement */}
           <div className="z-10 flex flex-col items-center space-y-8">
