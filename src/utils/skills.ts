@@ -6,12 +6,12 @@ export const skills = [
       'personas and empathy maps',
       'usability testing',
     ],
-    src: '/user-experience.png',
+    src: '/user-experience-white-bg.png',
   },
   {
     title: 'User Interface',
     bullets: ['wireframes', 'high-fidelity mockups', 'component library'],
-    src: '/user-interface.png',
+    src: '/user-interface-white-bg.png',
   },
   {
     title: 'Engineering',
@@ -21,6 +21,6 @@ export const skills = [
       'Node.js, Express',
       'SQL and NoSQL Databases',
     ],
-    src: '/engineering.png',
+    src: '/engineering-white-bg.png',
   },
 ]

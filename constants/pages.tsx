@@ -5,7 +5,7 @@ export interface IPage {
 }
 
 export enum Routes {
-  About = '/about',
+  Resume = '/resume',
   Contact = '/contact',
   Home = '/',
   RequestAccess = '/request-access',
@@ -20,9 +20,9 @@ export enum Routes {
 }
 
 export const pageInformation: Record<string, IPage> = {
-  [Routes.About]: {
-    title: 'About',
-    path: Routes.About,
+  [Routes.Resume]: {
+    title: 'Resume',
+    path: Routes.Resume,
     isPublic: true,
   },
   [Routes.Contact]: {

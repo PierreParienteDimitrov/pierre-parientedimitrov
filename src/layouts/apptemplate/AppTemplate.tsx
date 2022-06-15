@@ -42,22 +42,42 @@ const AppTemplate = ({ children }: ILayoutProps) => {
           <ul className="flex w-full items-center justify-between">
             <div className="flex items-center space-x-8">
               <li>
-                <Link href="/">
-                  <a className={`${pathname === '/' && 'font-bold'}`}>Home</a>
+                <Link href={`${pageInformation[Routes.Home]}`}>
+                  <a
+                    className={`${
+                      pathname === `${pageInformation[Routes.Home]}` &&
+                      'font-bold'
+                    }`}
+                  >
+                    Home
+                  </a>
                 </Link>
               </li>
               <li>
-                <Link href="/about">
-                  <a className={`${pathname === '/about' && 'font-bold'}`}>
-                    About
+                <Link href={`${pageInformation[Routes.Resume]}`}>
+                  <a
+                    className={`${
+                      pathname === `${pageInformation[Routes.Resume]}` &&
+                      'font-bold'
+                    }`}
+                  >
+                    Resume
                   </a>
                 </Link>
               </li>
             </div>
             <div className="flex space-x-16">
               {displayLogin ? (
-                <li>
-                  <Link href={pageInformation[Routes.SignIn]!.path}>Login</Link>
+                <li className="relative group">
+                  <h6 className="uppercase tracking-wider font-bold cursor-pointer z-50 px-2">
+                    <Link href={pageInformation[Routes.RequestAccess]!.path}>
+                      Request access to all projects
+                    </Link>
+                  </h6>
+                  <span
+                    className="absolute top-0 left-0 w-0 h-full bg-secondary transition-all group-hover:w-full"
+                    style={{ zIndex: '-100' }}
+                  ></span>
                 </li>
               ) : (
                 <li
