@@ -10,7 +10,9 @@ import { caseStudies } from '@/utils/caseStudiesContent'
 import { tags } from '@/utils/tags'
 
 const Portfolio = () => {
-  const [activeFilter, setActiveFilter] = React.useState<string[]>([])
+  const [activeFilter, setActiveFilter] = React.useState<string[]>(
+    Object.keys(tags).map((tag) => tags[tag])
+  )
 
   const handleFilterSelection = (e: React.SyntheticEvent) => {
     e.preventDefault()
@@ -55,9 +57,10 @@ const Portfolio = () => {
                 return (
                   <div key={index}>
                     <Tag
-                      tag={tag}
+                      tag={tags[tag]}
                       onclick={(e) => handleFilterSelection(e)}
                       id={tags[tag]}
+                      activeFilter={activeFilter}
                     />
                   </div>
                 )

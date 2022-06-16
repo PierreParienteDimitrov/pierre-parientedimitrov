@@ -4,12 +4,19 @@ interface Itag {
   tag: string
   onclick?: React.MouseEventHandler<HTMLDivElement>
   id?: string
+  activeFilter?: string[]
 }
 
-const Tag: React.FC<Itag> = ({ tag, id, onclick }) => {
+const Tag: React.FC<Itag> = ({ tag, id, onclick, activeFilter }) => {
+  const activeStyle = activeFilter?.includes(tag)
+
   return (
     <div
-      className="cursor-pointer rounded-full border border-primary bg-primary-700 px-4 py-1"
+      className={`cursor-pointer rounded-full border px-4 py-1 ${
+        activeStyle
+          ? 'bg-primary-700 border-primary'
+          : 'bg-gray-100 border-gray-400'
+      }`}
       id={id}
       onClick={onclick}
     >
