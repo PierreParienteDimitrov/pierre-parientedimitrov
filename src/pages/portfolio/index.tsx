@@ -2,7 +2,8 @@ import { pageInformation, Routes } from 'constants/pages'
 import Head from 'next/head'
 import Image from 'next/image'
 import Link from 'next/link'
-import React from 'react'
+import React, { useEffect, useState } from 'react'
+import { ICaseStudiesContent } from 'types/ICaseStudiesContent'
 
 import Tag from '@/components/Tag'
 import Container from '@/layouts/containers/Container'
@@ -10,10 +11,18 @@ import { caseStudies } from '@/utils/caseStudiesContent'
 import { tags } from '@/utils/tags'
 
 const Portfolio = () => {
-  const [activeFilter, setActiveFilter] = React.useState<string[]>(
+  const [activeFilter, setActiveFilter] = useState<string[]>(
     Object.keys(tags).map((tag) => tags[tag])
   )
-  const [projects, setProjects] = React.useState(caseStudies)
+  const [projects, setProjects] = React.useState<ICaseStudiesContent[]>([])
+
+  useEffect(() => {
+    const filteredProjects = caseStudies.filter((project) =>
+      project.tags.some((tag) => activeFilter.includes(tag))
+    )
+
+    setProjects(filteredProjects)
+  }, [activeFilter])
 
   const handleFilterSelection = (e: React.SyntheticEvent) => {
     e.preventDefault()
@@ -31,10 +40,6 @@ const Portfolio = () => {
         prevItems.filter((filterItem) => filterItem !== selectedFilter)
       )
     }
-
-    setProjects((prevProjects) =>
-      prevProjects.filter((item) => item.tags.includes(selectedFilter))
-    )
   }
 
   return (
