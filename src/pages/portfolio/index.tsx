@@ -2,13 +2,46 @@ import { pageInformation, Routes } from 'constants/pages'
 import Head from 'next/head'
 import Image from 'next/image'
 import Link from 'next/link'
-import React from 'react'
+import React, { useEffect, useState } from 'react'
+import { ICaseStudiesContent } from 'types/ICaseStudiesContent'
 
 import Tag from '@/components/Tag'
 import Container from '@/layouts/containers/Container'
 import { caseStudies } from '@/utils/caseStudiesContent'
+import { tags } from '@/utils/tags'
 
 const Portfolio = () => {
+  const [activeFilter, setActiveFilter] = useState<string[]>(
+    Object.keys(tags).map((tag) => tags[tag])
+  )
+  const [projects, setProjects] = React.useState<ICaseStudiesContent[]>([])
+
+  useEffect(() => {
+    const filteredProjects = caseStudies.filter((project) =>
+      project.tags.some((tag) => activeFilter.includes(tag))
+    )
+
+    setProjects(filteredProjects)
+  }, [activeFilter])
+
+  const handleFilterSelection = (e: React.SyntheticEvent) => {
+    e.preventDefault()
+
+    const selectedFilter = e.currentTarget.id
+
+    const isFilterActive = activeFilter.includes(selectedFilter)
+
+    if (!isFilterActive) {
+      setActiveFilter((prevItems) => [...prevItems, selectedFilter])
+    }
+
+    if (isFilterActive) {
+      setActiveFilter((prevItems) =>
+        prevItems.filter((filterItem) => filterItem !== selectedFilter)
+      )
+    }
+  }
+
   return (
     <>
       <Head>
@@ -27,11 +60,25 @@ const Portfolio = () => {
       </Head>
       <div className="py-16">
         <Container>
-          <div className="pb-16">
+          <div className="mb-32 flex flex-col space-y-8">
             <h3>Portfolio</h3>
+            <div className="flex space-x-4">
+              {Object.keys(tags).map((tag, index) => {
+                return (
+                  <div key={index}>
+                    <Tag
+                      tag={tags[tag]}
+                      onclick={(e) => handleFilterSelection(e)}
+                      id={tags[tag]}
+                      activeFilter={activeFilter}
+                    />
+                  </div>
+                )
+              })}
+            </div>
           </div>
           <div className="flex flex-col space-y-32 md:space-y-16">
-            {caseStudies.map((element, index) => {
+            {projects.map((element, index) => {
               if (element.external) {
                 return (
                   <div

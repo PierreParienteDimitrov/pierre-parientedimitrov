@@ -4,7 +4,7 @@ import { tags } from './tags'
 
 export const caseStudies = [
   {
-    project: 'Tempso',
+    project: 'Tempso UX',
     description: 'UX Research & Wireframes',
     href: pageInformation[Routes.TempsoUX]!.path,
     src: '/ux-case-study-tempso.png',
@@ -13,7 +13,7 @@ export const caseStudies = [
     tags: [tags.ux],
   },
   {
-    project: 'Tempso',
+    project: 'Tempso UI',
     description: 'UI & High-fidelity mockups',
     href: pageInformation[Routes.Tempso]!.path,
     src: '/case-study-tempso.png',
