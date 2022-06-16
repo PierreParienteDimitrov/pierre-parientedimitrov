@@ -10,14 +10,24 @@ import { caseStudies } from '@/utils/caseStudiesContent'
 import { tags } from '@/utils/tags'
 
 const Portfolio = () => {
-  const [activeFilter, setActiveFilter] = React.useState([])
+  const [activeFilter, setActiveFilter] = React.useState<string[]>([])
+
   const handleFilterSelection = (e: React.SyntheticEvent) => {
     e.preventDefault()
 
-    const isFilterActive = activeFilter.map(
-      (filter) => filter === e.currentTarget.id
-    )
-    console.log(isFilterActive)
+    const selectedFilter = e.currentTarget.id
+
+    const isFilterActive = activeFilter.includes(selectedFilter)
+
+    if (!isFilterActive) {
+      setActiveFilter((prevItems) => [...prevItems, selectedFilter])
+    }
+
+    if (isFilterActive) {
+      setActiveFilter((prevItems) =>
+        prevItems.filter((filterItem) => filterItem !== selectedFilter)
+      )
+    }
   }
 
   return (
