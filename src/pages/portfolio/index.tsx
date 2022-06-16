@@ -13,6 +13,7 @@ const Portfolio = () => {
   const [activeFilter, setActiveFilter] = React.useState<string[]>(
     Object.keys(tags).map((tag) => tags[tag])
   )
+  const [projects, setProjects] = React.useState(caseStudies)
 
   const handleFilterSelection = (e: React.SyntheticEvent) => {
     e.preventDefault()
@@ -30,6 +31,10 @@ const Portfolio = () => {
         prevItems.filter((filterItem) => filterItem !== selectedFilter)
       )
     }
+
+    setProjects((prevProjects) =>
+      prevProjects.filter((item) => item.tags.includes(selectedFilter))
+    )
   }
 
   return (
@@ -68,7 +73,7 @@ const Portfolio = () => {
             </div>
           </div>
           <div className="flex flex-col space-y-32 md:space-y-16">
-            {caseStudies.map((element, index) => {
+            {projects.map((element, index) => {
               if (element.external) {
                 return (
                   <div
