@@ -7,8 +7,19 @@ import React from 'react'
 import Tag from '@/components/Tag'
 import Container from '@/layouts/containers/Container'
 import { caseStudies } from '@/utils/caseStudiesContent'
+import { tags } from '@/utils/tags'
 
 const Portfolio = () => {
+  const [activeFilter, setActiveFilter] = React.useState([])
+  const handleFilterSelection = (e: React.SyntheticEvent) => {
+    e.preventDefault()
+
+    const isFilterActive = activeFilter.map(
+      (filter) => filter === e.currentTarget.id
+    )
+    console.log(isFilterActive)
+  }
+
   return (
     <>
       <Head>
@@ -27,8 +38,21 @@ const Portfolio = () => {
       </Head>
       <div className="py-16">
         <Container>
-          <div className="pb-16">
+          <div className="mb-32 flex flex-col space-y-8">
             <h3>Portfolio</h3>
+            <div className="flex space-x-4">
+              {Object.keys(tags).map((tag, index) => {
+                return (
+                  <div key={index}>
+                    <Tag
+                      tag={tag}
+                      onclick={(e) => handleFilterSelection(e)}
+                      id={tags[tag]}
+                    />
+                  </div>
+                )
+              })}
+            </div>
           </div>
           <div className="flex flex-col space-y-32 md:space-y-16">
             {caseStudies.map((element, index) => {
