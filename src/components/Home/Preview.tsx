@@ -7,11 +7,9 @@ import Container from '@/layouts/containers/Container'
 import TwoColsScreen from '@/layouts/grids/TwoColsScreen'
 import styles from '@/styles/animations.module.css'
 import { tags } from '@/utils/tags'
+import { tailwindStyles } from '@/utils/tailwindStyles'
 
 import Tag from '../Tag'
-
-const textGradient =
-  'bg-gradient-to-r from-primary via-secondary-400 to-tertiary-600 bg-clip-text font-extrabold text-transparent'
 
 const Description1: React.FC = () => {
   return (
@@ -34,7 +32,7 @@ const Description1: React.FC = () => {
           passHref
         >
           <h5
-            className={`${textGradient} uppercase cursor-pointer ${styles['hover-underline-animation']} pt-8`}
+            className={`${tailwindStyles.textGradient} uppercase cursor-pointer ${styles['hover-underline-animation']} pt-8`}
           >
             Learn More
           </h5>
@@ -91,7 +89,7 @@ const Description2: React.FC = () => {
         </div>
         <Link href={`${pageInformation[Routes.TempsoUX]!.path}`} passHref>
           <h5
-            className={`${textGradient} uppercase cursor-pointer ${styles['hover-underline-animation']} pt-8`}
+            className={`${tailwindStyles.textGradient} uppercase cursor-pointer ${styles['hover-underline-animation']} pt-8`}
           >
             Learn More
           </h5>
@@ -157,7 +155,7 @@ const Preview = () => {
         <div className="py-32 text-center">
           <Link href={`${pageInformation[Routes.Portfolio]!.path}`} passHref>
             <h3
-              className={`${textGradient} cursor-pointer ${styles['hover-underline-animation']}`}
+              className={`${tailwindStyles.textGradient} cursor-pointer ${styles['hover-underline-animation']}`}
             >
               See More projects
             </h3>

@@ -6,9 +6,7 @@ import React from 'react'
 import Container from '@/layouts/containers/Container'
 import styles from '@/styles/animations.module.css'
 import { aboutMe } from '@/utils/aboutMe'
-
-const textGradient =
-  'bg-gradient-to-r from-primary via-secondary-400 to-tertiary-600 bg-clip-text font-extrabold text-transparent'
+import { tailwindStyles } from '@/utils/tailwindStyles'
 
 const Statement: React.FC = () => {
   return (
@@ -28,7 +26,7 @@ const Statement: React.FC = () => {
             <div className="absolute top-0 z-0 h-[230px] w-[230px] rounded-full bg-primary opacity-10"></div>
           </div>
           <div>
-            <h2 className={textGradient}>
+            <h2 className={tailwindStyles.textGradient}>
               I build meaningful digital experiences with design-driven
               solutions.
             </h2>
@@ -45,7 +43,7 @@ const Statement: React.FC = () => {
           </div>
           <Link href={`${pageInformation[Routes.Resume]!.path}`} passHref>
             <h5
-              className={`${textGradient} uppercase cursor-pointer ${styles['hover-underline-animation']}`}
+              className={`${tailwindStyles.textGradient} uppercase cursor-pointer ${styles['hover-underline-animation']}`}
             >
               Learn More
             </h5>
