@@ -1,14 +1,10 @@
 import { pageInformation, Routes } from 'constants/pages'
 import Head from 'next/head'
 import Image from 'next/image'
-import Link from 'next/link'
 
-import ContactForm from '@/components/ContactForm'
-import Hero from '@/components/Hero/Hero'
 import CaseStudy from '@/components/Home/CaseStudy'
-import InfiniteCarousel from '@/components/Home/InfiniteCarousel'
+import Statement from '@/components/Home/Statement'
 import Container from '@/layouts/containers/Container'
-import { aboutMe } from '@/utils/aboutMe'
 import { skills } from '@/utils/skills'
 
 import styles from '../styles/home.module.css'
@@ -30,55 +26,8 @@ const Index: React.FC = () => {
         />
         <meta property="og:image" content="/website-preview.png" />
       </Head>
-      <div className="relative z-0 w-screen overflow-x-hidden bg-dark md:h-screen md:pt-20">
-        <div className={`${styles.container}`}></div>
-
-        {/* intro */}
-        <Container>
-          <div className="flex w-full flex-col -space-y-16">
-            <div className="relative z-50 flex h-full flex-col space-y-16 py-16 md:flex-row md:items-start md:space-y-0">
-              <div className="w-full lg:w-2/3">
-                <Hero />
-              </div>
-              <div className="w-full lg:w-1/3">
-                <ContactForm />
-              </div>
-            </div>
-            <div className="self-start">
-              <InfiniteCarousel />
-            </div>
-          </div>
-        </Container>
-      </div>
-      {/* statement */}
-      <div className="relative h-screen w-full py-32">
-        <Container>
-          <div className="z-10 flex flex-col items-center space-y-8">
-            <div className="relative w-3/6 md:w-1/6">
-              <Image
-                src="/pierrepariente.jpeg"
-                alt="Pierre Pariente Dimitrov"
-                layout="responsive"
-                width={500}
-                height={500}
-                priority
-                className="z-10 rounded-full shadow-lg"
-              />
-              <div className="absolute top-0 z-0 h-[230px] w-[230px] rounded-full bg-primary opacity-10"></div>
-            </div>
-            <div className="w-full flex-col space-y-4 md:m-auto md:w-3/6">
-              <h4>
-                I am a Digital Entrepreneur with a passion for creating
-                meaningful digital experiences.
-              </h4>
-              <p>{aboutMe}</p>
-            </div>
-            <Link href={`${pageInformation[Routes.Resume]!.path}`} passHref>
-              <h5 className="cursor-pointer text-primary">Learn More</h5>
-            </Link>
-          </div>
-        </Container>
-      </div>
+      {/* Statement */}
+      <Statement />
       {/* skills */}
       <div className="relative overflow-x-hidden bg-white py-24 text-dark">
         <div className={styles.skills}>

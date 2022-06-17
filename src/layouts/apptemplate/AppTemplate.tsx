@@ -8,6 +8,11 @@ import { useEffect } from 'react'
 import { AiFillDribbbleCircle, AiFillLinkedin } from 'react-icons/ai'
 import { ILayoutProps } from 'types/ILayoutProps'
 
+import ContactForm from '@/components/ContactForm'
+import Hero from '@/components/Hero/Hero'
+import InfiniteCarousel from '@/components/Home/InfiniteCarousel'
+import styles from '@/styles/home.module.css'
+
 import Container from '../containers/Container'
 
 // Track client-side page views with Segment
@@ -36,7 +41,8 @@ const AppTemplate = ({ children }: ILayoutProps) => {
 
   return (
     <div>
-      <nav className="relative z-50 flex h-12 w-full items-center justify-start bg-dark text-white">
+      {/* navigation */}
+      <nav className="relative z-50 flex h-12 w-full items-center justify-start text-dark">
         <div className="absolute bottom-0 h-[1.5px] w-full bg-gradient-to-r from-secondary to-tertiary"></div>
         <Container>
           <ul className="flex w-full items-center justify-between">
@@ -109,24 +115,47 @@ const AppTemplate = ({ children }: ILayoutProps) => {
         </Container>
       </nav>
       {children}
-      <div className="mt-16 flex w-full flex-col items-center justify-center space-y-2 border-t py-8">
-        <h6>©Pierre Pariente Dimitrov Portfolio {new Date().getFullYear()}</h6>
-        <h6>All rights reserved</h6>
-        <div className="flex space-x-4">
-          <a
-            href="https://www.linkedin.com/in/pierre-pariente-97835742/"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <AiFillLinkedin size={32} className="text-primary" />
-          </a>
-          <a
-            href="https://dribbble.com/Pariente"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <AiFillDribbbleCircle size={32} className="text-secondary" />
-          </a>
+      {/* footer */}
+      <div className="">
+        <div className="relative z-0 w-screen overflow-hidden bg-dark text-white md:py-32">
+          <div className={`${styles.container}`}></div>
+          <Container>
+            <div className="flex w-full flex-col space-y-16">
+              <div className="relative z-50 flex flex-col space-y-16 py-16 md:flex-row md:items-start md:space-y-0">
+                <div className="w-full lg:w-2/3">
+                  <Hero />
+                </div>
+                <div className="w-full lg:w-1/3">
+                  <ContactForm />
+                </div>
+              </div>
+              <div className="self-start">
+                <InfiniteCarousel />
+              </div>
+            </div>
+          </Container>
+          <div className="mt-32 flex w-full flex-col items-center justify-center space-y-8">
+            <h6>
+              ©Pierre Pariente Dimitrov Portfolio {new Date().getFullYear()}
+            </h6>
+            <h6>All rights reserved</h6>
+            <div className="flex space-x-4">
+              <a
+                href="https://www.linkedin.com/in/pierre-pariente-97835742/"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <AiFillLinkedin size={32} className="text-primary" />
+              </a>
+              <a
+                href="https://dribbble.com/Pariente"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <AiFillDribbbleCircle size={32} className="text-secondary" />
+              </a>
+            </div>
+          </div>
         </div>
       </div>
     </div>

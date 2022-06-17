@@ -22,7 +22,7 @@ const Resume = () => (
     </Head>
 
     <Container>
-      <div className="m-auto mt-10 flex w-full flex-col space-y-16 md:w-4/6">
+      <div className="m-auto mt-10 mb-48 flex w-full flex-col space-y-16 md:w-4/6">
         {/* about me */}
         <div className="flex flex-col space-y-4">
           <div className="flex flex-col space-y-1">

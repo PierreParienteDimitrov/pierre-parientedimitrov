@@ -1,8 +1,11 @@
 import React, { useEffect, useState } from 'react'
 
-import { TypewriterItems } from '@/utils/content'
+import { TypewriterItems } from '@/utils/typewriterItems'
 
-const word = 'software engineer'
+const word = 'ship great products!'
+
+const textGradient =
+  'bg-gradient-to-r from-primary via-secondary-400 to-tertiary-600 bg-clip-text font-extrabold text-transparent'
 
 const Hero = () => {
   const [letterIndex, setLetterIndex] = useState(0)
@@ -50,7 +53,7 @@ const Hero = () => {
       () => {
         setLetterIndex((prev) => (reverse ? prev - 1 : prev + 1))
       },
-      reverse ? 50 : 150
+      reverse ? 50 : 100
     )
 
     return () => clearTimeout(timer1)
@@ -58,16 +61,19 @@ const Hero = () => {
 
   return (
     <div className="flex flex-col space-y-4 text-white">
-      <h4>
-        Hi! My name is{' '}
-        <span className="font-bold">Pierre Pariente Dimitrov</span>. I am a Los
-        Angeles based:
-      </h4>
-      <ul className="flex h-60 flex-col md:h-96 md:-space-y-4">
-        {TypewriterItems.map((element) => {
+      <h4 className="font-bold">Let&apos;s</h4>
+      <ul className="flex flex-col">
+        {TypewriterItems.map((element, index) => {
           return (
-            <li key={element.title}>
-              <h2 className="font-serif font-extrabold italic text-white">
+            <li key={index}>
+              <h2
+                className={`font-serif font-extrabold italic ${
+                  index === TypewriterItems.length - 1 &&
+                  element[key] === 'ship great products!'
+                    ? textGradient
+                    : 'text-white'
+                }`}
+              >
                 {element[key].substring(0, letterIndex)}
                 {/* {blink && '|'} */}
               </h2>
