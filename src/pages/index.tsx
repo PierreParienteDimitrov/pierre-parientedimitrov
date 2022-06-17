@@ -2,6 +2,7 @@ import { pageInformation, Routes } from 'constants/pages'
 import Head from 'next/head'
 import Image from 'next/image'
 
+import CompanyLogos from '@/components/Home/CompanyLogos'
 import Preview from '@/components/Home/Preview'
 import Statement from '@/components/Home/Statement'
 import Container from '@/layouts/containers/Container'
@@ -28,6 +29,10 @@ const Index: React.FC = () => {
       </Head>
       {/* Statement */}
       <Statement />
+      {/* company logos */}
+      <div className="w-full pb-32">
+        <CompanyLogos />
+      </div>
       {/* Statement */}
       <Preview />
       {/* skills */}
