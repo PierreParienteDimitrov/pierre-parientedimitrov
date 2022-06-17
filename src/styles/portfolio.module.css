@@ -1,7 +1,7 @@
 .unselected {
-  border-radius: 20px;
-  background: #e3f2fe;
-  box-shadow: 4px 4px 8px #cfdce7, -2px -2px 8px #f7ffff;
+  border-radius: 50px;
+  background: #f8fafc;
+  box-shadow: 2px 2px 2px #cfdce7, -5px -5px 7px #ffffff;
 }
 
 .selected {

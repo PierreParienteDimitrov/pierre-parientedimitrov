@@ -58,14 +58,19 @@ const Portfolio = () => {
         />
         <meta property="og:image" content="/website-preview.png" />
       </Head>
-      <div className="bg-primary-800 py-16">
+      <div className="bg-gray-100 py-16 pb-48">
         <Container>
-          <div className="mb-32 flex flex-col space-y-8">
-            <h3 className="font-bold text-gray-800">Portfolio</h3>
-            <div className="flex space-x-4">
+          <div className="mb-24 flex flex-col space-y-8">
+            <div className="flex flex-col space-y-2">
+              <h3 className="font-bold text-gray-800">Portfolio</h3>
+              <h6 className="font-semibold uppercase tracking-wide">
+                showing {projects.length} out of {caseStudies.length}
+              </h6>
+            </div>
+            <div className="mr-8 flex flex-wrap items-center">
               {Object.keys(tags).map((tag, index) => {
                 return (
-                  <div key={index}>
+                  <div key={index} className="py-2 pr-4">
                     <Tag
                       tag={tags[tag]}
                       onclick={(e) => handleFilterSelection(e)}

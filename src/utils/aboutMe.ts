@@ -1,5 +1,5 @@
 export const aboutMe =
-  'I am a Product Designer and Front-End Engineer. For the last 18 month I have been the Product Designer and a Front-End Engineer for a fast-growing YC startup - BlueCargo. I have designed, built and grew, along with the product team, a multi-million dollar product for the Drayage Industry.'
+  'I am a Product Designer and Front-End Engineer. For the last 18 month I have designed and helped built a software for the Supply Chain industry. I have previously freelanced for a variety of clients, and built a classical music streaming App for iOS and Android.'
 
 export const skills = [
   'Interaction Design: Figma, Sketch, Adobe XD. Strong experience in building and managing large component library and documentation for developers.',

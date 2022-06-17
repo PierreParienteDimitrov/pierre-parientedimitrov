@@ -22,7 +22,7 @@
   margin: auto;
   overflow: hidden;
   position: relative;
-  width: 800px;
+  width: 100%;
 }
 /* 
 .slider::before,
