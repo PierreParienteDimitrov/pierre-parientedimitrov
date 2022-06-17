@@ -1,5 +1,5 @@
 import React, { useRef } from 'react'
-import { FaChevronCircleLeft, FaChevronCircleRight } from 'react-icons/Fa'
+import { FaChevronCircleLeft, FaChevronCircleRight } from 'react-icons/fa'
 
 import Container from '@/layouts/containers/Container'
 
