@@ -361,7 +361,7 @@ const LeftSide: React.FC = () => {
           </div>
         </div>
         <Link href={pageInformation[Routes.Tempso]!.path} passHref>
-          <h4 className="text-primary-100 cursor-pointer pb-16 font-bold underline">
+          <h4 className="cursor-pointer pb-16 font-bold text-primary underline">
             Discover Tempso UI here!
           </h4>
         </Link>
