@@ -1,5 +1,7 @@
 import React from 'react'
 
+import styles from '@/styles/portfolio.module.css'
+
 interface Itag {
   tag: string
   onclick?: React.MouseEventHandler<HTMLDivElement>
@@ -13,14 +15,16 @@ const Tag: React.FC<Itag> = ({ tag, id, onclick, activeFilter }) => {
   return (
     <div
       className={`cursor-pointer rounded-full border px-4 py-1 ${
-        activeStyle
-          ? 'bg-primary-700 border-primary'
-          : 'bg-gray-100 border-gray-400'
+        activeStyle ? styles.selected : styles.unselected
       }`}
       id={id}
       onClick={onclick}
     >
-      <h6 className="font-black uppercase tracking-wider text-primary">
+      <h6
+        className={`font-black uppercase tracking-wider ${
+          activeStyle ? 'text-primary' : 'text-gray-500'
+        }`}
+      >
         {tag}
       </h6>
     </div>

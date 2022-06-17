@@ -58,10 +58,10 @@ const Portfolio = () => {
         />
         <meta property="og:image" content="/website-preview.png" />
       </Head>
-      <div className="py-16">
+      <div className="bg-primary-800 py-16">
         <Container>
           <div className="mb-32 flex flex-col space-y-8">
-            <h3>Portfolio</h3>
+            <h3 className="font-bold text-gray-800">Portfolio</h3>
             <div className="flex space-x-4">
               {Object.keys(tags).map((tag, index) => {
                 return (
@@ -90,7 +90,7 @@ const Portfolio = () => {
                         <Image
                           src={element.src}
                           alt={element.alt}
-                          // layout="fill"
+                          layout="responsive"
                           width={640}
                           height={383}
                           objectFit="cover"
