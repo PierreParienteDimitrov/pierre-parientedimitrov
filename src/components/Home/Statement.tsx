@@ -14,7 +14,7 @@ const Statement: React.FC = () => {
   return (
     <Container>
       <div className="flex h-[94vh] w-full items-center">
-        <div className="w-4/6 flex-col items-center justify-center space-y-2">
+        <div className="flex-col items-center justify-center space-y-2 md:w-4/6">
           <div className="relative w-3/6 md:w-1/6">
             <Image
               src="/pierrepariente.jpeg"
@@ -36,7 +36,7 @@ const Statement: React.FC = () => {
         </div>
       </div>
       <div className="flex w-full items-center pb-32">
-        <div className="w-4/6 flex-col space-y-8">
+        <div className="flex-col space-y-8 md:w-4/6">
           <div className="flex flex-col space-y-2">
             <h4 className="font-bold">
               Hi, my name is Pierre Pariente Dimitrov.
