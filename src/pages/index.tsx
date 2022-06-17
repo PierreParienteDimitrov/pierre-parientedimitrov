@@ -2,7 +2,7 @@ import { pageInformation, Routes } from 'constants/pages'
 import Head from 'next/head'
 import Image from 'next/image'
 
-import CaseStudy from '@/components/Home/CaseStudy'
+import Preview from '@/components/Home/Preview'
 import Statement from '@/components/Home/Statement'
 import Container from '@/layouts/containers/Container'
 import { skills } from '@/utils/skills'
@@ -28,6 +28,8 @@ const Index: React.FC = () => {
       </Head>
       {/* Statement */}
       <Statement />
+      {/* Statement */}
+      <Preview />
       {/* skills */}
       <div className="relative overflow-x-hidden bg-white py-24 text-dark">
         <div className={styles.skills}>
@@ -71,13 +73,6 @@ const Index: React.FC = () => {
             </div>
           </Container>
         </div>
-      </div>
-      {/* case studies */}
-      <div className="py-32">
-        <div className="w-full pb-8 text-center">
-          <h4 className="font-bold">My Projects</h4>
-        </div>
-        <CaseStudy />
       </div>
     </>
   )

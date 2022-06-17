@@ -1,4 +1,5 @@
 export const tags = {
+  ur: 'user research',
   ux: 'user experience',
   ui: 'user interface',
   frontEnd: 'front-end',

@@ -6,10 +6,10 @@
   content: '';
   z-index: 0;
   position: absolute;
-  top: -40%;
-  left: 0;
-  width: 400px;
-  height: 400px;
+  top: -10%;
+  left: 5%;
+  width: 200px;
+  height: 200px;
   background: linear-gradient(#e91e63, #2196f3);
   clip-path: circle(50% at 50% 50%);
 }
