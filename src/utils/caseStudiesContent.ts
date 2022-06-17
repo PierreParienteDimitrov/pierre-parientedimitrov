@@ -13,15 +13,6 @@ export const caseStudies = [
     tags: [tags.ux],
   },
   {
-    project: 'Tempso UI',
-    description: 'UI & High-fidelity mockups',
-    href: pageInformation[Routes.Tempso]!.path,
-    src: '/case-study-tempso.png',
-    alt: 'Tempso UI',
-    external: false,
-    tags: [tags.ui],
-  },
-  {
     project: 'BlueCargo',
     description: 'UX Research & Wireframes',
     href: pageInformation[Routes.ContainerTracking]!.path,
@@ -29,6 +20,15 @@ export const caseStudies = [
     alt: 'Container Tracking Case Study',
     external: false,
     tags: [tags.ux],
+  },
+  {
+    project: 'Tempso UI',
+    description: 'UI & High-fidelity mockups',
+    href: pageInformation[Routes.Tempso]!.path,
+    src: '/case-study-tempso.png',
+    alt: 'Tempso UI',
+    external: false,
+    tags: [tags.ui],
   },
   {
     project: 'Luxury Travel Agency',

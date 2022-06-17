@@ -2,8 +2,8 @@ import { pageInformation, Routes } from 'constants/pages'
 import Head from 'next/head'
 import Image from 'next/image'
 
+import CarouselProjects from '@/components/Home/CarouselProjects'
 import CompanyLogos from '@/components/Home/CompanyLogos'
-import Preview from '@/components/Home/Preview'
 import Statement from '@/components/Home/Statement'
 import Container from '@/layouts/containers/Container'
 import { skills } from '@/utils/skills'
@@ -33,8 +33,9 @@ const Index: React.FC = () => {
       <div className="w-full pb-32">
         <CompanyLogos />
       </div>
-      {/* Statement */}
-      <Preview />
+      {/* Carousel Projects */}
+      <CarouselProjects />
+      {/* <Preview /> */}
       {/* skills */}
       <div className="relative overflow-x-hidden bg-white py-24 text-dark">
         <div className={styles.skills}>

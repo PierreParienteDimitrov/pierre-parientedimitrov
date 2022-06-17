@@ -25,7 +25,7 @@ const TwoColsScreen: React.FC<Props> = ({
         {leftSide}
       </div>
       <div
-        className={`order-${rightMobileOrder} w-full md:order-${rightDesktopOrder} md:w-4/6 md:pl-32 md:pr-8`}
+        className={`order-${rightMobileOrder} w-full md:order-${rightDesktopOrder} md:w-4/6 md:pl-16 md:pr-8`}
       >
         {rightSide}
       </div>

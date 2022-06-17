@@ -26,10 +26,10 @@ const Statement: React.FC = () => {
             <div className="absolute top-0 z-0 h-[230px] w-[230px] rounded-full bg-primary opacity-10"></div>
           </div>
           <div>
-            <h2 className={tailwindStyles.textGradient}>
+            <h1 className={tailwindStyles.textGradient}>
               I build meaningful digital experiences with design-driven
               solutions.
-            </h2>
+            </h1>
           </div>
         </div>
       </div>
