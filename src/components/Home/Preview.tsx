@@ -142,7 +142,7 @@ const Preview: React.FC<ICase> = (props) => {
   const { project, description, alt, href, src, tags } = props
   return (
     <div className="flex flex-col">
-      <div className="flex h-full items-center py-16 md:py-24">
+      <div className="flex h-full items-center py-16 md:py-8">
         <TwoColsScreen
           leftSide={
             <Description
