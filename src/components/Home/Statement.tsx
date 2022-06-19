@@ -11,8 +11,8 @@ import { tailwindStyles } from '@/utils/tailwindStyles'
 const Statement: React.FC = () => {
   return (
     <Container>
-      <div className="flex h-[94vh] w-full items-center">
-        <div className="flex-col items-center justify-center space-y-2 md:w-4/6">
+      <div className="flex w-full items-center py-16 md:h-[94vh]">
+        <div className="w-full flex-col items-center justify-center space-y-2 md:w-4/6">
           <div className="relative w-3/6 md:w-1/6">
             <Image
               src="/pierrepariente.jpeg"

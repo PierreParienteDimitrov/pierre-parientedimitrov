@@ -58,7 +58,7 @@ interface IProjectImage {
 
 const ProjectImage: React.FC<IProjectImage> = ({ alt, src, href }) => {
   return (
-    <div className="relative w-full shadow-lg">
+    <div className="relative shadow-lg md:h-full md:w-full">
       <a href={`${href}`} target="_blank" rel="noreferrer">
         <Image
           src={src}
@@ -141,24 +141,22 @@ const ProjectImage: React.FC<IProjectImage> = ({ alt, src, href }) => {
 const Preview: React.FC<ICase> = (props) => {
   const { project, description, alt, href, src, tags } = props
   return (
-    <div className="flex flex-col">
-      <div className="flex h-full items-center py-16 md:py-8">
-        <TwoColsScreen
-          leftSide={
-            <Description
-              project={project}
-              description={description}
-              tags={tags}
-              href={href}
-            />
-          }
-          rightSide={<ProjectImage alt={alt} src={src} href={href} />}
-          leftDesktopOrder={1}
-          leftMobileOrder={1}
-          rightMobileOrder={2}
-          rightDesktopOrder={2}
-        />
-      </div>
+    <div className="flex h-full w-screen items-center py-16 md:py-8">
+      <TwoColsScreen
+        leftSide={
+          <Description
+            project={project}
+            description={description}
+            tags={tags}
+            href={href}
+          />
+        }
+        rightSide={<ProjectImage alt={alt} src={src} href={href} />}
+        leftDesktopOrder={1}
+        leftMobileOrder={1}
+        rightMobileOrder={2}
+        rightDesktopOrder={2}
+      />
     </div>
   )
 }

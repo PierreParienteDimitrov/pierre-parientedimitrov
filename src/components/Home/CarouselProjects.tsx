@@ -13,16 +13,18 @@ const CarouselProjects = () => {
   const handleClick = (direction: string) => {
     let scrollCompleted = 0
 
+    console.log(window.innerWidth)
+
     const slideConst = setInterval(function () {
       if (direction === 'left') {
-        sectionRef.current!.scrollLeft -= 160
+        sectionRef.current!.scrollLeft -= window.innerWidth / caseStudies.length
       } else {
-        sectionRef.current!.scrollLeft += 160
+        sectionRef.current!.scrollLeft += window.innerWidth / caseStudies.length
       }
 
       scrollCompleted += 10
 
-      if (scrollCompleted >= 80) {
+      if (scrollCompleted >= caseStudies.length * 10) {
         window.clearInterval(slideConst)
       }
     }, 50)
@@ -45,11 +47,11 @@ const CarouselProjects = () => {
         </div>
         <hr className="h-1 bg-gray-400" />
       </Container>
-      <section className="w-full overflow-scroll" ref={sectionRef}>
-        <div className="flex h-full w-[1440px] items-center whitespace-nowrap">
+      <section className="overflow-scroll" ref={sectionRef}>
+        <div className="flex items-center whitespace-nowrap">
           {caseStudies.map((item, index) => {
             return (
-              <div key={index} className="min-w-[1280px]">
+              <div key={index} className="">
                 <Preview {...item} />
               </div>
             )
