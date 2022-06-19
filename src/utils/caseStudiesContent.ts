@@ -41,7 +41,7 @@ export const caseStudies = [
   // },
   {
     project: 'UI Shots',
-    description: 'UX/UI Design - Practice',
+    description: '100 Days of UI Challenge',
     href: pageInformation[Routes.UIShots]!.path,
     src: '/case-study-ui-shots.png',
     alt: 'UI Shots',
@@ -50,7 +50,7 @@ export const caseStudies = [
   },
   {
     project: 'Portfolio Website',
-    description: 'Front-end & Back-end',
+    description: 'Github Repo - Portfolio Website',
     href: 'https://github.com/PierreParienteDimitrov/pierre-parientedimitrov',
     src: '/software-portfolio.png',
     alt: 'Portfolio Website',
@@ -59,7 +59,7 @@ export const caseStudies = [
   },
   {
     project: 'Tempso Landing Page',
-    description: 'UX/UI Design & Front-end',
+    description: 'Github Repo - Tempso Landing Page',
     href: 'https://github.com/PierreParienteDimitrov/tempso.com',
     src: '/case-study-tempso-landing-page.png',
     alt: 'Tempso Landing Page',
@@ -68,7 +68,7 @@ export const caseStudies = [
   },
   {
     project: 'Know Better World Foundation',
-    description: 'UX/UI Design & Squarespace',
+    description: 'Web Design for a Foundation',
     href: 'https://www.knowbetterworldfoundation.org/',
     src: '/case-study-kbwf.png',
     alt: 'Know Better World Foundation Website',
@@ -77,7 +77,7 @@ export const caseStudies = [
   },
   {
     project: 'Skoog Media',
-    description: 'UX/UI Design & Shopify',
+    description: 'Shopify Store for a toy',
     href: 'https://skoog.media/',
     src: '/case-study-skoog.png',
     alt: 'Skoog Website',
@@ -86,7 +86,7 @@ export const caseStudies = [
   },
   {
     project: 'Technext',
-    description: 'UX/UI Design & Wix',
+    description: 'Web Design for a technology startup',
     href: 'https://www.technext.fr/?lang=en',
     src: '/case-study-technext.png',
     alt: 'Technext Website',

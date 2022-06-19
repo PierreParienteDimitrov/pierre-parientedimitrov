@@ -66,7 +66,7 @@ const Hero = () => {
         {TypewriterItems.map((element, index) => {
           return (
             <li key={index}>
-              <h2
+              <h1
                 className={`font-serif font-extrabold italic ${
                   index === TypewriterItems.length - 1 &&
                   element[key] === 'ship great products!'
@@ -76,7 +76,7 @@ const Hero = () => {
               >
                 {element[key].substring(0, letterIndex)}
                 {/* {blink && '|'} */}
-              </h2>
+              </h1>
             </li>
           )
         })}

@@ -18,7 +18,7 @@ const TwoColsScreen: React.FC<Props> = ({
   rightDesktopOrder,
 }) => {
   return (
-    <div className="relative flex  h-full w-full flex-col items-center space-y-8 md:flex md:flex-row md:space-y-0">
+    <div className="relative flex  h-full w-screen flex-col items-center space-y-8 md:flex md:flex-row md:space-y-0">
       <div
         className={`order-${leftMobileOrder} w-full md:order-${leftDesktopOrder} md:w-2/6`}
       >
