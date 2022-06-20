@@ -10,7 +10,7 @@ export const caseStudies = [
     src: '/case-study-container-management.png',
     alt: 'Container Tracking Case Study',
     external: false,
-    tags: [tags.ur, tags.ux, tags.ui],
+    tags: [tags.desktop, tags.ur, tags.ux, tags.ui],
   },
   {
     project: 'Tempso',
@@ -19,7 +19,7 @@ export const caseStudies = [
     src: '/ux-case-study-tempso.png',
     alt: 'Tempso UX Case Study',
     external: false,
-    tags: [tags.ur, tags.ux, tags.ui],
+    tags: [tags.mobile, tags.ur, tags.ux, tags.ui],
   },
   // {
   //   project: 'Tempso UI',
@@ -46,7 +46,7 @@ export const caseStudies = [
     src: '/case-study-ui-shots.png',
     alt: 'UI Shots',
     external: false,
-    tags: [tags.ui],
+    tags: [tags.desktop, tags.mobile, tags.ui],
   },
   {
     project: 'Portfolio Website',
@@ -64,7 +64,7 @@ export const caseStudies = [
     src: '/case-study-tempso-landing-page.png',
     alt: 'Tempso Landing Page',
     external: true,
-    tags: [tags.ux, tags.ui, tags.frontEnd],
+    tags: [tags.desktop, tags.ux, tags.ui, tags.frontEnd],
   },
   {
     project: 'Know Better World Foundation',
@@ -73,7 +73,7 @@ export const caseStudies = [
     src: '/case-study-kbwf.png',
     alt: 'Know Better World Foundation Website',
     external: true,
-    tags: [tags.ux, tags.ui, tags.websiteBuilder],
+    tags: [tags.desktop, tags.ux, tags.ui, tags.websiteBuilder],
   },
   {
     project: 'Skoog Media',
@@ -82,7 +82,7 @@ export const caseStudies = [
     src: '/case-study-skoog.png',
     alt: 'Skoog Website',
     external: true,
-    tags: [tags.ux, tags.ui, tags.websiteBuilder],
+    tags: [tags.desktop, tags.ux, tags.ui, tags.websiteBuilder],
   },
   {
     project: 'Technext',
@@ -91,6 +91,6 @@ export const caseStudies = [
     src: '/case-study-technext.png',
     alt: 'Technext Website',
     external: true,
-    tags: [tags.ux, tags.ui, tags.websiteBuilder],
+    tags: [tags.desktop, tags.ux, tags.ui, tags.websiteBuilder],
   },
 ]

@@ -1,4 +1,6 @@
 export const tags = {
+  mobile: 'mobile',
+  desktop: 'web',
   ur: 'user research',
   ux: 'user experience',
   ui: 'user interface',
