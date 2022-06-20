@@ -64,7 +64,7 @@ const Portfolio = () => {
             <div className="flex flex-col space-y-2">
               <h3 className="font-bold text-gray-800">Portfolio</h3>
               <h6 className="font-semibold uppercase tracking-wide">
-                showing {projects.length} out of {caseStudies.length}
+                showing {projects.length} out of {caseStudies.length} projects
               </h6>
             </div>
             <div className="mr-8 flex flex-wrap items-center">
