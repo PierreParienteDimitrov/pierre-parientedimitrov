@@ -3,6 +3,7 @@ import Head from 'next/head'
 import Image from 'next/image'
 
 import CarouselProjects from '@/components/Home/CarouselProjects'
+import MyApproach from '@/components/Home/MyApproach'
 import Statement from '@/components/Home/Statement'
 import Container from '@/layouts/containers/Container'
 import { skills } from '@/utils/skills'
@@ -28,13 +29,10 @@ const Index: React.FC = () => {
       </Head>
       {/* Statement */}
       <Statement />
-      {/* company logos */}
-      {/* <div className="w-full pb-32">
-        <CompanyLogos />
-      </div> */}
       {/* Carousel Projects */}
       <CarouselProjects />
-      {/* <Preview /> */}
+      {/* My Approach */}
+      <MyApproach />
       {/* skills */}
       <div className="relative overflow-x-hidden bg-white py-24 text-dark">
         <div className={styles.skills}>
