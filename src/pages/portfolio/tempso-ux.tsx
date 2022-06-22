@@ -389,8 +389,8 @@ const LeftSide: React.FC = () => {
           </div>
         </div>
         <h4 className="cursor-pointer pb-16 font-bold text-primary underline">
-          Tempso is live application. Discover it{' '}
-          <a href="https://www.tempso.com/">here!</a>
+          Tempso is live application.
+          <a href="https://www.tempso.com/"> Discover it here!</a>
         </h4>
       </div>
     </>
