@@ -1,7 +1,6 @@
 import { pageInformation, Routes } from 'constants/pages'
 import Head from 'next/head'
 import Image from 'next/image'
-import Link from 'next/link'
 import React from 'react'
 
 import { ICarousel } from '@/../types/ICarousel'
