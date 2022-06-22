@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import React from 'react'
 import { TbPoint } from 'react-icons/tb'
 
@@ -6,9 +7,9 @@ import { myApproach } from '@/utils/myApproach'
 const MyApproach = () => {
   return (
     <div className="py-32">
-      <section className="flex flex-col space-y-8 px-8 md:flex-row md:flex-nowrap md:space-x-8 md:space-y-0 md:overflow-auto md:px-0">
+      <section className="flex flex-col space-y-8 px-8 md:flex-row md:flex-nowrap md:items-center md:space-x-8 md:space-y-0 md:overflow-x-scroll md:px-0">
         <div className="md:pl-24">
-          <div className="w-full flex-auto flex-col space-y-8 bg-white py-8 md:min-w-[480px]">
+          <div className="w-full flex-col space-y-8 bg-white py-8 md:min-h-[288px] md:min-w-[480px]">
             <h4 className="font-black text-secondary">My Approach</h4>
             <p className="leading-8">
               I make it my primary purpose to work as a team and foster trust. I
@@ -25,7 +26,7 @@ const MyApproach = () => {
         {myApproach.map((item, index) => {
           return (
             <div
-              className="flex-col space-y-4 rounded-xl border bg-gray-50 px-8 py-6 shadow-lg md:min-w-[480px]"
+              className="flex-col space-y-4 rounded-xl border bg-gray-50 px-8 py-6 shadow-lg md:min-h-[288px] md:min-w-[480px]"
               key={index}
             >
               <h4 className="font-black capitalize text-primary">
@@ -44,6 +45,17 @@ const MyApproach = () => {
             </div>
           )
         })}
+        <div className="w-full flex-col space-y-8 bg-white py-8 pr-24 md:min-w-[480px]">
+          <Image
+            src="/team-cohesion.png"
+            alt="Team cohesion"
+            layout="responsive"
+            width={732}
+            height={609}
+            objectFit="cover"
+            priority
+          />
+        </div>
       </section>
     </div>
   )
