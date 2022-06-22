@@ -4,15 +4,6 @@ import { tags } from './tags'
 
 export const caseStudies = [
   {
-    project: 'BlueCargo',
-    description: 'Supply Chain Software',
-    href: pageInformation[Routes.ContainerTracking]!.path,
-    src: '/case-study-container-management.png',
-    alt: 'Container Tracking Case Study',
-    external: false,
-    tags: [tags.desktop, tags.ur, tags.ux, tags.ui],
-  },
-  {
     project: 'Tempso',
     description: 'Classical Music Streaming App',
     href: pageInformation[Routes.TempsoUX]!.path,
@@ -20,6 +11,15 @@ export const caseStudies = [
     alt: 'Tempso UX Case Study',
     external: false,
     tags: [tags.mobile, tags.ur, tags.ux, tags.ui],
+  },
+  {
+    project: 'BlueCargo',
+    description: 'Supply Chain Software',
+    href: pageInformation[Routes.ContainerTracking]!.path,
+    src: '/case-study-container-management.png',
+    alt: 'Container Tracking Case Study',
+    external: false,
+    tags: [tags.desktop, tags.ur, tags.ux, tags.ui],
   },
   // {
   //   project: 'Tempso UI',
