@@ -13,8 +13,6 @@ const CarouselProjects = () => {
   const handleClick = (direction: string) => {
     let scrollCompleted = 0
 
-    console.log(window.innerWidth)
-
     const slideConst = setInterval(function () {
       if (direction === 'left') {
         sectionRef.current!.scrollLeft -= window.innerWidth / caseStudies.length
