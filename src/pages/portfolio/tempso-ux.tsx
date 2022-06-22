@@ -12,19 +12,39 @@ import TwoCols from '@/layouts/grids/TwoCols'
 
 const TEMPSO: ICarousel[] = [
   {
-    title: 'Wireframe3',
-    src: '/Wireframe3.png',
-    alt: 'Wireframe3',
+    title: 'tempso1',
+    src: '/Slide1.png',
+    alt: 'alt1',
   },
   {
-    title: 'Wireframe1',
-    src: '/Wireframe1.png',
-    alt: 'Wireframe1',
+    title: 'tempso2',
+    src: '/Slide2.png',
+    alt: 'alt1',
   },
   {
-    title: 'Wireframe2',
-    src: '/Wireframe2.png',
-    alt: 'Wireframe2',
+    title: 'tempso3',
+    src: '/Slide3.png',
+    alt: 'alt3',
+  },
+  {
+    title: 'tempso4',
+    src: '/Slide4.png',
+    alt: 'alt4',
+  },
+  {
+    title: 'tempso5',
+    src: '/Slide5.png',
+    alt: 'alt5',
+  },
+  {
+    title: 'tempso6',
+    src: '/Slide6.png',
+    alt: 'alt6',
+  },
+  {
+    title: 'tempso7',
+    src: '/Slide7.png',
+    alt: 'alt7',
   },
 ]
 
@@ -346,25 +366,33 @@ const LeftSide: React.FC = () => {
                 Build carousel that would suggest to users playlists and radios
                 in order to facilitate their discovery and exploration.
               </p>
+              <h5 className="py-8 italic">
+                Click on the image to open it in full-width
+              </h5>{' '}
               <div>
-                <Image
-                  src="/Wireframe1.png"
-                  alt="Wireframe1"
-                  layout="responsive"
-                  width={1920}
-                  height={768}
-                  objectFit="cover"
-                  priority
-                />
+                <a
+                  href="/_next/image?url=%2Ftempso_wireframes.png&w=3840&q=75"
+                  target="_blank"
+                  className="h-full w-full cursor-pointer"
+                >
+                  <Image
+                    src="/tempso_wireframes.png"
+                    alt="Wireframe1"
+                    layout="responsive"
+                    width={2757}
+                    height={4096}
+                    objectFit="cover"
+                    priority
+                  />
+                </a>
               </div>
             </div>
           </div>
         </div>
-        <Link href={pageInformation[Routes.Tempso]!.path} passHref>
-          <h4 className="cursor-pointer pb-16 font-bold text-primary underline">
-            Discover Tempso UI here!
-          </h4>
-        </Link>
+        <h4 className="cursor-pointer pb-16 font-bold text-primary underline">
+          Tempso is live application. Discover it{' '}
+          <a href="https://www.tempso.com/">here!</a>
+        </h4>
       </div>
     </>
   )
