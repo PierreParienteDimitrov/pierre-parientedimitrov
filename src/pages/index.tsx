@@ -2,7 +2,7 @@ import { pageInformation, Routes } from 'constants/pages'
 import Head from 'next/head'
 import Image from 'next/image'
 
-import CarouselProjects from '@/components/Home/CarouselProjects'
+import CaseStudy from '@/components/Home/CaseStudy'
 import MyApproach from '@/components/Home/MyApproach'
 import Statement from '@/components/Home/Statement'
 import Container from '@/layouts/containers/Container'
@@ -29,8 +29,8 @@ const Index: React.FC = () => {
       </Head>
       {/* Statement */}
       <Statement />
-      {/* Carousel Projects */}
-      <CarouselProjects />
+      {/* Case Study */}
+      <CaseStudy />
       {/* My Approach */}
       <MyApproach />
       {/* skills */}
