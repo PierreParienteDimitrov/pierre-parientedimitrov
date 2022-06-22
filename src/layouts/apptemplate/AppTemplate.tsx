@@ -86,19 +86,20 @@ const AppTemplate = ({ children }: ILayoutProps) => {
               </li>
             </div>
             <div className="flex space-x-16">
-              {displayLogin ? (
-                <li className="group relative">
-                  <h6 className="z-50 cursor-pointer px-2 font-bold uppercase tracking-wider">
-                    <Link href={pageInformation[Routes.RequestAccess]!.path}>
-                      Request access to all projects
-                    </Link>
-                  </h6>
-                  <span
-                    className="absolute top-0 left-0 h-full w-0 bg-secondary transition-all group-hover:w-full"
-                    style={{ zIndex: '-100' }}
-                  ></span>
-                </li>
-              ) : (
+              {!displayLogin && (
+                // (
+                //   <li className="group relative">
+                //     <h6 className="z-50 cursor-pointer px-2 font-bold uppercase tracking-wider">
+                //       <Link href={pageInformation[Routes.RequestAccess]!.path}>
+                //         Request access to all projects
+                //       </Link>
+                //     </h6>
+                //     <span
+                //       className="absolute top-0 left-0 h-full w-0 bg-secondary transition-all group-hover:w-full"
+                //       style={{ zIndex: '-100' }}
+                //     ></span>
+                //   </li>
+                // ) :
                 <li
                   className="cursor-pointer"
                   onClick={() =>
