@@ -40,7 +40,7 @@ const Statement: React.FC = () => {
               <h4 className="font-bold">
                 Hi, my name is Pierre Pariente Dimitrov.
               </h4>
-              <h4 className="leading-loose">{aboutMe}</h4>
+              <p className="w-full leading-loose md:w-3/4">{aboutMe}</p>
             </div>
             <Link href={`${pageInformation[Routes.Resume]!.path}`} passHref>
               <h5
