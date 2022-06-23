@@ -52,7 +52,7 @@ const Statement: React.FC = () => {
           </div>
         </div>
         <div className="absolute inset-0 z-0 flex items-start">
-          <div className="relative right-[-800px] h-3/4 w-full">
+          <div className="relative right-[-800px] top-16 h-3/4 w-full">
             <Image
               src="/home_illustration.png"
               alt="Home illustration"
@@ -61,7 +61,7 @@ const Statement: React.FC = () => {
               height={893.6}
               objectFit="cover"
               priority
-              className="rounded-md"
+              className="opacity-60"
             />
           </div>
         </div>
