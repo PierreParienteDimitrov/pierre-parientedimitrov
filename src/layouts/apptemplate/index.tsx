@@ -9,8 +9,8 @@ import { AiFillDribbbleCircle, AiFillLinkedin } from 'react-icons/ai'
 import { ILayoutProps } from 'types/ILayoutProps'
 
 import ContactForm from '@/components/ContactForm'
-import Hero from '@/components/Hero/Hero'
 import InfiniteCarousel from '@/components/Home/InfiniteCarousel'
+import Hero from '@/layouts/apptemplate/Footer'
 import styles from '@/styles/home.module.css'
 
 import Container from '../containers/Container'

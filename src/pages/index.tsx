@@ -3,6 +3,7 @@ import Head from 'next/head'
 import Image from 'next/image'
 
 import CaseStudy from '@/components/Home/CaseStudy'
+import Hero from '@/components/Home/Hero'
 import MyApproach from '@/components/Home/MyApproach'
 import Statement from '@/components/Home/Statement'
 import Container from '@/layouts/containers/Container'
@@ -27,6 +28,8 @@ const Index: React.FC = () => {
         />
         <meta property="og:image" content="/website-preview.png" />
       </Head>
+      {/* Hero */}
+      <Hero />
       {/* Statement */}
       <Statement />
       {/* Case Study */}

@@ -8,7 +8,7 @@ import Script from 'next/script'
 import { SessionProvider } from 'next-auth/react'
 import NProgress from 'nprogress' //nprogress module
 
-import AppTemplate from '@/layouts/apptemplate/AppTemplate'
+import AppTemplate from '@/layouts/apptemplate'
 
 Router.events.on('routeChangeStart', () => NProgress.start())
 Router.events.on('routeChangeComplete', () => NProgress.done())
