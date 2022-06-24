@@ -1,0 +1,44 @@
+.container {
+  z-index: -10;
+}
+
+.container::before {
+  content: '';
+  z-index: 0;
+  position: absolute;
+  top: -10%;
+  left: -8%;
+  width: 200px;
+  height: 200px;
+  background: linear-gradient(#e91e63, #2196f3);
+  clip-path: circle(50% at 50% 50%);
+}
+
+.container::after {
+  content: '';
+  z-index: 0;
+  position: absolute;
+  top: 0;
+  right: -40%;
+  width: 700px;
+  height: 700px;
+  background: linear-gradient(#f0f, #f00);
+  clip-path: circle(50% at 50% 50%);
+}
+
+@media only screen and (max-width: 600px) {
+  .container::before {
+    left: -20%;
+    top: -10%;
+    width: 160px;
+    height: 160px;
+    background: linear-gradient(#e91e63, #2196f3);
+  }
+
+  .container::after {
+    top: 50%;
+    right: -50%;
+    width: 375px;
+    height: 375px;
+  }
+}
