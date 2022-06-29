@@ -2,20 +2,10 @@ import { pageInformation, Routes } from 'constants/pages'
 import Head from 'next/head'
 
 import CaseStudy from '@/components/Home/CaseStudy'
-<<<<<<< HEAD
-import Hero from '@/components/Home/Hero'
+import Hero2 from '@/components/Home/Hero2'
 import Methodology from '@/components/Home/Methodology'
 import MyApproach from '@/components/Home/MyApproach'
-import Statement from '@/components/Home/Statement'
-import Container from '@/layouts/containers/Container'
-import { skills } from '@/utils/copy/skills'
 import { uxMenuItems, uxTitle } from '@/utils/copy/uxMenuItems'
-
-import styles from '../styles/home.module.css'
-=======
-import Hero2 from '@/components/Home/Hero2'
-import MyApproach from '@/components/Home/MyApproach'
->>>>>>> main
 
 const Index: React.FC = () => {
   return (
