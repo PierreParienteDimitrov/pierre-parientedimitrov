@@ -42,8 +42,7 @@ const AppTemplate = ({ children }: ILayoutProps) => {
   return (
     <div>
       {/* navigation */}
-      <nav className="relative z-50 flex h-12 w-full items-center justify-start text-dark">
-        <div className="absolute bottom-0 h-[1.5px] w-full bg-gradient-to-r from-secondary to-tertiary"></div>
+      <nav className="relative z-50 flex h-12 w-full items-center justify-center text-dark">
         <Container>
           <ul className="flex w-full items-center justify-between">
             <div className="flex items-center space-x-8">
