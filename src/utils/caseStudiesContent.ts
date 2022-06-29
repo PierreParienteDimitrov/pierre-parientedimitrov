@@ -100,11 +100,11 @@ export const caseStudies = [
   },
   {
     project: 'Portfolio Website',
-    year: '2020',
-    platform: 'desktop and mobile',
+    year: '2022',
+    platform: 'responsive web',
     title: 'Designed and built my own portfolio website.',
     description:
-      'Designed and built the front-end and back-end of my portfolio website using Next.js, React.js, Node.js, Tailwind CSS and MongodB.',
+      'Designed and built the front-end and back-end of my portfolio website using Next.js, React.js, Node.js, Tailwind CSS, Mongoose and MongodB.',
     href: 'https://github.com/PierreParienteDimitrov/pierre-parientedimitrov',
     src: '/software-portfolio.png',
     alt: 'Portfolio Website',
@@ -113,8 +113,8 @@ export const caseStudies = [
   },
   {
     project: 'Tempso Landing Page',
-    year: '2020',
-    platform: 'desktop and mobile',
+    year: '2021',
+    platform: 'responsive web',
     title: 'Designed and built Tempso landing page.',
     description:
       'Designed and built Tempso landing page using Next.js, React.js and Tailwind CSS.',

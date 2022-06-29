@@ -25,6 +25,10 @@ const ProjectDescription: React.FC<IDescription> = ({
   color,
   href,
 }) => {
+  const border = color === 'primary' ? 'border-primary' : 'border-secondary'
+  const backgroundHover =
+    color === 'primary' ? 'hover:bg-primary' : 'hover:bg-secondary'
+
   return (
     <div className="flex flex-col items-start space-y-8">
       <div className="flex flex-col items-start space-y-4">
@@ -37,7 +41,7 @@ const ProjectDescription: React.FC<IDescription> = ({
         </div>
       </div>
       <div
-        className={`px-4 py-2 border border-${color} text-${color} bg-white cursor-pointer transition delay-50 duration-300 ease-in-out hover:bg-${color} hover:text-white`}
+        className={`px-4 py-2 border ${border} text-${color} bg-white cursor-pointer transition delay-50 duration-300 ease-in-out ${backgroundHover} hover:text-white`}
       >
         <Link href={href} passHref>
           <h6 className="uppercase tracking-widest">Read the story</h6>
@@ -59,7 +63,7 @@ const CaseStudy: React.FC = () => {
 
   return (
     <Container>
-      <div className="flex flex-col space-y-8 md:space-y-16">
+      <div className="flex flex-col space-y-8 md:space-y-10">
         {/* Design Stories */}
         <div className="flex flex-col space-y-8">
           <h2 className="font-thin tracking-wide text-primary">
