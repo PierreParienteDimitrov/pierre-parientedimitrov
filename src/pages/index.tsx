@@ -38,7 +38,6 @@ const Index: React.FC = () => {
       />
       {/* My Approach */}
       <MyApproach />
-      {/* skills */}
     </>
   )
 }
