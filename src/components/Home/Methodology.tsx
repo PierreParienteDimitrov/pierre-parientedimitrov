@@ -36,6 +36,15 @@ const Methodology: React.FC<{
                     className="cursor-pointer"
                   >
                     <img src={item.src} alt={item.alt} />
+                    <h5
+                      className={`pt-4 capitalize font-bold ${
+                        filter === item.filter
+                          ? 'text-primary'
+                          : 'text-gray-600'
+                      }`}
+                    >
+                      {item.title}
+                    </h5>
                   </div>
                 </div>
               )

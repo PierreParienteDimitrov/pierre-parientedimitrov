@@ -15,13 +15,13 @@ export const uxMenuItems = [
     filter: 'architecture',
     src: '/architecture.svg',
     alt: 'information architecture icon',
-    title: 'information architecture charts',
+    title: 'information architecture',
   },
   {
     filter: 'wireframes',
     src: '/wiframes.svg',
     alt: 'wireframe icon',
-    title: 'wireframes and prototypes',
+    title: 'wireframes & prototypes',
   },
 ]
 
