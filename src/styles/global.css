@@ -138,20 +138,20 @@ textarea {
   }
 
   h3 {
-    font-size: 1rem;
+    font-size: 1.25rem;
   }
 
   h4 {
     font-size: 1.5rem;
   }
 
+  h5 {
+    font-size: 1.125rem;
+  }
+
   p {
     font-size: 1rem;
     line-height: 160%;
-  }
-
-  h5 {
-    font-size: 0.875rem;
   }
 
   h6 {

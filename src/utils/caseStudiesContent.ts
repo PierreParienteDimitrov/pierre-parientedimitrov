@@ -9,7 +9,7 @@ export const caseStudies = [
     platform: 'native (IOS & ANDROID)',
     title: 'Designing a Classical Music Streaming App',
     description:
-      'Designed a classical music streaming application for, fully integrated with Apple Music and Spotify.',
+      'Designed a classical music streaming application fully integrated with Apple Music and Spotify.',
     href: pageInformation[Routes.TempsoUX]!.path,
     src: '/ux-case-study-tempso.png',
     alt: 'Tempso UX Case Study',
