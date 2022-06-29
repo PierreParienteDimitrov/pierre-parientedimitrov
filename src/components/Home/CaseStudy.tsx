@@ -3,8 +3,7 @@ import Link from 'next/link'
 import React from 'react'
 
 import Container from '@/layouts/containers/Container'
-
-import { caseStudies } from '../../utils/caseStudiesContent'
+import { caseStudies } from '@/utils/copy/caseStudiesContent'
 
 const CaseStudy: React.FC = () => {
   return (

@@ -2,7 +2,7 @@ import { pageInformation, Routes } from 'constants/pages'
 import Head from 'next/head'
 
 import Container from '@/layouts/containers/Container'
-import { aboutMe, professionalExperiences, skills } from '@/utils/aboutMe'
+import { aboutMe, professionalExperiences, skills } from '@/utils/copy/aboutMe'
 
 const Resume = () => (
   <>

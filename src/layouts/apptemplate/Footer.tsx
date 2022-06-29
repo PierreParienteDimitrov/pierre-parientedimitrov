@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 
-import { TypewriterItems } from '@/utils/typewriterItems'
+import { TypewriterItems } from '@/utils/copy/typewriterItems'
 
 const word = 'ship great products!'
 

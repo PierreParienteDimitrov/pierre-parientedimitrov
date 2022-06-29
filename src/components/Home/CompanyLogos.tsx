@@ -2,7 +2,7 @@ import Image from 'next/image'
 import React from 'react'
 
 import Container from '@/layouts/containers/Container'
-import { companyLogos } from '@/utils/companyLogos'
+import { companyLogos } from '@/utils/copy/companyLogos'
 
 const CompanyLogos = () => {
   return (

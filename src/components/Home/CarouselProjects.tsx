@@ -2,9 +2,9 @@ import React, { useRef } from 'react'
 import { FaChevronCircleLeft, FaChevronCircleRight } from 'react-icons/fa'
 
 import Container from '@/layouts/containers/Container'
+import { caseStudies } from '@/utils/copy/caseStudiesContent'
 import { tailwindStyles } from '@/utils/tailwindStyles'
 
-import { caseStudies } from '../../utils/caseStudiesContent'
 import Preview from './Preview'
 
 const CarouselProjects = () => {

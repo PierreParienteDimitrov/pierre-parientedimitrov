@@ -4,10 +4,12 @@ import Image from 'next/image'
 
 import CaseStudy from '@/components/Home/CaseStudy'
 import Hero from '@/components/Home/Hero'
+import Methodology from '@/components/Home/Methodology'
 import MyApproach from '@/components/Home/MyApproach'
 import Statement from '@/components/Home/Statement'
 import Container from '@/layouts/containers/Container'
-import { skills } from '@/utils/skills'
+import { skills } from '@/utils/copy/skills'
+import { uxMenuItems, uxTitle } from '@/utils/copy/uxMenuItems'
 
 import styles from '../styles/home.module.css'
 
@@ -34,6 +36,12 @@ const Index: React.FC = () => {
       <Statement />
       {/* Case Study */}
       <CaseStudy />
+      {/* Methodology */}
+      <Methodology
+        methodologyItems={uxMenuItems}
+        methodologyTitle={uxTitle}
+        color="primary"
+      />
       {/* My Approach */}
       <MyApproach />
       {/* skills */}

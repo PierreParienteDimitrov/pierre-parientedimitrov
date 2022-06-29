@@ -24,3 +24,10 @@ export const uxMenuItems = [
     title: 'wireframes and prototypes',
   },
 ]
+
+export const uxTitle = {
+  header: 'user experience',
+  title: 'Usable, Equitable, Enjoyable and Useful Products!',
+  description:
+    ' I build user experiences through an iterative process that starts with user research, flow charts and information architecture down to wireframes and prototypes. The end-user is involved at each step in order to keep a strong alignment between what I build and their needs.',
+}
