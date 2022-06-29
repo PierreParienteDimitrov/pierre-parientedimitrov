@@ -61,7 +61,7 @@ const Hero = () => {
 
   return (
     <div className="flex flex-col space-y-4 text-white">
-      <h4 className="font-bold">Let&apos;s</h4>
+      <h2 className="font-bold">Let&apos;s</h2>
       <ul className="flex flex-col">
         {TypewriterItems.map((element, index) => {
           return (

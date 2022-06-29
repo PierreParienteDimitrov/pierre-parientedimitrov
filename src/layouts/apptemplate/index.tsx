@@ -42,8 +42,7 @@ const AppTemplate = ({ children }: ILayoutProps) => {
   return (
     <div>
       {/* navigation */}
-      <nav className="relative z-50 flex h-12 w-full items-center justify-start text-dark">
-        <div className="absolute bottom-0 h-[1.5px] w-full bg-gradient-to-r from-secondary to-tertiary"></div>
+      <nav className="relative z-50 flex h-12 w-full items-center justify-center text-dark">
         <Container>
           <ul className="flex w-full items-center justify-between">
             <div className="flex items-center space-x-8">
@@ -118,11 +117,11 @@ const AppTemplate = ({ children }: ILayoutProps) => {
       {children}
       {/* footer */}
       <div className="">
-        <div className="relative z-0 w-screen overflow-hidden bg-dark text-white md:py-32">
+        <div className="relative z-0 w-screen overflow-hidden bg-dark text-white md:py-4">
           <div className={`${styles.container}`}></div>
           <Container>
-            <div className="flex w-full flex-col space-y-16">
-              <div className="relative z-50 flex flex-col space-y-16 py-16 md:flex-row md:items-start md:space-y-0">
+            <div className="flex w-full flex-col space-y-4">
+              <div className="relative z-50 flex flex-col space-y-4 py-16 md:flex-row md:items-start md:space-y-0">
                 <div className="w-full lg:w-2/3">
                   <Hero />
                 </div>
@@ -135,11 +134,10 @@ const AppTemplate = ({ children }: ILayoutProps) => {
               </div>
             </div>
           </Container>
-          <div className="mt-32 flex w-full flex-col items-center justify-center space-y-8">
+          <div className="mt-8 flex w-full flex-col items-center justify-center space-y-8">
             <h6>
               ©Pierre Pariente Dimitrov Portfolio {new Date().getFullYear()}
             </h6>
-            <h6>All rights reserved</h6>
             <div className="flex space-x-4">
               <a
                 href="https://www.linkedin.com/in/pierre-pariente-97835742/"

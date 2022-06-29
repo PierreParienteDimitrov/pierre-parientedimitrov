@@ -6,7 +6,7 @@ import { myApproach } from '@/utils/copy/myApproach'
 
 const MyApproach = () => {
   return (
-    <div className="py-32">
+    <div className="py-16">
       <section className="flex flex-col space-y-8 px-8 md:flex-row md:flex-nowrap md:items-center md:space-x-8 md:space-y-0 md:overflow-x-scroll md:px-0">
         <div className="md:pl-24">
           <div className="w-full flex-col space-y-8 bg-white py-8 md:min-h-[288px] md:min-w-[480px]">
