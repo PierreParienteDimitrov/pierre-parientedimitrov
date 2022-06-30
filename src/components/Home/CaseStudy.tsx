@@ -51,6 +51,76 @@ const ProjectDescription: React.FC<IDescription> = ({
   )
 }
 
+interface IUseCasesItems {
+  external: boolean
+  src: string
+  alt: string
+  project: string
+  year: string
+  platform: string
+  title: string
+  description: string
+  color: string
+  href: string
+}
+
+interface ITitle {
+  title: string
+}
+
+const UseCases: React.FC<IUseCasesItems[], ITitle> = ({
+  useCasesItems,
+  title,
+}) => {
+  return (
+    <div className="flex flex-col space-y-8">
+      <h2 className="font-thin tracking-wide text-primary">{title} </h2>
+      <div className="flex w-full flex-wrap">
+        {useCasesItems.map((element, index) => {
+          return (
+            <div
+              key={index}
+              className="flex w-full flex-col space-y-4 pb-16 md:w-1/2 md:pr-8"
+            >
+              <a
+                href={element.href}
+                target={element.external ? '_blank' : ''}
+                rel="noreferrer"
+              >
+                <div className="relative">
+                  <Image
+                    src={element.src}
+                    alt={element.alt}
+                    layout="responsive"
+                    width={640}
+                    height={383}
+                    objectFit="cover"
+                    priority
+                  />
+                  <div className="absolute inset-0 flex cursor-pointer items-center justify-center pr-4 pb-4 opacity-0 duration-300 hover:bg-black hover:opacity-90">
+                    <div className="flex flex-col items-center justify-center space-y-4 text-white">
+                      <h3>Read More!</h3>
+                    </div>
+                  </div>
+                </div>
+              </a>
+              <ProjectDescription
+                project={element.project}
+                year={element.year}
+                platform={element.platform}
+                title={element.title}
+                description={element.description}
+                color="primary"
+                href={element.href}
+              />
+            </div>
+          )
+        })}
+      </div>
+    </div>
+  )
+}
+
 const CaseStudy: React.FC = () => {
   const latestDesignStories = caseStudies.filter(
     (el) => el.project === 'Tempso' || el.project === 'BlueCargo'
@@ -65,167 +135,14 @@ const CaseStudy: React.FC = () => {
     <Container>
       <div className="flex flex-col space-y-8 md:space-y-10">
         {/* Design Stories */}
-        <div className="flex flex-col space-y-8">
-          <h2 className="font-thin tracking-wide text-primary">
-            Latest Design Stories
-          </h2>
-          <div className="flex w-full flex-wrap">
-            {latestDesignStories.map((element, index) => {
-              if (element.external) {
-                return (
-                  <div
-                    key={index}
-                    className="flex w-full flex-col space-y-4 pb-16 md:w-1/2 md:pr-8"
-                  >
-                    <a href={element.href} target="_blank" rel="noreferrer">
-                      <div className="relative">
-                        <Image
-                          src={element.src}
-                          alt={element.alt}
-                          layout="responsive"
-                          width={640}
-                          height={383}
-                          objectFit="cover"
-                          priority
-                        />
-                        <div className="absolute inset-0 flex cursor-pointer items-center justify-center pr-4 pb-4 opacity-0 duration-300 hover:bg-black hover:opacity-90">
-                          <div className="flex flex-col items-center justify-center space-y-4 text-white">
-                            <h3>Read More!</h3>
-                          </div>
-                        </div>
-                      </div>
-                    </a>
-                    <ProjectDescription
-                      project={element.project}
-                      year={element.year}
-                      platform={element.platform}
-                      title={element.title}
-                      description={element.description}
-                      color="primary"
-                      href={element.href}
-                    />
-                  </div>
-                )
-              }
-
-              return (
-                <div
-                  key={index}
-                  className="flex w-full flex-col space-y-4 pb-16 md:w-1/2 md:pr-8"
-                >
-                  <Link href={element.href} passHref>
-                    <div className="relative">
-                      <Image
-                        src={element.src}
-                        alt={element.alt}
-                        layout="responsive"
-                        width={640}
-                        height={383}
-                        objectFit="cover"
-                        priority
-                      />
-                      <div className="absolute inset-0 flex cursor-pointer items-center justify-center pr-4 pb-4 opacity-0 duration-300 hover:bg-black hover:opacity-90">
-                        <div className="flex flex-col items-center justify-center space-y-4 text-white">
-                          <h3>Read More!</h3>
-                        </div>
-                      </div>
-                    </div>
-                  </Link>
-                  <ProjectDescription
-                    project={element.project}
-                    year={element.year}
-                    platform={element.platform}
-                    title={element.title}
-                    description={element.description}
-                    color="primary"
-                    href={element.href}
-                  />
-                </div>
-              )
-            })}
-          </div>
-        </div>
-        {/* Engineering Projects */}
-        <div className="flex flex-col space-y-8">
-          <h2 className="font-thin tracking-wide text-secondary">
-            Latest Engineering Projects
-          </h2>
-          <div className="flex w-full flex-wrap">
-            {latestEngineering.map((element, index) => {
-              if (element.external) {
-                return (
-                  <div
-                    key={index}
-                    className="flex w-full flex-col space-y-4 pb-16 md:w-1/2 md:pr-8"
-                  >
-                    <a href={element.href} target="_blank" rel="noreferrer">
-                      <div className="relative">
-                        <Image
-                          src={element.src}
-                          alt={element.alt}
-                          layout="responsive"
-                          width={640}
-                          height={383}
-                          objectFit="cover"
-                          priority
-                        />
-                        <div className="absolute inset-0 flex cursor-pointer items-center justify-center pr-4 pb-4 opacity-0 duration-300 hover:bg-black hover:opacity-90">
-                          <div className="flex flex-col items-center justify-center space-y-4 text-white">
-                            <h3>Read More!</h3>
-                          </div>
-                        </div>
-                      </div>
-                    </a>
-                    <ProjectDescription
-                      project={element.project}
-                      year={element.year}
-                      platform={element.platform}
-                      title={element.title}
-                      description={element.description}
-                      color="secondary"
-                      href={element.href}
-                    />
-                  </div>
-                )
-              }
-
-              return (
-                <div
-                  key={index}
-                  className="flex w-full flex-col space-y-4 pb-16 md:w-1/2 md:pr-8"
-                >
-                  <Link href={element.href} passHref>
-                    <div className="relative">
-                      <Image
-                        src={element.src}
-                        alt={element.alt}
-                        layout="responsive"
-                        width={640}
-                        height={383}
-                        objectFit="cover"
-                        priority
-                      />
-                      <div className="absolute inset-0 flex cursor-pointer items-center justify-center pr-4 pb-4 opacity-0 duration-300 hover:bg-black hover:opacity-90">
-                        <div className="flex flex-col items-center justify-center space-y-4 text-white">
-                          <h3>Read More!</h3>
-                        </div>
-                      </div>
-                    </div>
-                  </Link>
-                  <ProjectDescription
-                    project={element.project}
-                    year={element.year}
-                    platform={element.platform}
-                    title={element.title}
-                    description={element.description}
-                    color="secondary"
-                    href={element.href}
-                  />
-                </div>
-              )
-            })}
-          </div>
-        </div>
+        <UseCases
+          UseCasesItems={latestDesignStories}
+          title="latest design stories"
+        />
+        <UseCases
+          UseCasesItems={latestEngineering}
+          title="Latest Engineering Projects"
+        />
       </div>
     </Container>
   )
