@@ -86,7 +86,7 @@ const Portfolio = () => {
             <UseCases
               useCasesItems={projects}
               title="All Projects"
-              color="primary"
+              projectType="design"
               button="read the story"
             />
           </div>

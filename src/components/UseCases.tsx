@@ -2,25 +2,31 @@ import Image from 'next/image'
 import React from 'react'
 import { IDescription, IUseCasesItems } from 'types/ICase'
 
+import Tag from './Tag'
+
 const ProjectDescription: React.FC<IDescription> = ({
   project,
   year,
   platform,
   title,
   description,
-  color,
   href,
   button,
   external,
+  projectType,
+  tags,
 }) => {
-  const border = color === 'primary' ? 'border-primary' : 'border-secondary'
+  const border =
+    projectType === 'design' ? 'border-primary' : 'border-secondary'
+  const textColor = projectType === 'design' ? 'text-primary' : 'text-secondary'
+
   const backgroundHover =
-    color === 'primary' ? 'hover:bg-primary' : 'hover:bg-secondary'
+    projectType === 'design' ? 'hover:bg-primary' : 'hover:bg-secondary'
 
   return (
     <div className="flex flex-col items-start space-y-8">
       <div className="flex flex-col items-start space-y-4">
-        <h6 className={`font-semibold uppercase tracking-wider text-${color}`}>
+        <h6 className={`font-semibold uppercase tracking-wider ${textColor}`}>
           {project} ({year}) • {platform}
         </h6>
         <div className="flex flex-col space-y-2">
@@ -28,8 +34,13 @@ const ProjectDescription: React.FC<IDescription> = ({
           <p className="text-gray-600">{description}</p>
         </div>
       </div>
+      <div className="flex space-x-2">
+        {tags.map((item) => (
+          <Tag key={item} tag={item} />
+        ))}
+      </div>
       <div
-        className={`px-4 py-2 border ${border} text-${color} bg-white cursor-pointer transition delay-50 duration-300 ease-in-out ${backgroundHover} hover:text-white`}
+        className={`px-4 py-2 border ${border} ${textColor} bg-white cursor-pointer transition delay-50 duration-300 ease-in-out ${backgroundHover} hover:text-white`}
       >
         <a href={href} target={external ? '_blank' : ''} rel="noreferrer">
           <h6 className="uppercase tracking-widest">{button}</h6>
@@ -42,10 +53,10 @@ const ProjectDescription: React.FC<IDescription> = ({
 const UseCases: React.FC<{
   useCasesItems: IUseCasesItems[]
   title: string
-  color: string
   button: string
-}> = ({ useCasesItems, title, color, button }) => {
-  const textColor = color === 'primary' ? 'text-primary' : 'text-secondary'
+  projectType: string
+}> = ({ useCasesItems, title, button, projectType }) => {
+  const textColor = projectType === 'design' ? 'text-primary' : 'text-secondary'
   return (
     <div className="flex flex-col space-y-8">
       <h2 className={`font-thin capitalize tracking-wide ${textColor}`}>
@@ -86,10 +97,11 @@ const UseCases: React.FC<{
                 platform={element.platform}
                 title={element.title}
                 description={element.description}
-                color={color}
+                projectType={element.projectType}
                 href={element.href}
                 button={button}
                 external={element.external}
+                tags={element.tags}
               />
             </div>
           )

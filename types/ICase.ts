@@ -14,10 +14,11 @@ export interface IDescription {
   platform: string
   title: string
   description: string
-  color: string
   href: string
   button: string
   external: boolean
+  projectType: string
+  tags: string[]
 }
 
 export interface IUseCasesItems {
@@ -30,4 +31,6 @@ export interface IUseCasesItems {
   title: string
   description: string
   href: string
+  projectType: string
+  tags: string[]
 }

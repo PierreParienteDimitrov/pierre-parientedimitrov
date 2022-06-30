@@ -22,14 +22,14 @@ const CaseStudy: React.FC = () => {
         <UseCases
           useCasesItems={latestDesignStories}
           title="latest design stories"
-          color="primary"
           button="read the story"
+          projectType="design"
         />
         <UseCases
           useCasesItems={latestEngineering}
           title="Latest Engineering Projects"
-          color="secondary"
           button="see project"
+          projectType="software"
         />
       </div>
     </Container>
