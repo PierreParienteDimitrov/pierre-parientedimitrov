@@ -57,7 +57,7 @@ const Portfolio = () => {
         />
         <meta property="og:image" content="/website-preview.png" />
       </Head>
-      <div className="bg-gray-100 py-16 pb-48">
+      <div className="py-16 pb-48">
         <Container>
           <div className="mb-24 flex flex-col space-y-8">
             <div className="flex flex-col space-y-2">
