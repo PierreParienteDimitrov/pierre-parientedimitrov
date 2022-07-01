@@ -7,6 +7,8 @@ import Methodology from '@/components/Home/Methodology'
 import MyApproach from '@/components/Home/MyApproach'
 import { uxMenuItems, uxTitle } from '@/utils/copy/uxMenuItems'
 
+const SHOW = process.env.NODE_ENV === 'development'
+
 const Index: React.FC = () => {
   return (
     <>
@@ -31,11 +33,13 @@ const Index: React.FC = () => {
       {/* Case Study */}
       <CaseStudy />
       {/* Methodology */}
-      <Methodology
-        methodologyItems={uxMenuItems}
-        methodologyTitle={uxTitle}
-        color="primary"
-      />
+      {SHOW && (
+        <Methodology
+          methodologyItems={uxMenuItems}
+          methodologyTitle={uxTitle}
+          color="primary"
+        />
+      )}
       {/* My Approach */}
       <MyApproach />
     </>
