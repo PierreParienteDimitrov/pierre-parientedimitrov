@@ -1,47 +1,25 @@
 import React from 'react'
-import { IProjectMetrics } from 'types/IProjectMetrics'
+import { AiOutlineArrowRight } from 'react-icons/ai'
 
-import styles from '../styles/projectMetrics.module.css'
-
-const ProjectMetrics: React.FC<IProjectMetrics> = (props) => {
-  const { year, role, technology, method, category } = props
+const MetricsItem: React.FC<{ metrics: string }> = ({ metrics }) => {
   return (
-    <div className={styles.box}>
-      <ul className="flex flex-col space-y-6 ">
-        <li className="flex flex-col space-y-2">
-          <div className="flex flex-col space-y-1 border-b border-gray-400">
-            <h6 className="pb-1 font-bold uppercase text-primary">Year</h6>
-          </div>
-          <p>{year}</p>
-        </li>
-        <li className="flex flex-col space-y-2">
-          <div className="flex flex-col space-y-1 border-b border-gray-400">
-            <h6 className="pb-1 font-bold uppercase text-primary">Role</h6>
-          </div>
-          <p>{role}</p>
-        </li>
-        <li className="flex flex-col space-y-2">
-          <div className="flex flex-col space-y-1 border-b border-gray-400">
-            <h6 className="pb-1 font-bold uppercase text-primary">
-              Technology
-            </h6>
-          </div>
-          <p>{technology}r</p>
-        </li>
-        <li className="flex flex-col space-y-2">
-          <div className="flex flex-col space-y-1 border-b border-gray-400">
-            <h6 className="pb-1 font-bold uppercase text-primary">
-              Research Method
-            </h6>
-          </div>
-          <p>{method}</p>
-        </li>
-        <li className="flex flex-col space-y-2">
-          <div className="flex flex-col space-y-1 border-b border-gray-400">
-            <h6 className="pb-1 font-bold uppercase text-primary">Category</h6>
-          </div>
-          <p>{category}Live App</p>
-        </li>
+    <li className="flex items-center space-x-2">
+      <AiOutlineArrowRight className="text-secondary" />
+      <p className="capitalize">{metrics}</p>
+    </li>
+  )
+}
+
+const ProjectMetrics: React.FC<{
+  projectMetrics: string[] | undefined
+}> = ({ projectMetrics }) => {
+  return (
+    <div className="">
+      <ul className="grid grid-flow-col grid-rows-2 gap-4">
+        {projectMetrics &&
+          projectMetrics.map((el, index) => {
+            return <MetricsItem key={index} metrics={el} />
+          })}
       </ul>
     </div>
   )

@@ -7,7 +7,8 @@ import { ICarousel } from '@/../types/ICarousel'
 import Carousel from '@/components/Carousel'
 import ProjectMetrics from '@/components/ProjectMetrics'
 import Container from '@/layouts/containers/Container'
-import TwoCols from '@/layouts/grids/TwoCols'
+import { caseStudies } from '@/utils/caseStudiesContent'
+import { tailwindStyles } from '@/utils/tailwindStyles'
 
 const TEMPSO: ICarousel[] = [
   {
@@ -47,7 +48,32 @@ const TEMPSO: ICarousel[] = [
   },
 ]
 
-const LeftSide: React.FC = () => {
+const ProjectIntro: React.FC = () => {
+  return (
+    <div className="flex flex-col space-y-10">
+      {/* introduction */}
+      <h1 className={`font-bold ${tailwindStyles.textGradient}`}>
+        Classical Music Streaming App
+      </h1>
+      <div className="flex flex-col space-y-4 md:w-4/6">
+        <h3>
+          <span className="font-bold">Tempso</span> is a live Classical Music
+          Streaming Mobile App, fully integrated with Spotify and Apple Music.
+        </h3>
+        <h5>
+          My task was to design a mobile application where users could
+          <span className="font-bold italic"> discover </span> and{' '}
+          <span className="font-bold italic"> browse </span>
+          the classical music catalogue,{' '}
+          <span className="font-bold italic"> compare </span> recordings and
+          save liked recordings and playlists to their library.{' '}
+        </h5>
+      </div>
+    </div>
+  )
+}
+
+const Content: React.FC = () => {
   return (
     <>
       <Head>
@@ -64,7 +90,7 @@ const LeftSide: React.FC = () => {
         />
         <meta property="og:image" content="/website-preview.png" />
       </Head>
-      <div className="flex flex-col space-y-16 md:pb-16 md:pr-24">
+      <div className="flex flex-col items-center space-y-16 md:m-auto md:w-4/6 md:pb-16">
         <div>
           {/* introduction */}
           <div className="flex flex-col space-y-4">
@@ -398,34 +424,24 @@ const LeftSide: React.FC = () => {
 }
 
 const Tempso: React.FC = () => {
-  return (
-    <div className="bg-gray-200">
-      <Container>
-        {/* carousel */}
-        <div className="py-8">
-          <Carousel carouselItems={TEMPSO} />
-        </div>
+  const project = caseStudies.filter((item) => item.key === 'tempso')
+  const projectMetrics = project[0]?.metrics
 
-        <div className="flex flex-col space-y-8 md:mt-16">
-          <TwoCols
-            leftSide={<LeftSide />}
-            leftDesktopOrder="order-1"
-            leftMobileOrder="order-2"
-            rightSide={
-              <ProjectMetrics
-                year="2020"
-                role="UX Researcher & Designer"
-                technology="Miro Mindmapping, Octopus sitemap, Figma"
-                method="User Interviews, Wireframing, Usability Study"
-                category="Mobile Application"
-              />
-            }
-            rightDesktopOrder="order-2"
-            rightMobileOrder="order-1"
-          />
-        </div>
-      </Container>
-    </div>
+  return (
+    <Container>
+      <div className="flex flex-col space-y-12 border-b border-secondary py-12">
+        <ProjectIntro />
+        <ProjectMetrics projectMetrics={projectMetrics} />
+      </div>
+      {/* carousel */}
+      <div className="py-8">
+        <Carousel carouselItems={TEMPSO} />
+      </div>
+
+      <div className="flex flex-col space-y-8 md:mt-16">
+        <Content />
+      </div>
+    </Container>
   )
 }
 
