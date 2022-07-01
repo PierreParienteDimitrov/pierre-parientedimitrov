@@ -3,9 +3,7 @@ import React from 'react'
 import { ICarousel } from 'types/ICarousel'
 
 import Carousel from '@/components/Carousel'
-import ProjectMetrics from '@/components/ProjectMetrics'
 import Container from '@/layouts/containers/Container'
-import TwoCols from '@/layouts/grids/TwoCols'
 import { getServerSideProps } from '@/utils/protectedRoutes'
 
 const LUXURY: ICarousel[] = [
@@ -176,22 +174,7 @@ const Luxurytravel = () => {
       </div>
 
       <div className="flex flex-col space-y-8 md:mt-16">
-        <TwoCols
-          leftSide={<LeftSide />}
-          leftDesktopOrder="order-1"
-          leftMobileOrder="order-2"
-          rightSide={
-            <ProjectMetrics
-              year="2020"
-              role="UX/UI Design, Marketing & Brand"
-              technology="Figma"
-              method="Founder Interview, Benchmark, Wireframing, High-fidelity prototypes"
-              category="Website"
-            />
-          }
-          rightDesktopOrder="order-2"
-          rightMobileOrder="order-1"
-        />
+        <LeftSide />
       </div>
     </Container>
   )
