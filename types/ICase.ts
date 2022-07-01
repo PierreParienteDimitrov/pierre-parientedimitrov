@@ -1,5 +1,5 @@
 export interface ICase {
-  project: string
+  client: string
   description: string
   href: string
   src: string
