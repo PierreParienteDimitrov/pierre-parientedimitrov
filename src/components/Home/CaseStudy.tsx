@@ -6,13 +6,11 @@ import { caseStudies } from '@/utils/copy/caseStudiesContent'
 import UseCases from '../UseCases'
 
 const CaseStudy: React.FC = () => {
-  const latestDesignStories = caseStudies.filter(
-    (el) => el.project === 'Tempso' || el.project === 'BlueCargo'
-  )
+  const latestDesignStories = caseStudies.filter((el) => el.latest)
 
   const latestEngineering = caseStudies.filter(
     (el) =>
-      el.project === 'Portfolio Website' || el.project === 'Tempso Landing Page'
+      el.client === 'Portfolio Website' || el.client === 'Tempso Landing Page'
   )
 
   return (

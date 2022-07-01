@@ -9,7 +9,6 @@ export interface ICase {
 }
 
 export interface IDescription {
-  project: string
   year: string
   platform: string
   title: string
@@ -19,13 +18,14 @@ export interface IDescription {
   external: boolean
   projectType: string
   tags: string[]
+  client: string
 }
 
 export interface IUseCasesItems {
   external: boolean
   src: string
   alt: string
-  project: string
+  client: string
   year: string
   platform: string
   title: string

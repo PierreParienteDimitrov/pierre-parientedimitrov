@@ -5,7 +5,6 @@ import { IDescription, IUseCasesItems } from 'types/ICase'
 import Tag from './Tag'
 
 const ProjectDescription: React.FC<IDescription> = ({
-  project,
   year,
   platform,
   title,
@@ -15,6 +14,7 @@ const ProjectDescription: React.FC<IDescription> = ({
   external,
   projectType,
   tags,
+  client,
 }) => {
   const border =
     projectType === 'design' ? 'border-primary' : 'border-secondary'
@@ -27,7 +27,7 @@ const ProjectDescription: React.FC<IDescription> = ({
     <div className="flex flex-col items-start space-y-8">
       <div className="flex flex-col items-start space-y-4">
         <h6 className={`font-semibold uppercase tracking-wider ${textColor}`}>
-          {project} ({year}) • {platform}
+          {client} ({year}) • {platform}
         </h6>
         <div className="flex flex-col space-y-2">
           <h4 className="">{title}</h4>
@@ -92,7 +92,6 @@ const UseCases: React.FC<{
                 </div>
               </a>
               <ProjectDescription
-                project={element.project}
                 year={element.year}
                 platform={element.platform}
                 title={element.title}
@@ -102,6 +101,7 @@ const UseCases: React.FC<{
                 button={button}
                 external={element.external}
                 tags={element.tags}
+                client={element.client}
               />
             </div>
           )

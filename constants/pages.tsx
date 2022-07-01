@@ -13,7 +13,8 @@ export enum Routes {
   ThankYou = '/thank-you',
   Tempso = '/portfolio/tempso',
   TempsoUX = '/portfolio/tempso-ux',
-  ContainerTracking = '/portfolio/container-tracking',
+  ContainerDashboard = '/portfolio/container-dashboard',
+  CheckoutFlow = '/portfolio/checkout-flow',
   LuxuryTravel = '/portfolio/luxury-travel',
   UIShots = '/portfolio/ui-shots',
   Portfolio = '/portfolio',
@@ -60,9 +61,9 @@ export const pageInformation: Record<string, IPage> = {
     path: Routes.TempsoUX,
     isPublic: true,
   },
-  [Routes.ContainerTracking]: {
+  [Routes.ContainerDashboard]: {
     title: 'Pierre Pariente Dimitrov - Container Tracking',
-    path: Routes.ContainerTracking,
+    path: Routes.ContainerDashboard,
     isPublic: false,
   },
   [Routes.LuxuryTravel]: {
@@ -79,5 +80,10 @@ export const pageInformation: Record<string, IPage> = {
     title: 'Pierre Pariente Dimitrov - Portfolio',
     path: Routes.Portfolio,
     isPublic: true,
+  },
+  [Routes.CheckoutFlow]: {
+    title: 'Pierre Pariente Dimitrov - Checkout Flow',
+    path: Routes.CheckoutFlow,
+    isPublic: false,
   },
 }
