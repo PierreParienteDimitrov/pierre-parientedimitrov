@@ -3,7 +3,11 @@ import Head from 'next/head'
 
 import CaseStudy from '@/components/Home/CaseStudy'
 import Hero2 from '@/components/Home/Hero2'
+import Methodology from '@/components/Home/Methodology'
 import MyApproach from '@/components/Home/MyApproach'
+import { uxMenuItems, uxTitle } from '@/utils/copy/uxMenuItems'
+
+const SHOW = process.env.NODE_ENV === 'development'
 
 const Index: React.FC = () => {
   return (
@@ -28,9 +32,16 @@ const Index: React.FC = () => {
       {/* <Statement /> */}
       {/* Case Study */}
       <CaseStudy />
+      {/* Methodology */}
+      {SHOW && (
+        <Methodology
+          methodologyItems={uxMenuItems}
+          methodologyTitle={uxTitle}
+          color="primary"
+        />
+      )}
       {/* My Approach */}
       <MyApproach />
-      {/* skills */}
     </>
   )
 }

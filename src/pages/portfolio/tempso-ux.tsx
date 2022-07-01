@@ -7,7 +7,7 @@ import { ICarousel } from '@/../types/ICarousel'
 import Carousel from '@/components/Carousel'
 import ProjectMetrics from '@/components/ProjectMetrics'
 import Container from '@/layouts/containers/Container'
-import { caseStudies } from '@/utils/caseStudiesContent'
+import { caseStudies } from '@/utils/copy/caseStudiesContent'
 import { tailwindStyles } from '@/utils/tailwindStyles'
 
 const TEMPSO: ICarousel[] = [

@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import React from 'react'
 
-import { uiShots } from '@/utils/uiShots'
+import { uiShots } from '@/utils/copy/uiShots'
 
 const UIShots: React.FC = () => {
   return (

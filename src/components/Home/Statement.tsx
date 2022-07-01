@@ -4,7 +4,7 @@ import Link from 'next/link'
 import React from 'react'
 
 import styles from '@/styles/home.module.css'
-import { aboutMe } from '@/utils/aboutMe'
+import { aboutMe } from '@/utils/copy/aboutMe'
 import { tailwindStyles } from '@/utils/tailwindStyles'
 
 const Statement: React.FC = () => {

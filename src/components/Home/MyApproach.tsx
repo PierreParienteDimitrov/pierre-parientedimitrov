@@ -2,7 +2,7 @@ import Image from 'next/image'
 import React from 'react'
 import { TbPoint } from 'react-icons/tb'
 
-import { myApproach } from '@/utils/myApproach'
+import { myApproach } from '@/utils/copy/myApproach'
 
 const MyApproach = () => {
   return (

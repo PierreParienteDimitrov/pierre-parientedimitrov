@@ -6,8 +6,8 @@ import { IUseCasesItems } from 'types/ICase'
 import Tag from '@/components/Tag'
 import UseCases from '@/components/UseCases'
 import Container from '@/layouts/containers/Container'
-import { caseStudies } from '@/utils/caseStudiesContent'
-import { tags } from '@/utils/tags'
+import { caseStudies } from '@/utils/copy/caseStudiesContent'
+import { tags } from '@/utils/copy/tags'
 
 const Portfolio = () => {
   const [activeFilter, setActiveFilter] = useState<string[]>(

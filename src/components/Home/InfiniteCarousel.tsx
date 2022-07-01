@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { skillLogos } from '@/utils/skillLogos'
+import { skillLogos } from '@/utils/copy/skillLogos'
 
 import styles from '../../styles/infiniteCarousel.module.css'
 

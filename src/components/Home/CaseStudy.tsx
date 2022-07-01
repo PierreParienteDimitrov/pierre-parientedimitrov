@@ -1,8 +1,8 @@
 import React from 'react'
 
 import Container from '@/layouts/containers/Container'
+import { caseStudies } from '@/utils/copy/caseStudiesContent'
 
-import { caseStudies } from '../../utils/caseStudiesContent'
 import UseCases from '../UseCases'
 
 const CaseStudy: React.FC = () => {

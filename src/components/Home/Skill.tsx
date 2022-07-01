@@ -3,7 +3,7 @@ import React from 'react'
 
 import Container from '@/layouts/containers/Container'
 import styles from '@/styles/home.module.css'
-import { skills } from '@/utils/skills'
+import { skills } from '@/utils/copy/skills'
 
 const Skill = () => {
   return (
