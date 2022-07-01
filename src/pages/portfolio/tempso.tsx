@@ -83,7 +83,7 @@ const LeftSide: React.FC = () => {
               <a
                 href="https://www.tempso.com/"
                 target="_blank"
-                className="text-primary-100 cursor-pointer"
+                className="cursor-pointer text-primary"
                 rel="noreferrer"
               >
                 Download it today!

@@ -4,6 +4,7 @@ import { tags } from './tags'
 
 export const caseStudies = [
   {
+    key: 'tempso',
     project: 'Tempso',
     year: '2019',
     platform: 'native (IOS & ANDROID)',
@@ -16,6 +17,13 @@ export const caseStudies = [
     external: false,
     tags: [tags.mobile, tags.design],
     projectType: 'design',
+    metrics: [
+      '2020',
+      'user research, user experience, user interface',
+      'user interviews, wireframing, usability studies',
+      'native IOS & android',
+      'miro mindmapping, octopus sitemap, figma',
+    ],
   },
   {
     project: 'BlueCargo',
