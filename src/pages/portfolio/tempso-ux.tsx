@@ -91,24 +91,6 @@ const Content: React.FC = () => {
         <meta property="og:image" content="/website-preview.png" />
       </Head>
       <div className="flex flex-col items-center space-y-16 md:m-auto md:w-4/6 md:pb-16">
-        <div>
-          {/* introduction */}
-          <div className="flex flex-col space-y-4">
-            <h4>
-              <span className="font-bold">Tempso</span> is a live Classical
-              Music Streaming Mobile App, fully integrated with Spotify and
-              Apple Music.
-            </h4>
-            <p>
-              My task was to design a mobile application where users could
-              <span className="font-bold italic"> discover </span> and{' '}
-              <span className="font-bold italic"> browse </span>
-              the classical music catalogue,{' '}
-              <span className="font-bold italic"> compare </span> recordings and
-              save liked recordings and playlists to their library.{' '}
-            </p>
-          </div>
-        </div>
         {/* Process */}
         <div className="flex flex-col space-y-2">
           <h4 className="font-bold">Process</h4>
