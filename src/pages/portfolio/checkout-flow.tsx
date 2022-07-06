@@ -402,22 +402,6 @@ const CheckoutFlow: React.FC = () => {
   const project = caseStudies.filter((item) => item.key === 'bluecargo_payment')
   const projectMetrics = project[0]?.metrics
 
-  // const [loading, setLoading] = useState<boolean>(false)
-
-  // if (status === 'loading') {
-  //   return (
-  //     <div className="flex h-screen items-center text-center">
-  //       <Container>
-  //         <p>Loading...</p>
-  //       </Container>
-  //     </div>
-  //   )
-  // }
-
-  // if (status === 'unauthenticated') {
-  //   window.location.replace('/signin')
-  // }
-
   return (
     <>
       <Head>
