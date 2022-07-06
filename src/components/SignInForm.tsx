@@ -39,12 +39,12 @@ const SignInForm = () => {
 
     //@ts-ignore
     if (!result?.error && requestedPath) {
-      router.replace(`/${requestedPath}`)
+      router.push(`/${requestedPath}`)
     }
 
     //@ts-ignore
     if (!result?.error && !requestedPath) {
-      router.replace(`/`)
+      router.push(`/`)
     }
 
     //@ts-ignore
@@ -53,7 +53,7 @@ const SignInForm = () => {
     }
 
     if (!result) {
-      return router.replace('/thank-you')
+      return router.push('/thank-you')
     }
 
     return
