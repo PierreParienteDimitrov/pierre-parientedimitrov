@@ -280,19 +280,20 @@ const Content: React.FC = () => {
             </div>
           </div>
         </div>
-        {/* User Journey */}
+        {/* Components */}
         <div className="flex w-full flex-col space-y-2">
           <h4 className="font-bold">Components</h4>
           <div className="flex flex-col space-y-10">
             <div className="flex flex-col space-y-4">
               <p className="font-bold">Plan Cards</p>
-              <div>
+              <p>I created all the states for the plan cards:</p>
+              <div className="shadow-md">
                 <Image
-                  src="/flow-chart-compare.png"
-                  alt="Flow Chart Discover"
+                  src="/payment-component-plan.png"
+                  alt="payment-component-plan"
                   layout="responsive"
-                  width={1920}
-                  height={768}
+                  width={1402}
+                  height={1014}
                   objectFit="cover"
                   priority
                 />
@@ -300,14 +301,14 @@ const Content: React.FC = () => {
             </div>
             <div className="flex flex-col space-y-4">
               <p className="font-bold">Volume Scale</p>
-
-              <div>
+              <p>I created all the states for the volume selection section:</p>
+              <div className="shadow-md">
                 <Image
-                  src="/flow-chart-explore.png"
-                  alt="Flow Chart Explore"
+                  src="/payment-component-volume.png"
+                  alt="payment-component-volume"
                   layout="responsive"
-                  width={1920}
-                  height={768}
+                  width={1590}
+                  height={1910}
                   objectFit="cover"
                   priority
                 />
@@ -315,13 +316,14 @@ const Content: React.FC = () => {
             </div>
             <div className="flex flex-col space-y-4">
               <p className="font-bold">Checkout cards</p>
-              <div>
+              <p>I created all the states for the checkout cards:</p>
+              <div className="shadow-md">
                 <Image
-                  src="/flow-chart-discover.png"
-                  alt="Flow Chart Discover"
+                  src="/payment-component-checkout.png"
+                  alt="payment-component-plan"
                   layout="responsive"
-                  width={1920}
-                  height={768}
+                  width={1590}
+                  height={1910}
                   objectFit="cover"
                   priority
                 />
