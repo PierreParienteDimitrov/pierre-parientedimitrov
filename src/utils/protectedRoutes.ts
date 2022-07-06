@@ -7,6 +7,8 @@ export const getServerSideProps: GetServerSideProps = async (context) => {
   const session: Session | null = await getSession(context)
   const params = context.resolvedUrl
 
+  console.log(session)
+
   if (!session) {
     return {
       redirect: {

@@ -32,7 +32,6 @@ export default NextAuth({
       if (!session) return
 
       await dbConnect()
-
       const userSession = await User.findOne({
         email: session.session.user.email,
       })
