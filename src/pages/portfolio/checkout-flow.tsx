@@ -80,7 +80,7 @@ const Content: React.FC = () => {
           </p>
         </div>
         {/* Business Brief */}
-        <div className="flex flex-col space-y-2">
+        <div className="flex w-full flex-col space-y-2">
           <h4 className="font-bold">Business Brief</h4>
           <div className="flex flex-col space-y-10">
             <p>
@@ -121,7 +121,7 @@ const Content: React.FC = () => {
           </div>
         </div>
         {/* User Journeys */}
-        <div className="flex flex-col space-y-2">
+        <div className="flex w-full flex-col space-y-2">
           <h4 className="font-bold">User Journeys</h4>
           <div className="flex flex-col space-y-8">
             <div className="flex flex-col space-y-2">
