@@ -43,18 +43,21 @@ const ProjectIntro: React.FC = () => {
       </h1>
       <div className="flex flex-col space-y-4 md:w-4/6">
         <h3>
-          <span className="font-bold">BlueCargo</span> is a container management
-          software, fully operational and deployed for the ports of Los Angeles
-          and Long Beach.
+          <span className="font-bold">BlueCargo</span> develops a Supply Chain
+          software for the Drayage Industry that allows industry professionals
+          to get real-time container data at the ports of Los Angeles and Long
+          Beach.
         </h3>
         <h5>
           My task was to redesign the checkout flow to reflect the company new
-          business model, which introduced a container transaction{' '}
-          <span className="font-bold italic"> volume-based </span>
-          pricing.
+          <span className="font-bold italic">
+            {' '}
+            container volume-based{' '}
+          </span>{' '}
+          business model pricing.
         </h5>
         <h6 className="italic">
-          *Price and plan name have been modified for confidentiality purpose.
+          *Price and plan names have been modified for confidentiality.
         </h6>
       </div>
     </div>
@@ -70,9 +73,10 @@ const Content: React.FC = () => {
           <h4 className="font-bold">Process</h4>
           <p>
             My goal was to create a user-centered design that followed the
-            business requirements and timeline. For this project, the User
-            Research had been conducted by the company founders and their
-            advisors. Thus, the process was divided into the following steps:
+            requirements and timeline of the business team. For this project,
+            the User Research had been conducted by the company founders and
+            their advisors. Thus, the process was divided into the following
+            steps:
           </p>
         </div>
         {/* Business Brief */}
@@ -95,7 +99,8 @@ const Content: React.FC = () => {
             <div>
               <p>
                 Each pack came with an additional set of feature and additional
-                level of customer support. The objective was to:
+                level of customer support. With the introduction of this new
+                business model, the objective was to:
               </p>
               <ul className="flex list-disc flex-col space-y-2 pl-4 pt-4">
                 <li>
@@ -239,7 +244,7 @@ const Content: React.FC = () => {
                 </li>
                 <li>
                   The third screen would allow user to choose a payment method
-                  and complete and place their order
+                  and place their order
                 </li>
               </ul>
             </div>
@@ -286,14 +291,14 @@ const Content: React.FC = () => {
           <div className="flex flex-col space-y-10">
             <div className="flex flex-col space-y-4">
               <p className="font-bold">Plan Cards</p>
-              <p>I created all the states for the plan cards:</p>
+              <p>I created all the versions of the plan cards:</p>
               <div className="shadow-md">
                 <Image
                   src="/payment-component-plan.png"
                   alt="payment-component-plan"
                   layout="responsive"
-                  width={1402}
-                  height={1014}
+                  width={1422}
+                  height={488}
                   objectFit="cover"
                   priority
                 />
@@ -301,7 +306,7 @@ const Content: React.FC = () => {
             </div>
             <div className="flex flex-col space-y-4">
               <p className="font-bold">Volume Scale</p>
-              <p>I created all the states for the volume selection section:</p>
+              <p>I created all the states for the volume selection:</p>
               <div className="shadow-md">
                 <Image
                   src="/payment-component-volume.png"
@@ -336,11 +341,11 @@ const Content: React.FC = () => {
           <h4 className="pb-8 font-bold">High-fidelity Mockups</h4>
           <div className="flex flex-col space-y-10">
             <div className="flex flex-col space-y-4">
-              <p>Container Volume Configurator Page</p>
+              <p>Select a Plan Page</p>
               <div className="shadow-md">
                 <Image
-                  src="/payment-mockup-volume.png"
-                  alt="Wireframe1"
+                  src="/payment-mockup-plan.png"
+                  alt="payment-mockup-plan"
                   layout="responsive"
                   width={1440}
                   height={764}
@@ -364,11 +369,11 @@ const Content: React.FC = () => {
               </div>
             </div>
             <div className="flex flex-col space-y-4">
-              <p>Container Volume Configurator Page</p>
+              <p>Checkout Page</p>
               <div className="shadow-md">
                 <Image
-                  src="/payment-mockup-volume.png"
-                  alt="Wireframe1"
+                  src="/payment-mockup-checkout.png"
+                  alt="payment-mockup-checkout"
                   layout="responsive"
                   width={1440}
                   height={764}
@@ -382,7 +387,11 @@ const Content: React.FC = () => {
         {/* Conclusion */}
         <div className="flex w-full flex-col space-y-2 pb-32">
           <h4 className="font-bold">Conclusion</h4>
-          <p>Container Volume Configurator</p>
+          <p>
+            The introduction of the new pricing model and checkout experience
+            allowed the business team to upscale all existing clients,
+            increasing the revenue of the company by 25% in only a few month.
+          </p>
         </div>
       </div>
     </>

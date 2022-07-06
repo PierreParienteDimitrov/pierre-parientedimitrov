@@ -24,6 +24,8 @@ const ContactForm: React.FC = () => {
     // Add Validation
     const isEmailValid = validateEmail(email)
 
+    console.log(isEmailValid)
+
     if (!isEmailValid) {
       setEmailError(true)
       return
