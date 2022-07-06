@@ -26,6 +26,7 @@ export default NextAuth({
   pages: { signIn: '/signin' },
   session: {
     strategy: 'jwt',
+    maxAge: 60 * 60 * 24 * 30,
   },
   callbacks: {
     session: async (session) => {
