@@ -282,7 +282,7 @@ const Content: React.FC = () => {
         </div>
         {/* Components */}
         <div className="flex w-full flex-col space-y-2">
-          <h4 className="font-bold">Components</h4>
+          <h4 className="pb-8 font-bold">Component Library - Samples</h4>
           <div className="flex flex-col space-y-10">
             <div className="flex flex-col space-y-4">
               <p className="font-bold">Plan Cards</p>
@@ -333,10 +333,38 @@ const Content: React.FC = () => {
         </div>
         {/* Mockups */}
         <div className="flex w-full flex-col space-y-2">
-          <h4 className="font-bold">High-fidelity Mockups</h4>
+          <h4 className="pb-8 font-bold">High-fidelity Mockups</h4>
           <div className="flex flex-col space-y-10">
             <div className="flex flex-col space-y-4">
-              <p>Container Volume Configurator</p>
+              <p>Container Volume Configurator Page</p>
+              <div className="shadow-md">
+                <Image
+                  src="/payment-mockup-volume.png"
+                  alt="Wireframe1"
+                  layout="responsive"
+                  width={1440}
+                  height={764}
+                  objectFit="cover"
+                  priority
+                />
+              </div>
+            </div>
+            <div className="flex flex-col space-y-4">
+              <p>Container Volume Configurator Page</p>
+              <div className="shadow-md">
+                <Image
+                  src="/payment-mockup-volume.png"
+                  alt="Wireframe1"
+                  layout="responsive"
+                  width={1440}
+                  height={764}
+                  objectFit="cover"
+                  priority
+                />
+              </div>
+            </div>
+            <div className="flex flex-col space-y-4">
+              <p>Container Volume Configurator Page</p>
               <div className="shadow-md">
                 <Image
                   src="/payment-mockup-volume.png"
