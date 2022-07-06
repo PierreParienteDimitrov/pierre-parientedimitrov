@@ -39,7 +39,7 @@ const SignInForm = () => {
 
     //@ts-ignore
     if (!result?.error && requestedPath) {
-      router.replace(`${requestedPath}`)
+      router.replace(`/${requestedPath}`)
     }
 
     //@ts-ignore
