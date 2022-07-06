@@ -9,7 +9,6 @@ import { validateEmail } from '@/utils/validateEmail'
 const SignInForm = () => {
   const router = useRouter()
   const { query } = router
-  const requestedPath = query.project
 
   const [email, setEmail] = useState<string>('')
   const [error, setError] = useState<boolean>(false)
