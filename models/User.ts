@@ -4,11 +4,9 @@ import mongoose from 'mongoose'
 const UserSchema = new mongoose.Schema({
   name: {
     type: String,
-    required: [true, 'Please enter your name.'],
   },
   company: {
     type: String,
-    required: [true, 'Please enter your company.'],
   },
   email: {
     type: String,

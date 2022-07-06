@@ -1,4 +1,3 @@
-import emailjs from '@emailjs/browser'
 import { useRouter } from 'next/router'
 import React, { useRef, useState } from 'react'
 
@@ -24,8 +23,6 @@ const ContactForm: React.FC = () => {
     // Add Validation
     const isEmailValid = validateEmail(email)
 
-    console.log(isEmailValid)
-
     if (!isEmailValid) {
       setEmailError(true)
       return
@@ -39,30 +36,11 @@ const ContactForm: React.FC = () => {
       engineering,
     })
 
-    if (router.pathname === '/') {
-      const formParams = { email, name, company, design, engineering }
-      emailjs
-        .send(
-          process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID!,
-          process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID!,
-          formParams,
-          process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY
-        )
-        .then(
-          (result) => {
-            console.log(result.text)
-          },
-          (error) => {
-            console.log(error.text)
-          }
-        )
-    }
-
     const data = await RequestAccess(name, email, company, design, engineering)
 
     if (data) {
       setThankYouMessage(true)
-      router.reload()
+      router.replace('/thank-you')
     }
   }
 
