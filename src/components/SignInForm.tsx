@@ -27,8 +27,8 @@ const SignInForm = () => {
     setPath(`${requestedPath}`)
   }, [])
 
-  const handleSubmit = async (event: React.SyntheticEvent) => {
-    event.preventDefault()
+  const handleSubmit = async (e: React.SyntheticEvent) => {
+    e.preventDefault()
     // Add Validation
     const isEmailValid = validateEmail(email)
 
@@ -75,7 +75,7 @@ const SignInForm = () => {
           </h5>
           <h6>Enter your email to continue</h6>
           <form
-            onSubmit={handleSubmit}
+            onSubmit={(e) => handleSubmit(e)}
             className="flex w-full flex-col space-y-8 md:m-auto md:w-2/4"
           >
             {/* email */}
