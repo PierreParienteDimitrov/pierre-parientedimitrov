@@ -14,6 +14,7 @@ const SignInForm = () => {
   const [email, setEmail] = useState<string>('')
   const [error, setError] = useState<boolean>(false)
   const [emailError, setEmailError] = useState<boolean>(false)
+  const [path, setPath] = useState<string>('')
 
   interface IResult {
     error: string | null
@@ -21,6 +22,11 @@ const SignInForm = () => {
     status: number
     url: string | null
   }
+
+  React.useEffect(() => {
+    const requestedPath = query.project
+    setPath(`${requestedPath}`)
+  }, [])
 
   const handleSubmit = async (event: React.SyntheticEvent) => {
     event.preventDefault()
@@ -38,13 +44,13 @@ const SignInForm = () => {
     })
 
     //@ts-ignore
-    if (!result?.error && requestedPath) {
+    if (!result?.error && path) {
       alert('works')
-      router.push(`/${requestedPath}`)
+      router.push(`${path}`)
     }
 
     //@ts-ignore
-    if (!result?.error && !requestedPath) {
+    if (!result?.error && !path) {
       router.push(`/`)
     }
 
@@ -54,7 +60,7 @@ const SignInForm = () => {
     }
 
     if (!result) {
-      return router.push('/thank-you')
+      return router.push('thank-you')
     }
 
     return
