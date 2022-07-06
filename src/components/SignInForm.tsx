@@ -42,14 +42,14 @@ const SignInForm = () => {
       email: email,
     })
 
+    console.log(path)
     //@ts-ignore
-    if (!result?.error && path) {
-      alert('works')
+    if (!result?.error && path.length > 0) {
       router.push(`${path}`)
     }
 
     //@ts-ignore
-    if (!result?.error && !path) {
+    if (!result?.error && path.length === 0) {
       router.push(`/`)
     }
 
