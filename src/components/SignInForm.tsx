@@ -42,7 +42,6 @@ const SignInForm = () => {
       email: email,
     })
 
-    console.log(path)
     //@ts-ignore
     if (!result?.error && path.length > 0) {
       router.push(`${path}`)
