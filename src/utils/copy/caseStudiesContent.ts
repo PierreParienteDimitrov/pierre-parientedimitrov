@@ -50,12 +50,19 @@ export const caseStudies = [
     title: 'Designing a checkout flow',
     description:
       'Designed a checkout flow for a Supply Chain software, where users have a choice between three plans, and can adjust their volume per plan.',
-    href: pageInformation[Routes.ContainerDashboard]!.path,
+    href: pageInformation[Routes.CheckoutFlow]!.path,
     src: '/case-study-payment-plan.png',
     alt: 'Checkout Flow Case Study',
     external: false,
     tags: [tags.desktop, tags.design],
     projectType: 'design',
+    metrics: [
+      '2021',
+      'user experience, user interface',
+      'wireframing',
+      'desktop',
+      'flow charts, figma',
+    ],
     latest: true,
   },
   {

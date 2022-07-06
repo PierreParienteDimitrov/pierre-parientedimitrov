@@ -1,9 +1,16 @@
 import React from 'react'
 
+import Container from '@/layouts/containers/Container'
 import { getServerSideProps } from '@/utils/protectedRoutes'
 
 const Bluecargo: React.FC = () => {
-  return <div>Hello</div>
+  return (
+    <div className="h-screen">
+      <Container>
+        <h1>Coming Soon!</h1>
+      </Container>
+    </div>
+  )
 }
 
 export default Bluecargo

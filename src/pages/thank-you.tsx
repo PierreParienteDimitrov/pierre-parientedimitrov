@@ -20,10 +20,7 @@ const ThankYou = () => {
         <meta property="og:image" content="/website-preview.png" />
       </Head>
 
-      <div className="m-auto mt-32 flex w-2/4 flex-col items-center space-y-16 text-center">
-        <h6 className="font-bold uppercase tracking-wider">
-          Access already requested
-        </h6>
+      <div className="m-auto mt-32 flex h-[60vh] w-2/4 flex-col items-center space-y-16 text-center">
         <h4 className="leading-relaxed">
           Thank you for your interest! <br /> I will come back to you shortly to
           grant you access.

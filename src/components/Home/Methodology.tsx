@@ -13,7 +13,6 @@ const Methodology: React.FC<{
 
   const handleFilterSelection = (e: React.SyntheticEvent) => {
     const selectedFilter = e.currentTarget.id
-    console.log(selectedFilter)
     setFilter(selectedFilter)
   }
 
