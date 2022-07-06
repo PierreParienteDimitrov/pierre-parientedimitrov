@@ -15,6 +15,13 @@ const SignInForm = () => {
   const [error, setError] = useState<boolean>(false)
   const [emailError, setEmailError] = useState<boolean>(false)
 
+  interface IResult {
+    error: string | null
+    ok: boolean
+    status: number
+    url: string | null
+  }
+
   const handleSubmit = async (event: React.SyntheticEvent) => {
     event.preventDefault()
     // Add Validation
@@ -25,13 +32,6 @@ const SignInForm = () => {
       return
     }
 
-    interface IResult {
-      error: string | null
-      ok: boolean
-      status: number
-      url: string | null
-    }
-
     const result: IResult | undefined = await signIn('credentials', {
       redirect: false,
       email: email,
@@ -39,6 +39,7 @@ const SignInForm = () => {
 
     //@ts-ignore
     if (!result?.error && requestedPath) {
+      alert('works')
       router.push(`/${requestedPath}`)
     }
 
