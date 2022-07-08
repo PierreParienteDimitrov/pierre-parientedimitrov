@@ -15,13 +15,6 @@ const SignInForm = () => {
   const [emailError, setEmailError] = useState<boolean>(false)
   const [path, setPath] = useState<string>('')
 
-  interface IResult {
-    error: string | null
-    ok: boolean
-    status: number
-    url: string | null
-  }
-
   React.useEffect(() => {
     const requestedPath = query.project
     setPath(`${requestedPath}`)
@@ -37,12 +30,11 @@ const SignInForm = () => {
       return
     }
 
-    const result: IResult | undefined = await signIn('credentials', {
+    const result = await signIn('credentials', {
       redirect: false,
       email: email,
     })
 
-    console.log(path)
     //@ts-ignore
     if (!result?.error && path.length > 0) {
       router.push(`${path}`)
