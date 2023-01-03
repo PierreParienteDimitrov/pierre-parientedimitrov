@@ -16,7 +16,8 @@ const Hero2 = () => {
           </h2>
           <div className="flex flex-col space-y-4">
             <h3>
-              Currently designing BlueCargo&apos;s Supply Chain software 🚢
+              Currently designing BlueCargo&apos;s Supply Chain software 🚢 and
+              building Charter Communications Design System.
             </h3>
             <h5 className="font-normal text-gray-600">
               Previously I freelanced for a variety of clients, and designed
