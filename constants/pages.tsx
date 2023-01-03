@@ -18,6 +18,7 @@ export enum Routes {
   LuxuryTravel = '/portfolio/luxury-travel',
   UIShots = '/portfolio/ui-shots',
   Portfolio = '/portfolio',
+  Charter = '/portfolio/charter-communications',
 }
 
 export const pageInformation: Record<string, IPage> = {
@@ -84,6 +85,11 @@ export const pageInformation: Record<string, IPage> = {
   [Routes.CheckoutFlow]: {
     title: 'Pierre Pariente Dimitrov - Checkout Flow',
     path: Routes.CheckoutFlow,
+    isPublic: false,
+  },
+  [Routes.Charter]: {
+    title: 'Pierre Pariente Dimitrov - Charter Communications',
+    path: Routes.Charter,
     isPublic: false,
   },
 }
