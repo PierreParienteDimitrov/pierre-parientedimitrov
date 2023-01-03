@@ -17,7 +17,7 @@ const Methodology: React.FC<{
   }
 
   return (
-    <div className=" flex flex-col space-y-8 py-32">
+    <div className=" flex flex-col space-y-2 py-48">
       <Container>
         <div className="flex flex-col space-y-16">
           <div className="flex flex-col space-y-4 md:w-4/6">
@@ -56,13 +56,15 @@ const Methodology: React.FC<{
           return (
             <div
               key={item.filter}
-              className={`absolute top-10 ${
+              className={`absolute top-0 ${
                 filter === item.filter
                   ? 'transition duration-500 ease-in opacity-100'
                   : 'transition duration-500 ease-out opacity-0'
               }`}
             >
-              {item.title}
+              <h5 className="pt-4 font-medium text-primary">
+                {item.description}
+              </h5>
             </div>
           )
         })}

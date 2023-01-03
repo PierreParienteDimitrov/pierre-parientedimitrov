@@ -6,7 +6,7 @@ import Container from '@/layouts/containers/Container'
 const Hero2 = () => {
   return (
     <Container>
-      <div className="flex w-full flex-col items-start justify-start space-y-2 overflow-hidden pb-16 md:order-1 md:flex-row md:py-32">
+      <div className="flex w-full flex-col items-center justify-start space-y-2 overflow-hidden pb-24 md:order-1 md:flex-row md:pt-32 md:pb-48">
         <div className="order-2 flex flex-col space-y-10 md:w-4/6 md:pr-44">
           <h2 className="font-medium">
             Hi, I&apos;m Pierre - a{' '}
