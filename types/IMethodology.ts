@@ -3,6 +3,7 @@ export interface IMethodology {
   src: string
   alt: string
   title: string
+  description: string
 }
 
 export interface IMethdologyTitle {
