@@ -1,29 +1,24 @@
-import { IUser } from 'types/IUser'
-
 export const RequestAccess = async (email: string) => {
-  const user: IUser = {
-    email,
-  }
-
   const res = await fetch(`/api/users/create-user`, {
     method: 'POST',
     headers: {
       Accept: 'application/json',
       'Content-Type': 'application/json',
     },
-    body: JSON.stringify(user),
+    body: JSON.stringify(email),
   })
 
-  const { message, success } = await res.json()
+  const data = await res.json()
+  const { success } = data
 
   if (!success) {
-    return message
+    return data
   }
 
   if (success) {
     window.analytics.track('User Requested Access', {
       email,
     })
-    return success
+    return data
   }
 }

@@ -30,29 +30,29 @@ const SignInForm = () => {
       return
     }
 
-    // Fetch user
-    const result = await signIn('credentials', {
-      redirect: false,
-      email: email,
-    })
+    const user = await RequestAccess(email)
 
-    // If user exists and path exists, user is redirected to the right page
-    //@ts-ignore
-    if (!result?.error && path.length > 0) {
-      router.push(`${path}`)
-    }
+    // check if user exists
+    // if user does not exist, create user
+    // if user exist and user does not have access, set a message
+    // if user exists and user has access, redirect to the right path
 
-    // If user exists and path does not exist, user is redirected to the homepage
-    //@ts-ignore
-    if (!result?.error && path.length === 0) {
-      router.push(`/`)
-    }
+    console.log(user.data.hasAccess)
 
-    // If user does not exist, user request is created and user is notified that is request is processed
-    //@ts-ignore
-    if (result?.error) {
+    if (user && !user.data.hasAccess) {
       setRequestAccess(true)
-      RequestAccess(email)
+    }
+
+    if (user && user.data.hasAccess) {
+      // sign in user
+      const result = await signIn('credentials', {
+        redirect: false,
+        email: email,
+      })
+      //@ts-ignore
+      if (!result?.error && path.length > 0) {
+        router.push(`${path}`)
+      }
     }
 
     return

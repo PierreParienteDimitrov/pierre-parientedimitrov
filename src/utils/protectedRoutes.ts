@@ -28,7 +28,7 @@ export const getServerSideProps: GetServerSideProps = async (context) => {
           }
         | undefined
     }
-
+    //@ts-ignore
     const userSession: UserSession = session.session as object
     const hasAccess: boolean = userSession?.user?.hasAccess as boolean
 

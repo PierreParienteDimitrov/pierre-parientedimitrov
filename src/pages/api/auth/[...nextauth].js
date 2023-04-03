@@ -40,12 +40,8 @@ export default NextAuth({
       return {
         session: {
           user: {
-            name: userSession.name,
-            company: userSession.company,
             email: userSession.email,
             hasAccess: userSession.hasAccess,
-            design: userSession.design,
-            engineering: userSession.engineering,
           },
         },
       }
