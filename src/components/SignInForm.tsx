@@ -3,8 +3,8 @@ import { signIn } from 'next-auth/react'
 import React, { useState } from 'react'
 
 import Container from '@/layouts/containers/Container'
-import { validateEmail } from '@/utils/validateEmail'
 import { RequestAccess } from '@/utils/RequestAccess'
+import { validateEmail } from '@/utils/validateEmail'
 
 const SignInForm = () => {
   const router = useRouter()
@@ -62,7 +62,7 @@ const SignInForm = () => {
     <Container>
       <div className="mb-16">
         {requestAccess ? (
-          <div className="flex justify-center items-center flex-col space-y-8">
+          <div className="flex flex-col items-center justify-center space-y-8">
             <h2>Thank you for requesing access!</h2>
             <h5>I will get back to you shortly to grant you access.</h5>
           </div>

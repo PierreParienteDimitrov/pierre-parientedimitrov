@@ -10,7 +10,9 @@
     "@typescript-eslint/no-unused-vars": "error",
     "@typescript-eslint/no-explicit-any": "error",
     "@typescript-eslint/ban-ts-comment": "off",
-    "@typescript-eslint/no-non-null-assertion": "off"
+    "@typescript-eslint/no-non-null-assertion": "off",
+    "simple-import-sort/imports": "error",
+    "simple-import-sort/exports": "error"
   },
   "overrides": [
     // Configuration for TypeScript files

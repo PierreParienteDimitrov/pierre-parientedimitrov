@@ -1,7 +1,7 @@
+import dbConnect from 'lib/dbConnect'
 import User from 'models/User'
 import NextAuth from 'next-auth'
 import CredentialsProvider from 'next-auth/providers/credentials'
-import dbConnect from 'lib/dbConnect'
 
 export default NextAuth({
   providers: [
