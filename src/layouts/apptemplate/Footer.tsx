@@ -69,11 +69,13 @@ const Hero = () => {
               <h1
                 className={`font-serif font-extrabold italic ${
                   index === TypewriterItems.length - 1 &&
+                  //@ts-ignore
                   element[key] === 'ship great products!'
                     ? textGradient
                     : 'text-white'
                 }`}
               >
+                {/* @ts-ignore */}
                 {element[key].substring(0, letterIndex)}
                 {/* {blink && '|'} */}
               </h1>
