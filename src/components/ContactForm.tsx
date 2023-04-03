@@ -36,7 +36,7 @@ const ContactForm: React.FC = () => {
       engineering,
     })
 
-    const data = await RequestAccess(name, email, company, design, engineering)
+    const data = await RequestAccess(email)
 
     if (data) {
       setThankYouMessage(true)
