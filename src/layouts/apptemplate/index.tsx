@@ -8,7 +8,6 @@ import { useEffect } from 'react'
 import { AiFillDribbbleCircle, AiFillLinkedin } from 'react-icons/ai'
 import { ILayoutProps } from 'types/ILayoutProps'
 
-import ContactForm from '@/components/ContactForm'
 import InfiniteCarousel from '@/components/Home/InfiniteCarousel'
 import Hero from '@/layouts/apptemplate/Footer'
 import styles from '@/styles/home.module.css'
@@ -125,9 +124,6 @@ const AppTemplate = ({ children }: ILayoutProps) => {
                 <div className="relative z-50 flex flex-col space-y-4 py-16 md:flex-row md:items-start md:space-y-0">
                   <div className="w-full lg:w-2/3">
                     <Hero />
-                  </div>
-                  <div className="w-full lg:w-1/3">
-                    <ContactForm />
                   </div>
                 </div>
                 <div className="self-start">
