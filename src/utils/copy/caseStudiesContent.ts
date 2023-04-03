@@ -6,7 +6,7 @@ export const caseStudies = [
   {
     key: 'charter',
     client: 'Charter Communications',
-    year: '2022',
+    year: '2023',
     platform: 'TVSDK (Mobile, TV and HDTV)',
     title: 'Design System',
     description:
@@ -23,14 +23,14 @@ export const caseStudies = [
   {
     key: 'bluecargo_dashboard',
     client: 'BlueCargo',
-    year: '2022',
+    year: '2023',
     platform: 'desktop',
-    title: 'Designing a Container Management Dashboard',
+    title: 'Designing a Per Diem Fee Reporting System',
     description:
-      'Designed a dashboard for Supply Chain professionals, where they can follow the status of their containers at the ports of Los Angeles and Long Beach.',
+      'Designed a reporting system where Supply Chain professionals can analyze their per diem fees over a time period and compare it to the same time period in the past.',
     href: pageInformation[Routes.ContainerDashboard]!.path,
     src: '/case-study-container-management.png',
-    alt: 'Container Tracking Case Study',
+    alt: 'D&D Dashboard',
     external: false,
     tags: [tags.desktop, tags.design],
     projectType: 'design',
