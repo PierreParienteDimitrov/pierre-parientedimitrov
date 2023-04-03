@@ -27,8 +27,6 @@ const AppTemplate = ({ children }: ILayoutProps) => {
   const isUser = !!session
   const [displayLogin, setDisplayLogin] = useState<boolean>(false)
 
-  console.log(pathname)
-
   useEffect(() => {
     if (status === 'loading') return
 

@@ -4,13 +4,14 @@ import React, { useState } from 'react'
 
 import Container from '@/layouts/containers/Container'
 import { validateEmail } from '@/utils/validateEmail'
+import { RequestAccess } from '@/utils/RequestAccess'
 
 const SignInForm = () => {
   const router = useRouter()
   const { query } = router
 
   const [email, setEmail] = useState<string>('')
-  const [error, setError] = useState<boolean>(false)
+  const [requestAccess, setRequestAccess] = useState<boolean>(false)
   const [emailError, setEmailError] = useState<boolean>(false)
   const [path, setPath] = useState<string>('')
 
@@ -35,8 +36,6 @@ const SignInForm = () => {
       email: email,
     })
 
-    console.log(result)
-
     // If user exists and path exists, user is redirected to the right page
     //@ts-ignore
     if (!result?.error && path.length > 0) {
@@ -52,11 +51,8 @@ const SignInForm = () => {
     // If user does not exist, user request is created and user is notified that is request is processed
     //@ts-ignore
     if (result?.error) {
-      setError(true)
-    }
-
-    if (!result) {
-      return router.push('thank-you')
+      setRequestAccess(true)
+      RequestAccess(email)
     }
 
     return
@@ -65,7 +61,7 @@ const SignInForm = () => {
   return (
     <Container>
       <div className="mb-16">
-        {error ? (
+        {requestAccess ? (
           <div className="flex justify-center items-center flex-col space-y-8">
             <h2>Thank you for requesing access!</h2>
             <h5>I will get back to you shortly to grant you access.</h5>
