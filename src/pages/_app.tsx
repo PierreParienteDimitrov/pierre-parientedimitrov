@@ -38,6 +38,7 @@ function renderSnippet() {
 
 const MyApp = ({
   Component,
+  //@ts-ignore
   pageProps: { session, ...pageProps },
 }: AppProps) => (
   <SessionProvider session={session}>
