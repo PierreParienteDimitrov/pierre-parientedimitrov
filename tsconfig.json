@@ -10,8 +10,6 @@
     "alwaysStrict": false,
     "strictNullChecks": true,
     "noUncheckedIndexedAccess": true,
-    "suppressImplicitAnyIndexErrors": true,
-
     "noImplicitAny": true,
     "noImplicitReturns": true,
     "noImplicitThis": true,

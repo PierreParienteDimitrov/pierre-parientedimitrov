@@ -14,9 +14,7 @@ const AccessForm = () => {
   const handleSubmit = async (e: React.SyntheticEvent) => {
     e.preventDefault()
     const user: IUser = {
-      name,
       email,
-      company,
     }
 
     const res = await fetch(`/api/users/create-user`, {

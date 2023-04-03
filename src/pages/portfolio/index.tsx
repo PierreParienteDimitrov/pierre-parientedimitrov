@@ -11,6 +11,7 @@ import { tags } from '@/utils/copy/tags'
 
 const Portfolio = () => {
   const [activeFilter, setActiveFilter] = useState<string[]>(
+    //@ts-ignore
     Object.keys(tags).map((tag) => tags[tag])
   )
   const [projects, setProjects] = React.useState<IUseCasesItems[]>([])
@@ -71,8 +72,10 @@ const Portfolio = () => {
                 return (
                   <div key={index} className="py-2 pr-4">
                     <Tag
+                      //@ts-ignore
                       tag={tags[tag]}
                       onclick={(e) => handleFilterSelection(e)}
+                      //@ts-ignore
                       id={tags[tag]}
                       activeFilter={activeFilter}
                     />

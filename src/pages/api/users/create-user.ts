@@ -13,8 +13,7 @@ export default async function handler(
   switch (method) {
     case 'POST':
       try {
-        const data = req.body
-        const { email } = data
+        const email = req.body
 
         // email validation
         if (!email || !email.includes('@')) {
@@ -25,17 +24,20 @@ export default async function handler(
           mongoose.connection.close()
         }
 
+        //@ts-ignore
         const isExistingEmail = await User.findOne({ email })
 
         if (isExistingEmail) {
           return res.status(422).json({
             message: 'access already requested',
             success: false,
-            data: {},
+            data: isExistingEmail,
           })
         }
 
-        const user = await User.create(data)
+        //@ts-ignore
+        const user = await User.create({ email })
+
         return res.status(201).json({
           success: true,
           data: user,

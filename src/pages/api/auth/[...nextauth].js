@@ -1,7 +1,7 @@
+import dbConnect from 'lib/dbConnect'
 import User from 'models/User'
 import NextAuth from 'next-auth'
 import CredentialsProvider from 'next-auth/providers/credentials'
-import dbConnect from 'lib/dbConnect'
 
 export default NextAuth({
   providers: [
@@ -40,12 +40,8 @@ export default NextAuth({
       return {
         session: {
           user: {
-            name: userSession.name,
-            company: userSession.company,
             email: userSession.email,
             hasAccess: userSession.hasAccess,
-            design: userSession.design,
-            engineering: userSession.engineering,
           },
         },
       }
