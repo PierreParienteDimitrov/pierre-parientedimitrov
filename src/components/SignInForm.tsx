@@ -63,8 +63,8 @@ const SignInForm = () => {
       <div className="mb-16">
         {requestAccess ? (
           <div className="flex flex-col items-center justify-center space-y-8">
-            <h2>Thank you for requesing access!</h2>
-            <h5>I will get back to you shortly to grant you access.</h5>
+            <h2>Thank you for your request!</h2>
+            <h5>I will get back to you shortly.</h5>
           </div>
         ) : (
           <div className="flex flex-col items-center space-y-4">
