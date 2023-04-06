@@ -37,7 +37,7 @@ const BLUECARGO_PAYMENT: ICarousel[] = [
 
 const ProjectIntro: React.FC = () => {
   return (
-    <div className="flex flex-col space-y-10">
+    <div className="flex flex-col space-y-10 dark:text-white">
       {/* introduction */}
       <h1 className={`font-bold ${tailwindStyles.textGradient}`}>
         Checkout flow for a SAAS company
@@ -68,7 +68,7 @@ const ProjectIntro: React.FC = () => {
 const Content: React.FC = () => {
   return (
     <>
-      <div className="flex flex-col items-center space-y-8 text-gray-800 md:pb-16">
+      <div className="flex flex-col items-center space-y-8 text-gray-800 dark:text-gray-100 md:pb-16">
         {/* Process */}
         <ContainerText>
           <div className="flex flex-col space-y-2">

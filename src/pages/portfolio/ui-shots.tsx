@@ -24,12 +24,9 @@ const Uishots = () => {
       </Head>
 
       <Container>
-        <div className="pt-16 text-center">
-          <h3 className="font-bold">UI Shots</h3>
-          <p>
-            I built this series of UI shot while following the Daily UI Design
-            Challenge.
-          </p>
+        <div className="mb-32 pt-16 text-center dark:text-gray-100">
+          <h1 className="font-bold">UI Shots</h1>
+
           <UIShots />
         </div>
       </Container>

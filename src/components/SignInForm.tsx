@@ -77,14 +77,14 @@ const SignInForm = () => {
               className="flex w-full flex-col space-y-8 md:m-auto md:w-2/4"
             >
               {/* email */}
-              <div className="flex flex-col space-y-1 text-black">
+              <div className="flex flex-col space-y-1 text-black dark:text-gray-100">
                 <input
                   type="email"
                   placeholder="Email"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   required
-                  className="border-b border-black px-4 py-2"
+                  className="border-b border-black px-4 py-2 dark:border-gray-500"
                 />
               </div>
               {/* Submit */}

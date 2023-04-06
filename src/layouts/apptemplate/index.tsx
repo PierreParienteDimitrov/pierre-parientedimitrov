@@ -9,8 +9,7 @@ import { AiFillDribbbleCircle, AiFillLinkedin } from 'react-icons/ai'
 import { ILayoutProps } from 'types/ILayoutProps'
 
 import InfiniteCarousel from '@/components/Home/InfiniteCarousel'
-import Hero from '@/layouts/apptemplate/Footer'
-import styles from '@/styles/home.module.css'
+import Toggle from '@/components/Toogle'
 
 import Container from '../containers/Container'
 
@@ -41,7 +40,7 @@ const AppTemplate = ({ children }: ILayoutProps) => {
   return (
     <div>
       {/* navigation */}
-      <nav className="relative z-50 flex h-12 w-full items-center justify-center text-dark">
+      <nav className="relative z-50 flex h-12 w-full items-center justify-center text-dark dark:text-gray-100">
         <Container>
           <ul className="flex w-full items-center justify-between">
             <div className="flex items-center space-x-8">
@@ -84,31 +83,34 @@ const AppTemplate = ({ children }: ILayoutProps) => {
               </li>
             </div>
             <div className="flex space-x-16">
-              {!displayLogin && (
-                // (
-                //   <li className="group relative">
-                //     <h6 className="z-50 cursor-pointer px-2 font-bold uppercase tracking-wider">
-                //       <Link href={pageInformation[Routes.RequestAccess]!.path}>
-                //         Request access to all projects
-                //       </Link>
-                //     </h6>
-                //     <span
-                //       className="absolute top-0 left-0 h-full w-0 bg-secondary transition-all group-hover:w-full"
-                //       style={{ zIndex: '-100' }}
-                //     ></span>
-                //   </li>
-                // ) :
-                <li
-                  className="cursor-pointer"
-                  onClick={() =>
-                    signOut({
-                      callbackUrl: `${pageInformation[Routes.Home]!.path}`,
-                    })
-                  }
-                >
-                  Sign out
-                </li>
-              )}
+              <Toggle />
+              <div className="flex space-x-16">
+                {!displayLogin && (
+                  // (
+                  //   <li className="group relative">
+                  //     <h6 className="z-50 cursor-pointer px-2 font-bold uppercase tracking-wider">
+                  //       <Link href={pageInformation[Routes.RequestAccess]!.path}>
+                  //         Request access to all projects
+                  //       </Link>
+                  //     </h6>
+                  //     <span
+                  //       className="absolute top-0 left-0 h-full w-0 bg-secondary transition-all group-hover:w-full"
+                  //       style={{ zIndex: '-100' }}
+                  //     ></span>
+                  //   </li>
+                  // ) :
+                  <li
+                    className="cursor-pointer"
+                    onClick={() =>
+                      signOut({
+                        callbackUrl: `${pageInformation[Routes.Home]!.path}`,
+                      })
+                    }
+                  >
+                    Sign out
+                  </li>
+                )}
+              </div>
             </div>
           </ul>
         </Container>
@@ -117,15 +119,15 @@ const AppTemplate = ({ children }: ILayoutProps) => {
       {/* footer */}
       {!pathname.includes('signin') && (
         <div className="">
-          <div className="relative z-0 w-screen overflow-hidden bg-dark text-white md:py-4">
-            <div className={`${styles.container}`}></div>
+          <div className="relative z-0 w-screen overflow-hidden dark:text-gray-100 md:py-4">
+            {/* <div className={`${styles.container}`}></div> */}
             <Container>
               <div className="flex w-full flex-col space-y-4">
-                <div className="relative z-50 flex flex-col space-y-4 py-16 md:flex-row md:items-start md:space-y-0">
+                {/* <div className="relative z-50 flex flex-col space-y-4 py-16 md:flex-row md:items-start md:space-y-0">
                   <div className="w-full lg:w-2/3">
                     <Hero />
                   </div>
-                </div>
+                </div> */}
                 <div className="self-start">
                   <InfiniteCarousel />
                 </div>

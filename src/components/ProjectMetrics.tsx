@@ -14,7 +14,7 @@ const ProjectMetrics: React.FC<{
   projectMetrics: string[] | undefined
 }> = ({ projectMetrics }) => {
   return (
-    <div className="">
+    <div className="dark:text-gray-100">
       <ul className="grid grid-flow-col grid-rows-2 gap-4">
         {projectMetrics &&
           projectMetrics.map((el, index) => {

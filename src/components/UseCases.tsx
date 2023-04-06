@@ -24,14 +24,14 @@ const ProjectDescription: React.FC<IDescription> = ({
     projectType === 'design' ? 'hover:bg-primary' : 'hover:bg-secondary'
 
   return (
-    <div className="flex flex-col items-start space-y-8">
+    <div className="flex flex-col items-start space-y-8 dark:text-gray-100">
       <div className="flex flex-col items-start space-y-4">
         <h6 className={`font-semibold uppercase tracking-wider ${textColor}`}>
           {client} ({year}) • {platform}
         </h6>
         <div className="flex flex-col space-y-2">
           <h4 className="">{title}</h4>
-          <p className="text-gray-600">{description}</p>
+          <p className="text-gray-600 dark:text-gray-500">{description}</p>
         </div>
       </div>
       <div className="flex space-x-2">
@@ -40,7 +40,7 @@ const ProjectDescription: React.FC<IDescription> = ({
         ))}
       </div>
       <div
-        className={`px-4 py-2 border ${border} ${textColor} bg-white cursor-pointer transition delay-50 duration-300 ease-in-out ${backgroundHover} hover:text-white`}
+        className={`px-4 py-2 border ${border} ${textColor} bg-white cursor-pointer transition delay-50 duration-300 ease-in-out ${backgroundHover} hover:text-white dark:bg-gray-800`}
       >
         <a href={href} target={external ? '_blank' : ''} rel="noreferrer">
           <h6 className="uppercase tracking-widest">{button}</h6>
