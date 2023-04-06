@@ -51,7 +51,7 @@ const TEMPSO: ICarousel[] = [
 
 const ProjectIntro: React.FC = () => {
   return (
-    <div className="flex flex-col space-y-10">
+    <div className="flex flex-col space-y-10 dark:text-gray-100">
       {/* introduction */}
       <h1 className={`font-bold ${tailwindStyles.textGradient}`}>
         Classical Music Streaming App
@@ -91,7 +91,7 @@ const Content: React.FC = () => {
         />
         <meta property="og:image" content="/website-preview.png" />
       </Head>
-      <div className="flex flex-col items-center space-y-16 md:pb-16">
+      <div className="flex flex-col items-center space-y-16 dark:text-gray-100 md:pb-16">
         {/* Process */}
         <div className="flex flex-col space-y-2">
           <h2 className="font-bold">Process</h2>

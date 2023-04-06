@@ -61,7 +61,7 @@ const LeftSide: React.FC = () => {
         />
         <meta property="og:image" content="/website-preview.png" />
       </Head>
-      <div className="flex flex-col space-y-12 md:pr-20">
+      <div className="flex flex-col space-y-12 dark:text-white md:pr-20">
         <div>
           {/* introduction */}
           <div className="flex flex-col space-y-4">

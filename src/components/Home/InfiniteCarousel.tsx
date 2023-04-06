@@ -6,7 +6,7 @@ import styles from '../../styles/infiniteCarousel.module.css'
 
 const InfiniteCarousel: React.FC = () => {
   return (
-    <div className="flex items-center justify-center">
+    <div className="mt-32 flex items-center justify-center">
       <div className={styles.slider}>
         <div className={styles['slide-track']}>
           {skillLogos.map((skill, index) => {

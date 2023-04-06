@@ -6,6 +6,7 @@ import { AppProps } from 'next/app'
 import Router from 'next/router'
 import Script from 'next/script'
 import { SessionProvider } from 'next-auth/react'
+import { ThemeProvider } from 'next-themes'
 import NProgress from 'nprogress' //nprogress module
 
 import AppTemplate from '@/layouts/apptemplate'
@@ -16,6 +17,7 @@ Router.events.on('routeChangeError', () => NProgress.done())
 
 const DEFAULT_WRITE_KEY = process.env.NEXT_PUBLIC_DEFAULT_WRITE_KEY
 
+// Segment code
 function renderSnippet() {
   if (process.env.NODE_ENV === 'development') {
     const opts = {
@@ -42,13 +44,15 @@ const MyApp = ({
   pageProps: { session, ...pageProps },
 }: AppProps) => (
   <SessionProvider session={session}>
-    <AppTemplate>
-      <Script
-        id="segment-script"
-        dangerouslySetInnerHTML={{ __html: renderSnippet() }}
-      />
-      <Component {...pageProps} />
-    </AppTemplate>
+    <ThemeProvider attribute="class">
+      <AppTemplate>
+        <Script
+          id="segment-script"
+          dangerouslySetInnerHTML={{ __html: renderSnippet() }}
+        />
+        <Component {...pageProps} />
+      </AppTemplate>
+    </ThemeProvider>
   </SessionProvider>
 )
 

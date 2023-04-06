@@ -58,11 +58,13 @@ const Portfolio = () => {
         />
         <meta property="og:image" content="/website-preview.png" />
       </Head>
-      <div className="py-16 pb-48">
+      <div className="py-16 pb-48 dark:text-white">
         <Container>
           <div className="mb-24 flex flex-col space-y-8">
             <div className="flex flex-col space-y-2">
-              <h3 className="font-bold text-gray-800">Portfolio</h3>
+              <h3 className="font-bold text-gray-800 dark:text-gray-500">
+                Portfolio
+              </h3>
               <h6 className="font-semibold uppercase tracking-wide">
                 showing {projects.length} out of {caseStudies.length} projects
               </h6>

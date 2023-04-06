@@ -12,25 +12,7 @@ const Hero = () => {
   const [reverse, setReverse] = useState(false)
   const [key, setKey] = useState('title')
   const [typewriter, setTypewriter] = useState(true)
-  //   const [blink, setBlink] = useState(true)
 
-  //   // blink
-  //   useEffect(() => {
-  //     if (letterIndex < TypewriterItems[wordIndex]?.title.length) {
-  //       const timer = setTimeout(() => {
-  //         setBlink(!blink)
-  //       }, 500)
-  //       return () => clearTimeout(timer)
-  //     }
-
-  //     if (letterIndex === word.length) {
-  //       setBlink(false)
-  //     }
-
-  //     return
-  //   }, [blink])
-
-  //   typewriter
   useEffect(() => {
     if (!typewriter) {
       return

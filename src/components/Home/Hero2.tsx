@@ -6,7 +6,7 @@ import Container from '@/layouts/containers/Container'
 const Hero2 = () => {
   return (
     <Container>
-      <div className="flex w-full flex-col items-center justify-start space-y-2 overflow-hidden pb-24 md:order-1 md:flex-row md:pt-32 md:pb-48">
+      <div className="flex w-full flex-col items-center justify-start space-y-2 overflow-hidden pb-24 dark:text-gray-100 md:order-1 md:flex-row md:pt-32 md:pb-48">
         <div className="order-2 flex flex-col space-y-10 md:w-4/6 md:pr-44">
           <h2 className="font-medium">
             Hi, I&apos;m Pierre - a{' '}
@@ -19,7 +19,7 @@ const Hero2 = () => {
               Currently designing BlueCargo&apos;s Supply Chain software 🚢 and
               building Charter Communications Design System.
             </h3>
-            <h5 className="font-normal text-gray-600">
+            <h5 className="font-normal text-gray-600 dark:text-gray-500">
               Previously I freelanced for a variety of clients, and designed
               <span>
                 {' '}

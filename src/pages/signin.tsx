@@ -8,7 +8,7 @@ import SignInForm from '../components/SignInForm'
 
 const Signin: React.FC = () => {
   return (
-    <div className="pt-32">
+    <div className="pt-32 dark:text-white">
       <SignInForm />
     </div>
   )
