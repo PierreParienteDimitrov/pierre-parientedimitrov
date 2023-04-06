@@ -20,12 +20,14 @@ export default function Toggle() {
   useEffect(() => {
     setMounted(true)
 
-    if (theme === 'light') {
+    console.log(theme)
+
+    if (theme === 'system' || theme === 'dark') {
       setEnabled(true)
       setTheme('dark')
     }
 
-    setEnabled(true)
+    // setEnabled(true)
   }, [])
 
   if (!mounted) {
