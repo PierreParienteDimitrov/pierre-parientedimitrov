@@ -19,6 +19,8 @@ export enum Routes {
   UIShots = '/portfolio/ui-shots',
   Portfolio = '/portfolio',
   Charter = '/portfolio/charter-communications',
+  ContainerHomepage = '/portfolio/container-homepage',
+  SignUp = '/portfolio/sign-up',
 }
 
 export const pageInformation: Record<string, IPage> = {
@@ -90,6 +92,16 @@ export const pageInformation: Record<string, IPage> = {
   [Routes.Charter]: {
     title: 'Pierre Pariente Dimitrov - Charter Communications',
     path: Routes.Charter,
+    isPublic: false,
+  },
+  [Routes.ContainerHomepage]: {
+    title: 'Pierre Pariente Dimitrov - Container Homepage',
+    path: Routes.ContainerHomepage,
+    isPublic: false,
+  },
+  [Routes.SignUp]: {
+    title: 'Pierre Pariente Dimitrov - Sign Up Flow',
+    path: Routes.SignUp,
     isPublic: false,
   },
 }
