@@ -2,6 +2,8 @@ import { Switch } from '@headlessui/react'
 import { useTheme } from 'next-themes'
 import { useEffect, useState } from 'react'
 
+import MediaQuery from '@/utils/mediaQuery'
+
 function classNames(...classes: string[]) {
   return classes.filter(Boolean).join(' ')
 }
@@ -11,6 +13,9 @@ export default function Toggle() {
   const [mounted, setMounted] = useState(false)
 
   const { theme, setTheme } = useTheme()
+
+  const screenSize = MediaQuery()
+  const { isTabletOrMobile } = screenSize
 
   const onToggle = () => {
     setEnabled(enabled === true ? false : true)
@@ -35,7 +40,10 @@ export default function Toggle() {
   }
 
   return (
-    <Switch.Group as="div" className="flex items-center">
+    <Switch.Group
+      as="div"
+      className="flex flex-col md:flex-row md:items-center"
+    >
       <Switch
         checked={enabled}
         onChange={onToggle}
@@ -52,11 +60,13 @@ export default function Toggle() {
           )}
         />
       </Switch>
-      <Switch.Label as="span" className="ml-3 text-sm">
-        <span className="font-medium text-gray-900 dark:text-gray-100">
-          {theme === 'dark' ? 'dark mode on' : 'dark mode off'}
-        </span>
-      </Switch.Label>
+      {!isTabletOrMobile && (
+        <Switch.Label as="span" className="ml-3 text-sm">
+          <span className="font-medium text-gray-900 dark:text-gray-100">
+            {theme === 'dark' ? 'dark mode on' : 'dark mode off'}
+          </span>
+        </Switch.Label>
+      )}
     </Switch.Group>
   )
 }
