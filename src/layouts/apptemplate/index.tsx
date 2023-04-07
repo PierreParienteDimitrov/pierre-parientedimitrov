@@ -10,6 +10,7 @@ import { ILayoutProps } from 'types/ILayoutProps'
 
 import InfiniteCarousel from '@/components/Home/InfiniteCarousel'
 import Toggle from '@/components/Toogle'
+import MediaQuery from '@/utils/mediaQuery'
 
 import Container from '../containers/Container'
 
@@ -24,6 +25,8 @@ const AppTemplate = ({ children }: ILayoutProps) => {
   const { data: session, status } = useSession()
   const isUser = !!session
   const [displayLogin, setDisplayLogin] = useState<boolean>(false)
+  const screenSize = MediaQuery()
+  const { isTabletOrMobile } = screenSize
 
   useEffect(() => {
     if (status === 'loading') return
@@ -83,22 +86,9 @@ const AppTemplate = ({ children }: ILayoutProps) => {
               </li>
             </div>
             <div className="flex space-x-16">
-              <Toggle />
+              {!isTabletOrMobile && <Toggle />}
               <div className="flex space-x-16">
                 {!displayLogin && (
-                  // (
-                  //   <li className="group relative">
-                  //     <h6 className="z-50 cursor-pointer px-2 font-bold uppercase tracking-wider">
-                  //       <Link href={pageInformation[Routes.RequestAccess]!.path}>
-                  //         Request access to all projects
-                  //       </Link>
-                  //     </h6>
-                  //     <span
-                  //       className="absolute top-0 left-0 h-full w-0 bg-secondary transition-all group-hover:w-full"
-                  //       style={{ zIndex: '-100' }}
-                  //     ></span>
-                  //   </li>
-                  // ) :
                   <li
                     className="cursor-pointer"
                     onClick={() =>
@@ -111,6 +101,7 @@ const AppTemplate = ({ children }: ILayoutProps) => {
                   </li>
                 )}
               </div>
+              {isTabletOrMobile && <Toggle />}
             </div>
           </ul>
         </Container>
