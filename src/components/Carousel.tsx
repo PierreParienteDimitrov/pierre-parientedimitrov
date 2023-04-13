@@ -26,7 +26,7 @@ const Carousel: React.FC<{ carouselItems: ICarousel[] }> = (props) => {
     return () => clearTimeout(timer)
   }, [carouselIndex])
   return (
-    <div className="h-[300px] w-full md:h-[500px]">
+    <div className="h-[300px] w-full md:h-[700px]">
       <div className="relative flex h-4/6 w-full items-center md:h-full">
         {carouselItems.map((item, index: number) => {
           return (
@@ -37,9 +37,9 @@ const Carousel: React.FC<{ carouselItems: ICarousel[] }> = (props) => {
                   ? 'transition duration-1000 ease-in opacity-100'
                   : 'transition duration-1000 ease-out opacity-0'
               }`}
-              style={{
-                boxShadow: '3px 3px 5px #c9ced2, -3px -3px 5px #ffffff',
-              }}
+              // style={{
+              //   boxShadow: '3px 3px 5px #c9ced2, -3px -3px 5px #ffffff',
+              // }}
             >
               <Image
                 src={item.src}

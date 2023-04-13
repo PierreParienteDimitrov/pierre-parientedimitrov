@@ -50,6 +50,13 @@ export const caseStudies = [
     external: false,
     tags: [tags.desktop, tags.design],
     projectType: 'design',
+    metrics: [
+      '2023',
+      'user research, user experience, user interface',
+      'wireframing, high-fidelity',
+      'desktop',
+      'sitemap, figma',
+    ],
     latest: true,
   },
   {
