@@ -107,9 +107,7 @@ const Content: React.FC = () => {
         {/* Components */}
         <div className="flex w-full flex-col space-y-2">
           <ContainerText>
-            <h2 className="pb-4 text-center font-bold">
-              Component Library - Samples
-            </h2>
+            <h3 className="pt-8 pb-4 font-bold">Component Library - Samples</h3>
           </ContainerText>
           <ContainerText>
             <div className="mb-16 shadow-md">
@@ -141,9 +139,7 @@ const Content: React.FC = () => {
         {/* Mockups */}
         <div className="flex w-full flex-col space-y-8">
           <ContainerText>
-            <h2 className="pb-4 text-center font-bold">
-              High-fidelity Mockups
-            </h2>
+            <h3 className="pb-4 font-bold">High-fidelity Mockups</h3>
           </ContainerText>
         </div>
         <div className="flex w-full flex-col space-y-32">
