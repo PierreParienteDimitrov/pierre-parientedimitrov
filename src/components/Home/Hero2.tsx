@@ -51,7 +51,7 @@ const Hero2 = () => {
               className="z-10 rounded-full shadow-lg"
             />
             <div
-              className={`${styles.blink} absolute bottom-16 left-0 h-[260px] w-[260px] rounded-full bg-white md:bottom-10 md:left-4 md:h-[300px] md:w-[300px] lg:h-[450px] lg:w-[450px]`}
+              className={`${styles.blink} absolute bottom-16 left-0 h-[260px] w-[260px] rounded-full bg-primary-100 dark:bg-white md:bottom-10 md:left-4 md:h-[300px] md:w-[300px] lg:h-[450px] lg:w-[450px]`}
             ></div>
           </div>
         </Link>
