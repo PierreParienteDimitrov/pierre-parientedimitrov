@@ -2,6 +2,7 @@ import { pageInformation, Routes } from 'constants/pages'
 import Head from 'next/head'
 import Image from 'next/image'
 import React from 'react'
+import { AiOutlineArrowRight } from 'react-icons/ai'
 
 import { ICarousel } from '@/../types/ICarousel'
 import Carousel from '@/components/Carousel'
@@ -35,6 +36,35 @@ const BLUECARGO_PAYMENT: ICarousel[] = [
   },
 ]
 
+const Headline: React.FC<{ title: string; description: string[] }> = ({
+  title,
+  description,
+}) => {
+  return (
+    <div className="flex h-[600px]">
+      <ContainerText>
+        <div className="flex flex-col space-y-2">
+          <h5 className="font-bold uppercase tracking-widest text-gray-600">
+            {title}
+          </h5>
+          <ul className="flex flex-col space-y-12">
+            {description.map((el, index) => (
+              <li key={index} className="flex items-start">
+                <div className="flex items-center justify-center">
+                  {description.length > 1 && (
+                    <AiOutlineArrowRight className="relative top-4 mr-8 h-[32px] w-[32px] text-secondary" />
+                  )}
+                </div>
+                <h2 className="font-light text-gray-200">{el || ''}</h2>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </ContainerText>
+    </div>
+  )
+}
+
 const ProjectIntro: React.FC = () => {
   return (
     <div className="flex flex-col space-y-10 dark:text-white">
@@ -64,46 +94,23 @@ const Content: React.FC = () => {
     <>
       <div className="flex flex-col items-center space-y-8 text-gray-800 dark:text-gray-100 md:pb-16">
         {/* Process */}
-        <ContainerText>
-          <div className="flex flex-col space-y-2">
-            <h2 className="font-bold">Process</h2>
-            <h5>
-              My goal was to create a system that followed the same design logic
-              whatever the platform. Even if the component UI for the different
-              platforms is slightly different, I wanted the components to be
-              built as similar as possible.
-            </h5>
-          </div>
-        </ContainerText>
-        {/* Business Brief */}
-        <ContainerText>
-          <div className="flex flex-col space-y-2">
-            <h2 className="font-bold">Business Brief</h2>
-            <div className="flex flex-col space-y-8">
-              <h5>The objective of my contract with Spectrum TV was:</h5>
-              <div>
-                <ul className="flex list-disc flex-col space-y-2 pl-4 pt-4">
-                  <li>
-                    <h5>
-                      Transition and update all components from Sketch to Figma;
-                    </h5>
-                  </li>
-                  <li>
-                    <h5>
-                      Build the TVSDK design system (720px), Apple TV and
-                      Android TV design system (1920px);
-                    </h5>
-                  </li>
-                  <li>
-                    <h5>
-                      Build the main page templates for all of those libraries.
-                    </h5>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </ContainerText>
+        <div className="flex flex-col justify-start">
+          <Headline
+            title="Objective"
+            description={[
+              'My goal was to create a system that followed the same design logicc whatever the platform. Even if the component UI for the different platforms is slightly different, I wanted the components to be builtas similar as possible.',
+            ]}
+          />
+          <Headline
+            title="Tasks"
+            description={[
+              'Transition and update all components from Sketch to Figma;',
+              'Build the TVSDK design system (720px), Apple TV and Android TV design system (1920px);',
+              'Build the main page templates for all of those libraries.',
+            ]}
+          />
+        </div>
+
         {/* Components */}
         <div className="flex w-full flex-col space-y-2">
           <ContainerText>
