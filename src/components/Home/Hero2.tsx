@@ -1,7 +1,10 @@
 import Image from 'next/image'
+import Link from 'next/link'
 import React from 'react'
 
 import Container from '@/layouts/containers/Container'
+
+import styles from '../../styles/blink.module.css'
 
 const Hero2 = () => {
   return (
@@ -36,18 +39,22 @@ const Hero2 = () => {
             </h5>
           </div>
         </div>
-        <div className="relative order-1 w-full px-16 pb-4 md:order-2 md:w-2/6 md:pr-32 md:pl-0">
-          <Image
-            src="/pierrepariente.jpeg"
-            alt="Pierre Pariente Dimitrov"
-            layout="responsive"
-            width={500}
-            height={500}
-            priority
-            className="z-10 rounded-full shadow-lg"
-          />
-          <div className="absolute bottom-16 left-0 h-[260px] w-[260px] rounded-full bg-primary opacity-10 md:bottom-10 md:left-4 md:h-[300px] md:w-[300px]"></div>
-        </div>
+        <Link href="/resume" passHref>
+          <div className="relative order-1 w-full px-16 pb-4 hover:cursor-pointer md:order-2 md:w-2/6 md:pr-32 md:pl-0">
+            <Image
+              src="/pierrepariente.jpeg"
+              alt="Pierre Pariente Dimitrov"
+              layout="responsive"
+              width={500}
+              height={500}
+              priority
+              className="z-10 rounded-full shadow-lg"
+            />
+            <div
+              className={`${styles.blink} absolute bottom-16 left-0 h-[260px] w-[260px] rounded-full bg-white md:bottom-10 md:left-4 md:h-[300px] md:w-[300px] lg:h-[450px] lg:w-[450px]`}
+            ></div>
+          </div>
+        </Link>
       </div>
     </Container>
   )

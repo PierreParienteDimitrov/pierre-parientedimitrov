@@ -53,13 +53,9 @@ const UseCases: React.FC<{
   title: string
   button: string
   projectType: string
-}> = ({ useCasesItems, title, projectType }) => {
-  const textColor = projectType === 'design' ? 'text-primary' : 'text-secondary'
+}> = ({ useCasesItems }) => {
   return (
     <div className="flex flex-col space-y-8">
-      <h2 className={`font-thin capitalize tracking-wide ${textColor}`}>
-        {title}{' '}
-      </h2>
       <div className="flex w-full flex-wrap">
         {useCasesItems.map((element, index) => {
           return (

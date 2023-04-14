@@ -1,0 +1,29 @@
+.blink {
+  -webkit-animation: fadeinout 4s linear forwards;
+  animation: fadeinout 6s ease-in-out forwards;
+  animation-iteration-count: infinite;
+}
+
+.blink:hover {
+  animation-play-state: paused;
+}
+
+@-webkit-keyframes fadeinout {
+  0%,
+  100% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.03;
+  }
+}
+
+@keyframes fadeinout {
+  0%,
+  100% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.03;
+  }
+}
