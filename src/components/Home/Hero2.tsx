@@ -5,39 +5,25 @@ import React from 'react'
 import Container from '@/layouts/containers/Container'
 
 import styles from '../../styles/blink.module.css'
+import shineEffect from '../../styles/shineEffect.module.css'
 
 const Hero2 = () => {
   return (
     <Container>
       <div className="flex w-full flex-col items-center justify-start space-y-2 overflow-hidden pb-24 dark:text-gray-100 md:order-1 md:flex-row md:pt-32 md:pb-48">
         <div className="order-2 flex flex-col space-y-10 md:w-4/6 md:pr-44">
-          <h2 className="font-medium">
+          <h1 className="font-medium text-gray-400">
             Hi, I&apos;m Pierre - a{' '}
-            <span className="text-primary">product designer</span> and
-            <span className="text-secondary"> software engineer</span>, with
-            affinities for purpose-driven products.
-          </h2>
-          <div className="flex flex-col space-y-4">
-            <h3>
-              Currently designing BlueCargo&apos;s Supply Chain software 🚢 and
-              building Charter Communications Design System.
-            </h3>
-            <h5 className="font-normal text-gray-600 dark:text-gray-500">
-              Previously I freelanced for a variety of clients, and designed
-              <span>
-                {' '}
-                <a
-                  href="https://www.tempso.com/"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="cursor-pointer text-primary underline underline-offset-4"
-                >
-                  Tempso
-                </a>
-              </span>
-              , a classical music streaming App for iOS and Android.
-            </h5>
-          </div>
+            <span className={`${shineEffect.textBlue} italic text-white`}>
+              product designer
+            </span>{' '}
+            and
+            <span className={`${shineEffect.textRed} italic text-white`}>
+              {' '}
+              software engineer
+            </span>
+            , with affinities for purpose-driven products.
+          </h1>
         </div>
         <Link href="/resume" passHref>
           <div className="relative order-1 w-full px-16 pb-4 hover:cursor-pointer md:order-2 md:w-2/6 md:pr-32 md:pl-0">

@@ -1,0 +1,44 @@
+.textBlue {
+  background: radial-gradient(
+    circle at 100%,
+    hsl(207, 90%, 36%) 0%,
+    #e6e6e6 5%,
+    #0965af 20%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shineBlue ease-in-out;
+  animation-duration: 2s;
+}
+
+.textRed {
+  background: radial-gradient(
+    circle at 100%,
+    #f48fb1 0%,
+    #e6e6e6 5%,
+    #f48fb1 20%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shineRed ease-in-out;
+  animation-duration: 2s;
+  animation-delay: 0.75s;
+}
+
+@keyframes shineBlue {
+  0% {
+    background-position: 0;
+  }
+  100% {
+    background-position: 503px;
+  }
+}
+
+@keyframes shineRed {
+  0% {
+    background-position: 0;
+  }
+  100% {
+    background-position: 555px;
+  }
+}
