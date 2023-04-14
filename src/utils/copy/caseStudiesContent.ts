@@ -17,7 +17,13 @@ export const caseStudies = [
     external: false,
     tags: [tags.mobile, tags.design],
     projectType: 'design',
-    metrics: ['2022', 'design system', 'component library'],
+    metrics: [
+      '2022-2023',
+      'design system for TVSDK, Apple TV, Android TV',
+      'component library',
+      'high-fidelity mockups',
+      'contract',
+    ],
     latest: true,
   },
   {
