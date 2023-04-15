@@ -1,6 +1,9 @@
 import Image from 'next/image'
 import React from 'react'
+import { AnimationOnScroll } from 'react-animation-on-scroll'
 import { IUseCasesItems } from 'types/ICase'
+
+import fadeIn from '../styles/fadeIn.module.css'
 
 // const ProjectDescription: React.FC<IDescription> = ({
 //   year,
@@ -61,31 +64,33 @@ const UseCases: React.FC<{
           return (
             <div
               key={index}
-              className="flex w-full flex-col space-y-4 pb-16 md:w-1/2 md:pr-8"
+              className={`flex w-full flex-col space-y-4 pb-16 md:w-1/2 md:pr-8`}
             >
-              <a
-                href={element.href}
-                target={element.external ? '_blank' : ''}
-                rel="noreferrer"
-              >
-                <div className="relative">
-                  <Image
-                    src={element.src}
-                    alt={element.alt}
-                    layout="responsive"
-                    width={640}
-                    height={383}
-                    objectFit="cover"
-                    priority
-                  />
-                  <div className="absolute inset-0 flex cursor-pointer items-center justify-center pr-4 pb-4 opacity-0 duration-300 hover:bg-black hover:opacity-90">
-                    <div className="flex flex-col items-center justify-center space-y-4 text-white">
-                      <h3>{element.title}</h3>
-                      <h6 className="uppercase">{element.client}</h6>
+              <AnimationOnScroll animateIn={fadeIn['fade-in-image']}>
+                <a
+                  href={element.href}
+                  target={element.external ? '_blank' : ''}
+                  rel="noreferrer"
+                >
+                  <div className="relative">
+                    <Image
+                      src={element.src}
+                      alt={element.alt}
+                      layout="responsive"
+                      width={640}
+                      height={383}
+                      objectFit="cover"
+                      priority
+                    />
+                    <div className="absolute inset-0 flex cursor-pointer items-center justify-center pr-4 pb-4 opacity-0 duration-300 hover:bg-black hover:opacity-90">
+                      <div className="flex flex-col items-center justify-center space-y-4 text-white">
+                        <h3>{element.title}</h3>
+                        <h6 className="uppercase">{element.client}</h6>
+                      </div>
                     </div>
                   </div>
-                </div>
-              </a>
+                </a>
+              </AnimationOnScroll>
               {/* <ProjectDescription
                 year={element.year}
                 platform={element.platform}
