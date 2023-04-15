@@ -1,6 +1,6 @@
 .blink {
   -webkit-animation: fadeinout 4s linear forwards;
-  animation: fadeinout 6s ease-in-out forwards;
+  animation: fadeinout 4s ease-in-out forwards;
   animation-iteration-count: infinite;
 }
 
@@ -14,7 +14,7 @@
     opacity: 0;
   }
   50% {
-    opacity: 0.03;
+    opacity: 0.06;
   }
 }
 
@@ -24,6 +24,6 @@
     opacity: 0;
   }
   50% {
-    opacity: 0.03;
+    opacity: 0.06;
   }
 }
