@@ -2,6 +2,7 @@ import { pageInformation, Routes } from 'constants/pages'
 import Head from 'next/head'
 import Image from 'next/image'
 import React from 'react'
+import { AnimationOnScroll } from 'react-animation-on-scroll'
 import { AiOutlineArrowRight } from 'react-icons/ai'
 
 import { ICarousel } from '@/../types/ICarousel'
@@ -10,8 +11,11 @@ import ProjectMetrics from '@/components/ProjectMetrics'
 import Container from '@/layouts/containers/Container'
 import ContainerText from '@/layouts/containers/ContainerText'
 import { caseStudies } from '@/utils/copy/caseStudiesContent'
+import { charterImages } from '@/utils/copy/charterImages'
 import { getServerSideProps } from '@/utils/protectedRoutes'
 import { tailwindStyles } from '@/utils/tailwindStyles'
+
+import fadeIn from '../../styles/fadeIn.module.css'
 
 const BLUECARGO_PAYMENT: ICarousel[] = [
   {
@@ -41,7 +45,7 @@ const Headline: React.FC<{ title: string; description: string[] }> = ({
   description,
 }) => {
   return (
-    <div className="flex h-[600px]">
+    <div className="flex  py-12 md:h-[600px]">
       <ContainerText>
         <div className="flex flex-col space-y-2">
           <h5 className="font-bold uppercase tracking-widest text-gray-600">
@@ -98,7 +102,7 @@ const Content: React.FC = () => {
           <Headline
             title="Objective"
             description={[
-              'My goal was to create a system that followed the same design logicc whatever the platform. Even if the component UI for the different platforms is slightly different, I wanted the components to be builtas similar as possible.',
+              'As a product designer at Spectrum TV, I focused on developing a comprehensive design system for all video platforms. My objective was to ensure consistency in design logic across platforms, while accommodating for slight variations in component UI within the Spectrum TV ecosystem.',
             ]}
           />
           <Headline
@@ -112,12 +116,12 @@ const Content: React.FC = () => {
         </div>
 
         {/* Components */}
-        <div className="flex w-full flex-col space-y-2">
+        <div className="flex w-full flex-col space-y-8">
           <ContainerText>
             <h3 className="pt-8 pb-4 font-bold">Component Library - Samples</h3>
           </ContainerText>
-          <ContainerText>
-            <div className="mb-16 shadow-md">
+          <div className="mb-16 shadow-md">
+            <AnimationOnScroll animateIn={fadeIn['fade-in-image']}>
               <Image
                 src="/spectrum-showcard-anatomy.png"
                 alt="showcard"
@@ -127,10 +131,10 @@ const Content: React.FC = () => {
                 objectFit="cover"
                 priority
               />
-            </div>
-          </ContainerText>
-          <ContainerText>
-            <div className="mb-16 shadow-md">
+            </AnimationOnScroll>
+          </div>
+          <div className="mb-16 shadow-md">
+            <AnimationOnScroll animateIn={fadeIn['fade-in-image']}>
               <Image
                 src="/spectrum-nav.png"
                 alt="spectrum nav"
@@ -140,104 +144,59 @@ const Content: React.FC = () => {
                 objectFit="cover"
                 priority
               />
-            </div>
-          </ContainerText>
+            </AnimationOnScroll>
+          </div>
         </div>
         {/* Mockups */}
-        <div className="flex w-full flex-col space-y-8">
+        <div className="flex w-full flex-col space-y-8 md:pt-48">
           <ContainerText>
             <h3 className="pb-4 font-bold">High-fidelity Mockups</h3>
           </ContainerText>
         </div>
-        <div className="flex w-full flex-col space-y-32">
+        <div className="flex w-full flex-col space-y-16 md:space-y-32">
           <div className="shadow-md">
-            <Image
-              src="/spectrum-settings.png"
-              alt="homepage"
-              layout="responsive"
-              width={1280}
-              height={720}
-              objectFit="cover"
-              priority
-            />
+            <AnimationOnScroll animateIn={fadeIn['fade-in-image']}>
+              <Image
+                src="/spectrum-settings.png"
+                alt="homepage"
+                layout="responsive"
+                width={1280}
+                height={720}
+                objectFit="cover"
+                priority
+              />
+            </AnimationOnScroll>
           </div>
-          <div className="h-[900px] overflow-auto shadow-md">
-            <Image
-              src="/spectrum-homepage.png"
-              alt="homepage"
-              layout="responsive"
-              width={1920}
-              height={7388}
-              objectFit="cover"
-              priority
-            />
+          <div className="h-[400px] overflow-auto shadow-md md:h-[900px]">
+            <AnimationOnScroll animateIn={fadeIn['fade-in-image']}>
+              <Image
+                src="/spectrum-homepage.png"
+                alt="homepage"
+                layout="responsive"
+                width={1920}
+                height={7388}
+                objectFit="cover"
+                priority
+              />
+            </AnimationOnScroll>
           </div>
-          <div className="shadow-md">
-            <Image
-              src="/spectrum-movie.png"
-              alt="homepage"
-              layout="responsive"
-              width={1920}
-              height={1080}
-              objectFit="cover"
-              priority
-            />
-          </div>
-          <div className="shadow-md">
-            <Image
-              src="/spectrum-related.png"
-              alt="related"
-              layout="responsive"
-              width={1920}
-              height={1080}
-              objectFit="cover"
-              priority
-            />
-          </div>
-          <div className="shadow-md">
-            <Image
-              src="/spectrum-channel.png"
-              alt="channel"
-              layout="responsive"
-              width={1280}
-              height={720}
-              objectFit="cover"
-              priority
-            />
-          </div>
-          <div className="shadow-md">
-            <Image
-              src="/spectrum-checkout.png"
-              alt="homepage"
-              layout="responsive"
-              width={1280}
-              height={720}
-              objectFit="cover"
-              priority
-            />
-          </div>
-          <div className="shadow-md">
-            <Image
-              src="/spectrum-preferences.png"
-              alt="homepage"
-              layout="responsive"
-              width={1280}
-              height={720}
-              objectFit="cover"
-              priority
-            />
-          </div>
-          <div className="shadow-md">
-            <Image
-              src="/spectrum-ondemand.png"
-              alt="homepage"
-              layout="responsive"
-              width={1280}
-              height={720}
-              objectFit="cover"
-              priority
-            />
-          </div>
+          {charterImages.map((img, index) => {
+            return (
+              <div className="shadow-md" key={index}>
+                <AnimationOnScroll animateIn={fadeIn['fade-in-image']}>
+                  <Image
+                    src={img.src}
+                    alt={img.alt}
+                    layout="responsive"
+                    width={img.width}
+                    height={img.height}
+                    objectFit="cover"
+                    priority
+                  />
+                </AnimationOnScroll>
+              </div>
+            )
+          })}
         </div>
       </div>
     </>
