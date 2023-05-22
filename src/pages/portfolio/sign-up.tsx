@@ -1,7 +1,6 @@
 import React from 'react'
 
 import Container from '@/layouts/containers/Container'
-import { getServerSideProps } from '@/utils/protectedRoutes'
 
 const SignUp: React.FC = () => {
   return (
@@ -14,4 +13,4 @@ const SignUp: React.FC = () => {
 }
 
 export default SignUp
-export { getServerSideProps }
+// export { getServerSideProps }

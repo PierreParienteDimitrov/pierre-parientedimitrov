@@ -4,7 +4,6 @@ import { ICarousel } from 'types/ICarousel'
 
 import Carousel from '@/components/Carousel'
 import Container from '@/layouts/containers/Container'
-import { getServerSideProps } from '@/utils/protectedRoutes'
 
 const LUXURY: ICarousel[] = [
   {
@@ -181,4 +180,4 @@ const Luxurytravel = () => {
 }
 
 export default Luxurytravel
-export { getServerSideProps }
+// export { getServerSideProps }

@@ -1,7 +1,6 @@
 import React from 'react'
 
 import Container from '@/layouts/containers/Container'
-import { getServerSideProps } from '@/utils/protectedRoutes'
 
 const Bluecargo: React.FC = () => {
   return (
@@ -14,4 +13,4 @@ const Bluecargo: React.FC = () => {
 }
 
 export default Bluecargo
-export { getServerSideProps }
+// export { getServerSideProps }

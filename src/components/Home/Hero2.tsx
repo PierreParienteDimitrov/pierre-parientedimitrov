@@ -6,6 +6,9 @@ import Container from '@/layouts/containers/Container'
 
 import blink from '../../styles/blink.module.css'
 import fadeIn from '../../styles/fadeIn.module.css'
+import textHover from '../../styles/textHover.module.css'
+
+console.log(textHover)
 
 const Hero2 = () => {
   return (
@@ -14,7 +17,12 @@ const Hero2 = () => {
         <div className="order-2 flex flex-col space-y-10 md:w-4/6 md:pr-44">
           <h1 className={`font-medium text-gray-400 ${fadeIn['fade-in-text']}`}>
             Hi, I&apos;m Pierre - a{' '}
-            <span className={`italic text-white`}>product designer</span> and
+            <Link href="/portfolio" passHref>
+              <span className={`italic hover:cursor-pointer`}>
+                product designer{' '}
+              </span>
+            </Link>
+            and
             <span className={`italic text-white`}> software engineer</span>,
             with affinities for purpose-driven products.
           </h1>
