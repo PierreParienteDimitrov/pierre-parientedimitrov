@@ -9,7 +9,6 @@ import ProjectMetrics from '@/components/ProjectMetrics'
 import Container from '@/layouts/containers/Container'
 import ContainerText from '@/layouts/containers/ContainerText'
 import { caseStudies } from '@/utils/copy/caseStudiesContent'
-import { getServerSideProps } from '@/utils/protectedRoutes'
 import { tailwindStyles } from '@/utils/tailwindStyles'
 
 const BLUECARGO_PAYMENT: ICarousel[] = [
@@ -257,4 +256,4 @@ const ContainerHomepage: React.FC = () => {
 }
 
 export default ContainerHomepage
-export { getServerSideProps }
+// export { getServerSideProps }

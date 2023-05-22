@@ -12,7 +12,6 @@ import Container from '@/layouts/containers/Container'
 import ContainerText from '@/layouts/containers/ContainerText'
 import { caseStudies } from '@/utils/copy/caseStudiesContent'
 import { charterImages } from '@/utils/copy/charterImages'
-import { getServerSideProps } from '@/utils/protectedRoutes'
 import { tailwindStyles } from '@/utils/tailwindStyles'
 
 import fadeIn from '../../styles/fadeIn.module.css'
@@ -242,4 +241,4 @@ const Charter: React.FC = () => {
 }
 
 export default Charter
-export { getServerSideProps }
+// export { getServerSideProps }
